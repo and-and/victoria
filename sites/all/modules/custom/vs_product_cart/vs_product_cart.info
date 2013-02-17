@@ -1,0 +1,6 @@
+name = VS product cart
+description = Provide product display and customize cart
+core = 7.x
+package = VS
+version = 7.x-1.0
+dependencies[] = commerce_product

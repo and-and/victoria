@@ -1,0 +1,60 @@
+<?php
+
+function vs_product_cart_form_alter (&$form, &$form_state, $form_id) {
+  
+}
+
+function vs_product_cart_form_commerce_cart_add_to_cart_form_alter (&$form, &$form_state, $form_id) {
+  $form['#theme'] = 'vs_product_cart_add_to_cart_form';
+  $form['#attached']['js'][] = drupal_get_path('theme', 'victoria') . '/scripts/vs-product.js';
+//  $form['#attached']['js'][] = drupal_get_path('theme', 'victoria') . '/scripts/vs-popup.js';
+  $form['submit']['#attributes']['class'][] = 'vs-button-3-steps';
+  $form['submit']['#ajax']['callback'] = 'vs_product_cart_ajax_callback';
+}
+
+function vs_product_cart_ajax_callback($form, &$form_state){
+  $commands = array();
+//  $commands[] = ajax_command_prepend('#object-1', 'some html here');
+  return array('#type' => 'ajax', '#commands' => $commands);
+}
+
+function vs_product_cart_theme (){
+  return array(
+    'vs_product_cart_add_to_cart_form' => array(
+      'render element' => 'form',
+      'path' => drupal_get_path('module', 'vs_product_cart') . '/theme',
+      'template' => 'vs-product-cart-add-to-cart-form',
+    ),
+  );
+}
+
+function template_preprocess_vs_product_cart_add_to_cart_form (&$vars) {
+  drupal_add_js(drupal_get_path('module', 'cloud_zoom') . '/js/cloud_zoom.js');
+  drupal_add_js(drupal_get_path('module', 'cloud_zoom') . '/libraries/cloud-zoom/cloud-zoom.1.0.3.min.js');
+  $field_options = $vars['form']['field_options'][0];
+  if (empty($field_options)) {
+    return;
+  }
+  $product_id = $vars['form']['product_id']['#value'];
+  $product = commerce_product_load($product_id);
+  $rendered_html = array();
+  $count = 0;
+  foreach (element_children($field_options) as $key) {
+    $attr_str = $product->field_valid_attributes['und'][$count]['safe_value'];
+    $attr_arr = explode('|', $attr_str);
+    foreach ($attr_arr as $k => $v) {
+      $rendered_html[$key]['options'] .= '<p class="ui-selectmenu-value"><a>' . strtoupper($v) . '</a></p>';
+    }
+    if (isset($rendered_html[$key]['options'])) {
+      $rendered_html[$key]['title'] = $field_options[$key]['und']['#title'];
+    }
+    $count ++;
+  }
+  $vars['rendered_html'] = $rendered_html;
+}
+
+function vs_product_cart_preprocess_views_view_fields (&$vars) {
+  if ($vars['theme_hook_suggestion'] == 'views_view_fields__product_display__default') {
+//    dsm($vars['row']);
+  }
+}

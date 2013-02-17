@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * Implements hook_pathauto.
+ */
+function vs_pathauto_pathauto($op) {
+  $settings = new stdClass();
+  $settings->module = 'vs_pathauto';
+  $settings->groupheader = t('Commerce products Paths');
+  $settings->patterndescr = t('Default path pattern');
+  $settings->patterndefault = 'product/[commerce-product:title]';
+  $settings->token_type = 'commerce-product';
+  $settings->patternitems = array('commerce-product' => 'Commerce product');
+  $settings->batch_update_callback = 'vs_pathauto_pathauto_bulkupdate';  
+  return $settings;
+}
+
+/**
+ * Implements hook_pathauto_bulkupdate.
+ */
+function vs_pathauto_pathauto_bulkupdate() {
+  // find all node ids for the store content type
+   module_load_include('inc', 'pathauto');
+  
+  $query = db_select('commerce_product', 'cp');
+  $query
+    ->condition('cp.type', 'product')
+    ->fields('cp', array('title', 'sku', 'product_id'));
+  $results = $query->execute()->fetchAll();
+  $count = 0;
+  foreach($results as $row) {
+    $product = commerce_product_load($product);
+    pathauto_create_alias('vs_pathauto', 'bulkupdate', 'product/' . $row->title . '-' . $row->sku, array('commerce-product' => $product), 'commerce-product');
+    $count++;
+  }
+  drupal_set_message($count . ' node extras were updated.');
+}

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the VS menu feature.
+ */
+
+include_once 'vs_menu.features.inc';

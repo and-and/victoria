@@ -1,0 +1,5 @@
+name = VS Categories
+description = Provide Categories and Sub-categories
+core = 7.x
+package = VS
+version = 7.x-1.0

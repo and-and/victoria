@@ -1,0 +1,14 @@
+name = VS menu
+description = provide categories pages
+core = 7.x
+package = VS
+version = 7.x-1.0
+project = vs_menu
+dependencies[] = ctools
+dependencies[] = image
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[image][] = category_main
+features[image][] = category_thumb
+features[views_view][] = category_page

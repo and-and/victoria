@@ -1,0 +1,10 @@
+name = VS pathauto
+description = Provide custom pathauto
+core = 7.x
+package = VS
+version = 7.x-1.0
+dependencies[] = commerce_product
+dependencies[] = path
+dependencies[] = pathauto
+dependencies[] = token
+dependencies[] = transliteration
