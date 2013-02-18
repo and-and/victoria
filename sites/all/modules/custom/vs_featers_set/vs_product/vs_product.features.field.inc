@@ -10,181 +10,191 @@
 function vs_product_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'commerce_option-bras-field_band_size'.
-  $fields['commerce_option-bras-field_band_size'] = array(
+  // Exported field: 'commerce_option-one_attribute-field_txt_attribute'.
+  $fields['commerce_option-one_attribute-field_txt_attribute'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_band_size',
-      'foreign keys' => array(),
+      'field_name' => 'field_txt_attribute',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
       'indexes' => array(
-        'value' => array(
-          0 => 'value',
+        'format' => array(
+          0 => 'format',
         ),
       ),
       'locked' => '0',
-      'module' => 'list',
+      'module' => 'text',
       'settings' => array(
-        'allowed_values' => array(
-          32 => '32',
-          34 => '34',
-          36 => '36',
-          38 => '38',
-        ),
-        'allowed_values_function' => '',
+        'max_length' => '255',
       ),
       'translatable' => '0',
-      'type' => 'list_integer',
+      'type' => 'text',
     ),
     'field_instance' => array(
-      'bundle' => 'bras',
+      'bundle' => 'one_attribute',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'list',
+          'module' => 'text',
           'settings' => array(),
-          'type' => 'list_default',
+          'type' => 'text_default',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'commerce_option',
+      'field_name' => 'field_txt_attribute',
+      'label' => 'Size',
+      'required' => 1,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported field: 'commerce_option-two_attibutes-field_int_attribute'.
+  $fields['commerce_option-two_attibutes-field_int_attribute'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_int_attribute',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'two_attibutes',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
           'weight' => 1,
         ),
       ),
       'entity_type' => 'commerce_option',
-      'field_name' => 'field_band_size',
+      'field_name' => 'field_int_attribute',
       'label' => 'Band size',
       'required' => 1,
       'settings' => array(
+        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '2',
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '3',
       ),
     ),
   );
 
-  // Exported field: 'commerce_option-bras-field_cup_size'.
-  $fields['commerce_option-bras-field_cup_size'] = array(
+  // Exported field: 'commerce_option-two_attibutes-field_txt_attribute'.
+  $fields['commerce_option-two_attibutes-field_txt_attribute'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_cup_size',
-      'foreign keys' => array(),
+      'field_name' => 'field_txt_attribute',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
       'indexes' => array(
-        'value' => array(
-          0 => 'value',
+        'format' => array(
+          0 => 'format',
         ),
       ),
       'locked' => '0',
-      'module' => 'list',
+      'module' => 'text',
       'settings' => array(
-        'allowed_values' => array(
-          'a' => 'A',
-          'b' => 'B',
-          'c' => 'C',
-          'd' => 'D',
-          'dd' => 'DD',
-        ),
-        'allowed_values_function' => '',
+        'max_length' => '255',
       ),
       'translatable' => '0',
-      'type' => 'list_text',
+      'type' => 'text',
     ),
     'field_instance' => array(
-      'bundle' => 'bras',
+      'bundle' => 'two_attibutes',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'list',
+          'module' => 'text',
           'settings' => array(),
-          'type' => 'list_default',
+          'type' => 'text_default',
           'weight' => 0,
         ),
       ),
       'entity_type' => 'commerce_option',
-      'field_name' => 'field_cup_size',
+      'field_name' => 'field_txt_attribute',
       'label' => 'Cup size',
       'required' => 1,
       'settings' => array(
+        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '1',
-      ),
-    ),
-  );
-
-  // Exported field: 'commerce_option-size-field_size_abc'.
-  $fields['commerce_option-size-field_size_abc'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_size_abc',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
         ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          'xs' => 'XS',
-          's' => 'S',
-          'm' => 'M',
-          'l' => 'L',
-          'xl' => 'XL',
-        ),
-        'allowed_values_function' => '',
-      ),
-      'translatable' => '0',
-      'type' => 'list_text',
-    ),
-    'field_instance' => array(
-      'bundle' => 'size',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'list',
-          'settings' => array(),
-          'type' => 'list_default',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'commerce_option',
-      'field_name' => 'field_size_abc',
-      'label' => 'Размер',
-      'required' => 0,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_buttons',
-        'weight' => '1',
+        'type' => 'text_textfield',
+        'weight' => '2',
       ),
     ),
   );
@@ -238,7 +248,7 @@ function vs_product_field_default_fields() {
           'module' => 'taxonomy',
           'settings' => array(),
           'type' => 'taxonomy_term_reference_link',
-          'weight' => 1,
+          'weight' => '1',
         ),
         'line_item' => array(
           'label' => 'above',
@@ -259,7 +269,7 @@ function vs_product_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_buttons',
-        'weight' => '5',
+        'weight' => '2',
       ),
     ),
   );
@@ -293,10 +303,12 @@ function vs_product_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => NULL,
-          'settings' => array(),
-          'type' => 'commerce_price_default',
-          'weight' => 5,
+          'module' => 'commerce_price',
+          'settings' => array(
+            'calculation' => FALSE,
+          ),
+          'type' => 'commerce_price_raw_amount',
+          'weight' => '5',
         ),
         'line_item' => array(
           'label' => 'above',
@@ -319,7 +331,7 @@ function vs_product_field_default_fields() {
           'currency_code' => 'default',
         ),
         'type' => 'commerce_price_full',
-        'weight' => '3',
+        'weight' => '5',
       ),
     ),
   );
@@ -362,7 +374,7 @@ function vs_product_field_default_fields() {
           'module' => 'commerce_option_set_reference',
           'settings' => array(),
           'type' => 'commerce_option_set_reference_form',
-          'weight' => 4,
+          'weight' => '4',
         ),
         'line_item' => array(
           'label' => 'above',
@@ -383,7 +395,7 @@ function vs_product_field_default_fields() {
         'module' => 'commerce_option_set_reference',
         'settings' => array(),
         'type' => 'commerce_option_set_reference_select_list',
-        'weight' => '7',
+        'weight' => '4',
       ),
     ),
   );
@@ -392,7 +404,7 @@ function vs_product_field_default_fields() {
   $fields['commerce_product-product-field_prod_main_image'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '-1',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_prod_main_image',
@@ -425,13 +437,33 @@ function vs_product_field_default_fields() {
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'image',
+          'module' => 'cloud_zoom',
           'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
+            'gallery_filedset' => array(
+              'gallery_mode' => 1,
+              'thumb_style' => 'thumbnail',
+            ),
+            'slide_style' => 'thumbnail',
+            'zoom_position_fieldset' => array(
+              'adjust_x' => '0',
+              'adjust_y' => '0',
+              'position' => 'inside',
+              'zoom_height' => 'auto',
+              'zoom_width' => 'auto',
+            ),
+            'zoom_style' => 'thumbnail_product_display',
+            'zoom_style_fieldset' => array(
+              'Show title' => 1,
+              'lens_opacity' => '0.5',
+              'smooth_move' => '3',
+              'soft_focus' => 0,
+              'tint' => 'false',
+              'tint_opacity' => '0.5',
+              'title_opacity' => '0.5',
+            ),
           ),
-          'type' => 'image',
-          'weight' => 3,
+          'type' => 'cloud_zoom',
+          'weight' => '3',
         ),
         'line_item' => array(
           'label' => 'above',
@@ -463,7 +495,145 @@ function vs_product_field_default_fields() {
           'progress_indicator' => 'throbber',
         ),
         'type' => 'image_image',
-        'weight' => '6',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'commerce_product-product-field_product_description'.
+  $fields['commerce_product-product-field_product_description'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_product_description',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'text_with_summary',
+    ),
+    'field_instance' => array(
+      'bundle' => 'product',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '6',
+        ),
+        'line_item' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'commerce_product',
+      'field_name' => 'field_product_description',
+      'label' => 'Описание',
+      'required' => 0,
+      'settings' => array(
+        'display_summary' => 0,
+        'text_processing' => '1',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'rows' => '20',
+          'summary_rows' => 5,
+        ),
+        'type' => 'text_textarea_with_summary',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'commerce_product-product-field_valid_attributes'.
+  $fields['commerce_product-product-field_valid_attributes'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '2',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_valid_attributes',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'product',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => '7',
+        ),
+        'line_item' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'commerce_product',
+      'field_name' => 'field_valid_attributes',
+      'label' => 'Доступные размеры',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '5',
       ),
     ),
   );
@@ -546,11 +716,13 @@ function vs_product_field_default_fields() {
   // Included for use with string extractors like potx.
   t('Band size');
   t('Cup size');
+  t('Size');
+  t('Доступные размеры');
   t('Изображение главное');
   t('Изображение категории');
   t('Категория');
+  t('Описание');
   t('Опции');
-  t('Размер');
   t('Старая цена');
 
   return $fields;
