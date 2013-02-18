@@ -374,3 +374,37 @@ input.form-submit, a.button {
   font-weight: lighter;
   letter-spacing: -.025em;
 }
+.vs-add-to-cart-confirmation-wrapper .column-1 {
+  width: 537px;
+  position: relative;
+  height: 500px;
+  float: left;
+}
+.vs-add-to-cart-confirmation-wrapper .vs-close-popup {
+  position: absolute;
+  background: url(../images/close.gif) no-repeat 0 0 transparent;
+  text-indent: -9999px;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  cursor: pointer;
+  right: 20px;
+  top: 20px;
+}
+.titlebar-on {
+  padding: 22px 0 20px;
+  border-bottom: 1px solid #E5E5E5;
+}
+.titlebar-content {
+  padding-left: 20px;
+  padding-right: 65px;
+}
+.large {
+  font-size: 21px;
+  letter-spacing: -.025em;
+  line-height: 20px;
+  min-height: 21px;
+}
+.titlebar-content .title {
+  text-transform: uppercase;
+}

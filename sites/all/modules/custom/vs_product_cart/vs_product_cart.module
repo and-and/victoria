@@ -14,7 +14,13 @@ function vs_product_cart_form_commerce_cart_add_to_cart_form_alter (&$form, &$fo
 
 function vs_product_cart_ajax_callback($form, &$form_state){
   $commands = array();
-//  $commands[] = ajax_command_prepend('#object-1', 'some html here');
+  $content = theme('vs_product_cart_add_to_cart_confirm', array(
+    'line_item' => $form_state['line_item'], 
+    'product' => $form_state['product'],
+  ));
+//  dsm($content,'ad');
+//  dsm($form_state);
+  $commands[] = ajax_command_html('#vs-cart-confirmation-ajax-wrapper', $content);
   return array('#type' => 'ajax', '#commands' => $commands);
 }
 
@@ -24,6 +30,11 @@ function vs_product_cart_theme (){
       'render element' => 'form',
       'path' => drupal_get_path('module', 'vs_product_cart') . '/theme',
       'template' => 'vs-product-cart-add-to-cart-form',
+    ),
+    'vs_product_cart_add_to_cart_confirm' => array(
+//      'render element' => 'form',
+      'path' => drupal_get_path('module', 'vs_product_cart') . '/theme',
+      'template' => 'vs-product-cart-add-to-cart-confirm',
     ),
   );
 }

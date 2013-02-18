@@ -8,4 +8,13 @@
       });
     }
   }
+  Drupal.behaviors.buttonBackgorundTwoSteps = {
+    attach:function(){
+      $('.vs-button-2-steps').hover(function() {
+        $(this).css('background-position-y', 'bottom');
+      } , function () {
+        $(this).css('background-position-y', 'top');
+      });
+    }
+  }
 }(jQuery));

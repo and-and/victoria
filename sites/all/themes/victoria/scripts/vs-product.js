@@ -10,4 +10,15 @@
       });
     }
   }
+  Drupal.behaviors.addToBagFancybox = {
+    attach:function() {
+      $('.vs-product-display-add-to-bag input').mousedown(function() {
+        popuConfirmStart();
+      });
+    }
+  }  
+  
 }(jQuery));
+function popuConfirmStart() {
+  $('.fancy-add-to-cart-confirm').click();
+}(jQuery);
