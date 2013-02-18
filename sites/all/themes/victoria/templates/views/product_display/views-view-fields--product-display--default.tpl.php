@@ -24,18 +24,6 @@
  * @ingroup views_templates
  */
 ?>
-<?php /*
-  <?php foreach ($fields as $id => $field): ?>
-  <?php if (!empty($field->separator)): ?>
-    <?php print $field->separator; ?>
-  <?php endif; ?>
-
-  <?php print $field->wrapper_prefix; ?>
-    <?php print $field->label_html; ?>
-    <?php print $field->content; ?>
-  <?php print $field->wrapper_suffix; ?>
-<?php endforeach; ?> 
- */ ?>
 <div class="vs-product-display-column-1">
   <?php if (!empty($row->field_field_prod_main_image)) : ?>
     <div class="vs-product-dispay-main-image">
@@ -81,9 +69,8 @@
   </div>
 </div>
 <div class="element-hidden">
-  <a href="#vs-data" class="fancy-add-to-cart-confirm">This shows content of element who has id="data"</a>
+  <a href="#vs-cart-confirmation-ajax-wrapper" class="fancy-add-to-cart-confirm">This shows content of element who has id="data"</a>
   <div style="display:none">
-    <div id="vs-data"><div class="vs-fancybox-loading"></div></div>
+    <div id="vs-cart-confirmation-ajax-wrapper"><div class="vs-fancybox-loading"></div></div>
   </div>
-  <script>jQuery(setTimeout(function() {jQuery('.fancy-add-to-cart-confirm').click();}, 1000));</script>>
 </div>

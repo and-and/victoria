@@ -217,7 +217,7 @@ $databases = array (
     array (
       'database' => 'vs',
       'username' => 'root',
-      'password' => 'and',
+      'password' => '',
       'host' => 'localhost',
       'port' => '',
       'driver' => 'mysql',

@@ -6,9 +6,10 @@
                 minWidth	: 450,
                 minHeight	: 350,
 		fitToView	: false,
-		width		: '70%',
-		height		: '70%',
+//		width		: '70%',
+//		height		: '70%',
 		autoSize	: true,
+                autoResize      : true,
 		openEffect	: 'none',
 		closeEffect	: 'none',
                 closeBtn        : false,
@@ -16,7 +17,19 @@
                 helpers : { 
                   overlay : {closeClick: false}
                 },
-                scrollOutside   : false
+                scrollOutside   : false,
+                afterClose     : function(){
+                  $('#vs-cart-confirmation-ajax-wrapper').html('<div class="vs-fancybox-loading"></div>');
+                }
     });
   });
 })(jQuery);
+(function($) {
+  Drupal.behaviors.popupCustomCloseButton = {
+    attach:function() {
+      $('.vs-close-popup').click(function() {
+        $.fancybox.close();
+      });
+    }
+  }
+}(jQuery));

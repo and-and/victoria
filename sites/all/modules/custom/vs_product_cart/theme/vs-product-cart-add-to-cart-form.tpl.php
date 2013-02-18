@@ -13,11 +13,12 @@
       </div>
     </div>
     <div class="element-hidden">
-      <?php print render($variables['form']['field_options'][0][$key]); ?>
+      <?php print drupal_render($form['field_options'][0][$key]); ?>
     </div>
   </div>
   <?php endforeach; ?>
 <?php endif; ?>
 <div class="vs-product-display-add-to-bag">
-  <?php print render($variables['form']['submit']); ?>
+  <?php print drupal_render($form['submit']); ?>
 </div>
+  <?php print drupal_render_children($form); ?>
