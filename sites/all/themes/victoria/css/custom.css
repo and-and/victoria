@@ -408,3 +408,56 @@ input.form-submit, a.button {
 .titlebar-content .title {
   text-transform: uppercase;
 }
+.vs-product-dispay-main-image{
+  height: 573px;
+}
+.cloud-zoom-gallery.selected {
+  display: inline-block;
+  width: 59px;
+  height: 80px;
+  border: 2px solid #F25C93;
+  overflow: hidden;
+}
+.cloud-zoom-gallery.selected .vs-thumb{
+  display: block;
+  width: 57px;
+  height: 78px;
+  border: 1px solid white;
+  overflow: hidden;
+}
+.cloud-zoom-gallery.selected img{
+  margin-top: -3px;
+  margin-left: -3px;
+}
+.cloud-zoom-gallery.thumb-hover {
+  display: inline-block;
+  width: 59px;
+  height: 80px;
+  border: 2px solid #F25C93;
+  overflow: hidden;
+}
+.cloud-zoom-gallery.thumb-hover .vs-thumb{
+  display: block;
+  width: 57px;
+  height: 78px;
+  border: 1px solid white;
+  overflow: hidden;
+}
+.cloud-zoom-gallery.thumb-hover img{
+  margin-top: -3px;
+  margin-left: -3px;
+}
+.vs-product-zoom-text {
+  height: 34px;
+}
+.vs-product-zoom-text p.zoom-text{
+  float: right;
+  margin: 10px 0;
+  color: gray;
+  padding-left: 17px;
+  background: url(../images/zoom.png) no-repeat scroll 0 0 transparent;
+}
+.vs-product-zoom-text p {
+  margin: 10px 0;
+  float: left;
+}

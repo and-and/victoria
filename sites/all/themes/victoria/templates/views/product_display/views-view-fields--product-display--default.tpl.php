@@ -33,12 +33,25 @@
     </div>
   <?php endif; ?>
   <?php if (count($row->field_field_prod_main_image) > 1) : ?>
+    <?php $count = 0; ?>
+    <div class="vs-product-zoom-text">
+      <p class="zoom-text"><?php print 'Нажмите для увеличения'; ?></p>
+      <p><?php print 'Дополнительные изображения:'; ?></p>
+    </div>
     <div class="vs-product-display-thumnails">
       <?php foreach ($row->field_field_prod_main_image as $img) : ?>
         <?php $img_thumb = theme('image_formatter', $img['rendered']); ?>
         <?php $img_medium = image_style_url('product_dispaly_main', $img['raw']['uri']); ?>
         <?php $img_large = image_style_url('large_product_image', $img['raw']['uri']); ?>
-        <a class="cloud-zoom-gallery" href="<?php print $img_large; ?>" rel="useZoom: 'zoom1', smallImage: '<?php print $img_medium; ?>'"><?php print $img_thumb; ?></a>
+        <a class="cloud-zoom-gallery <?php ($count == 0)? print ' selected ': NULL; ?>" 
+           href="<?php print $img_large; ?>" 
+           rel="useZoom: 'zoom1', smallImage: '<?php print $img_medium; ?>'" 
+           mid="<?php print $img_medium; ?>">
+            <span class="vs-thumb">
+              <?php print $img_thumb; ?>
+            </span>
+        </a>
+        <?php $count ++; ?>
       <?php endforeach; ?>
     </div>
   <?php endif; ?>
