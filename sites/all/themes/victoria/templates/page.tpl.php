@@ -88,15 +88,15 @@
 <div id="page-wrapper"><div id="page">
   <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>">
     <div id="header-inner">
-      <div id="site-name"<?php // if ($hide_site_name) { print ' class="element-invisible"'; } ?>>
+      <div id="site-name">
         <strong>
-          <a href="<?php print $front_page; ?>" rel="home"><span><?php print $site_name; ?></span></a>
+          <a class="vs-button-2-steps" href="<?php print $front_page; ?>" rel="home"><span><?php print $site_name; ?></span></a>
         </strong>
       </div>
       <div class="right header-search yui-skin-sam search">
         <form method="get" id="searchform" name="searchform" action="" class="single-field">
           <input class="yui-ac-input text input" id="atomz_query" name="q" value="Search" type="text" autocomplete="off">
-          <button type="submit">Submit</button>
+          <button class="vs-button-2-steps" type="submit">Submit</button>
           <div class="yui-ac-container" id="autocomplete"><div class="yui-ac-content" style="display: none;"><div class="yui-ac-hd" style="display: none;"></div><div class="yui-ac-bd"><ul id="autocomplete-list"></ul></div><div class="yui-ac-ft" style="display: none; "></div></div><div class="yui-ac-shadow" style="display: none;"></div></div>
         </form>
       </div>
@@ -109,9 +109,7 @@
         <li id="english" style="display: none;"><a href="http://www.victoriassecret.com/" onclick="cmCreateConversionEventTag('Global', '2', 'english', '0'); var switchLanguage = function(lang){MP.SrcUrl=unescape('mp_js_orgin_url');MP.UrlLang='mp_js_current_lang';MP.init();MP.switchLanguage(MP.UrlLang==lang?'en':lang);return false;}; return switchLanguage('en');"><!-- mp_trans_disable_start -->English<!-- mp_trans_disable_end --></a></li>
         <li id="signOut" style="display: none;"><a href="https://secure.victoriassecret.com/commerce/logoff.vs?namespace=main&amp;origin=myMain.jsp&amp;event=link.logout">Sign out</a></li>			
       </ul>
-      <div class="shopping-bag" style="visibility: visible;">
-        <a href="#">Shopping Bag</a> <em></em>
-      </div>
+      <?php print theme('vs_product_cart_header_line'); ?>
     </div> <!--header-inner END-->
   </div> <!-- /.section, /#header -->
   <?php if ($main_menu): ?>

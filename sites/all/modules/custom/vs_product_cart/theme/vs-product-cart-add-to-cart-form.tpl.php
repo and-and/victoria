@@ -19,6 +19,9 @@
   <?php endforeach; ?>
 <?php endif; ?>
 <div class="vs-product-display-add-to-bag">
-  <?php print drupal_render($form['submit']); ?>
+  <div class="add-to-bag-button vs-button-3-steps">Добавить в корзину</div>
+  <div class="element-hidden">
+    <?php print drupal_render($form['submit']); ?>
+  </div>
 </div>
   <?php print drupal_render_children($form); ?>

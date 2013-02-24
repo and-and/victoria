@@ -2,14 +2,14 @@
 Drupal.behaviors.cloudZoom = {
   attach: function (context, settings) {
     $('.cloud-zoom').click(function () {
-      items = $('.cloud-zoom:not(cloud-zoom-processed), .cloud-zoom-gallery:not(cloud-zoom-processed)', context);
+      items = $('.cloud-zoom:not(.cloud-zoom-processed), .cloud-zoom-gallery:not(cloud-zoom-processed)', context);
       if (items.length) {
         items.addClass('cloud-zoom-processed').CloudZoom();
 //        items.parent().css('float', 'left');
       }
       return false;
     });
-     $('.cloud-zoom-gallery:not(cloud-zoom-processed)').click(function () {
+     $('.cloud-zoom-gallery:not(.cloud-zoom-processed)').click(function () {
        var mid_img = $(this).attr('mid');
            large_img = $(this).attr('href');
        $('.cloud-zoom').find('img').attr('src', mid_img);

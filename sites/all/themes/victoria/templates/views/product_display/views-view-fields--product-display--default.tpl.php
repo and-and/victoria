@@ -32,12 +32,12 @@
       </a>
     </div>
   <?php endif; ?>
+  <div class="vs-product-zoom-text">
+    <p class="zoom-text"><?php print 'Нажмите для увеличения'; ?></p>
+    <?php (count($row->field_field_prod_main_image) > 1)? print '<p>Дополнительные изображения:</p>': NULL; ?>
+  </div>
   <?php if (count($row->field_field_prod_main_image) > 1) : ?>
     <?php $count = 0; ?>
-    <div class="vs-product-zoom-text">
-      <p class="zoom-text"><?php print 'Нажмите для увеличения'; ?></p>
-      <p><?php print 'Дополнительные изображения:'; ?></p>
-    </div>
     <div class="vs-product-display-thumnails">
       <?php foreach ($row->field_field_prod_main_image as $img) : ?>
         <?php $img_thumb = theme('image_formatter', $img['rendered']); ?>

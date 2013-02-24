@@ -13,15 +13,47 @@ function vs_product_cart_form_commerce_cart_add_to_cart_form_alter (&$form, &$fo
 }
 
 function vs_product_cart_ajax_callback($form, &$form_state){
+  global $user;
   $commands = array();
+  $order = commerce_cart_order_load($user->uid);
+  $order_total_arr = field_get_items('commerce_order', $order, 'commerce_order_total');
+  $order_total = commerce_currency_format($order_total_arr[0]['amount'], $order_total_arr[0]['currency_code']);
+  $price_arr = field_get_items('commerce_line_item', $form_state['line_item'], 'commerce_total');
+  $price = commerce_currency_format($price_arr[0]['amount'], $price_arr[0]['currency_code']);
+  $product_img = $form_state['default_product']->field_prod_main_image['und'][0];
+  $product_img['path'] = $product_img['uri'];
+  $product_img['style_name'] = 'confirm_add_cart';
+  $options = vs_product_cart_get_html_options($form_state['line_item']->line_item_id, $form_state['default_product']);
   $content = theme('vs_product_cart_add_to_cart_confirm', array(
+    'quantity' => $form_state['values']['quantity'],
+    'product_img' => $product_img,
+    'options' => $options,
+    'price' => $price,
+    'order_total' => $order_total,
     'line_item' => $form_state['line_item'], 
-    'product' => $form_state['product'],
+    'product' => $form_state['default_product'],
   ));
-//  dsm($content,'ad');
-//  dsm($form_state);
+  $cart_header = theme('vs_product_cart_header_line');
+  $commands[] = ajax_command_replace('.shopping-bag', $cart_header);
   $commands[] = ajax_command_html('#vs-cart-confirmation-ajax-wrapper', $content);
   return array('#type' => 'ajax', '#commands' => $commands);
+}
+
+/**
+ * Return label and value of product options.
+ */
+function vs_product_cart_get_html_options($line_item_id, $product) {
+  $product_options = commerce_option_load_by_line_item($line_item_id);
+  $product_opt = reset($product_options);
+  if (isset($product_opt->field_txt_attribute)) {
+    $options[0]['label'] = $product->field_size_labels['und'][0]['value']; 
+    $options[0]['value'] = $product_opt->field_txt_attribute['und'][0]['value'];
+  }
+  if (isset($product_opt->field_int_attribute)) {
+    $options[1]['label'] = $product->field_size_labels['und'][1]['value']; 
+    $options[1]['value'] = $product_opt->field_int_attribute['und'][0]['value'];
+  }
+  return $options;
 }
 
 function vs_product_cart_theme (){
@@ -35,6 +67,10 @@ function vs_product_cart_theme (){
 //      'render element' => 'form',
       'path' => drupal_get_path('module', 'vs_product_cart') . '/theme',
       'template' => 'vs-product-cart-add-to-cart-confirm',
+    ),
+    'vs_product_cart_header_line' => array (
+      'path' => drupal_get_path('module', 'vs_product_cart') . '/theme',
+      'template' => 'vs-product-cart-header-line',
     ),
   );
 }
@@ -51,13 +87,14 @@ function template_preprocess_vs_product_cart_add_to_cart_form (&$vars) {
   $rendered_html = array();
   $count = 0;
   foreach (element_children($field_options) as $key) {
+//    dsm($product);
     $attr_str = $product->field_valid_attributes['und'][$count]['safe_value'];
     $attr_arr = explode('|', $attr_str);
     foreach ($attr_arr as $k => $v) {
       $rendered_html[$key]['options'] .= '<p class="ui-selectmenu-value"><a>' . strtoupper($v) . '</a></p>';
     }
-    if (isset($rendered_html[$key]['options'])) {
-      $rendered_html[$key]['title'] = $field_options[$key]['und']['#title'];
+    if (isset($product->field_size_labels['und'][$count]['safe_value'])) {
+      $rendered_html[$key]['title'] = $product->field_size_labels['und'][$count]['safe_value'];
     }
     $count ++;
   }
@@ -68,4 +105,25 @@ function vs_product_cart_preprocess_views_view_fields (&$vars) {
   if ($vars['theme_hook_suggestion'] == 'views_view_fields__product_display__default') {
 //    dsm($vars['row']);
   }
+}
+
+function vs_product_cart_get_count_products() {
+  global $user;
+  // First check to ensure there are products in the shopping cart.
+  if ($order = commerce_cart_order_load($user->uid)) {
+    $wrapper = entity_metadata_wrapper('commerce_order', $order);
+    // If there are one or more products in the cart...
+    if (commerce_line_items_quantity($wrapper->commerce_line_items, commerce_product_line_item_types()) > 0) {
+      $query = db_select('commerce_line_item', 'li');
+      $query->addExpression('sum(quantity)', 'sum');
+      $query->condition('order_id', $order->order_id);
+      $query->condition('type', 'product');
+      $result = $query->execute()->fetchAssoc();
+      if (!isset($result['sum']) || !is_numeric($result['sum'])) {
+        return FALSE;
+      }
+      return round($result['sum']);
+    }
+  }
+  return FALSE;
 }

@@ -12,7 +12,7 @@ body {
   color: #1a1a1a;
 }
 #site-name a{
-  background-image: url('/sites/default/files/images/vs-logo.gif');
+  background-image: url('../images/vs-logo.gif');
   display: block;
   float: left;
   width: 256px;
@@ -22,14 +22,7 @@ body {
   margin: 20px 40px 0 0;
   padding-top: 0;
 }
-#site-name a:hover{
-  background-image: url('/sites/default/files/images/vs-logo-hover.gif');
-  display: block;
-  float: left;
-  width: 256px;
-  height: 21px;
-  text-indent: -9999px;
-}
+
 #header {
   width: 995px;
   margin: 0 auto;
@@ -80,7 +73,7 @@ input, textarea, select, a.button {
   font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
 }
 form.single-field button {
-  background: url(/sites/default/files/images/search-btn-q.gif) no-repeat;
+  background: url(/sites/default/files/images/search-btn.gif) no-repeat;
   border: 0;
   cursor: pointer;
   text-indent: -9999px;
@@ -91,9 +84,7 @@ form.single-field button {
   float: right;
   margin-right: 4px;
 }
-form.single-field button:hover {
-  background: url(/sites/default/files/images/search-btn-q-hover.gif) no-repeat;
-}
+
 #header .utilities {
   float: left;
   margin: 24px 0 0 0;
@@ -113,14 +104,11 @@ form.single-field button:hover {
 }
 #header .shopping-bag {
   float: right;
-  padding-top: 24px;
+  margin-top: 24px;
+  background: url(/sites/default/files/images/bag.gif) no-repeat;
 }
 #header .shopping-bag a {
-  background: url(/sites/default/files/images/vs-bag.gif) no-repeat;
-  padding: 1px 0 0 20px;
-}
-#header .shopping-bag a:hover {
-  background: url(/sites/default/files/images/vs-bag-hover.gif) no-repeat;
+  
   padding: 1px 0 0 20px;
 }
 #nav {
@@ -358,18 +346,18 @@ a.vs-category-product-link:hover {
 input.form-submit, a.button {
   
 }
-.vs-product-display-add-to-bag input.form-submit{
+.vs-product-display-add-to-bag .add-to-bag-button{
+  cursor: pointer;
+  padding-top: 12px;
+  overflow: hidden;
+  padding-left: 35px;
   margin-top: 10px;
   display: block;
-  height: 40px;
+  height: 28px;
   width: 165px;
   color: #FFF;
   background-image: url('/sites/default/files/images/pink-40px.gif');
   border: none;
-  -khtml-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -webkit-border-radius: 0px;
-  border-radius: 0px;
   font-size: 14px;
   font-weight: lighter;
   letter-spacing: -.025em;
@@ -460,4 +448,163 @@ input.form-submit, a.button {
 .vs-product-zoom-text p {
   margin: 10px 0;
   float: left;
+}
+#header .shopping-bag em {
+  color: #808080;
+  font-style: normal;
+}
+.vs-cart-confirm-content {
+  height: 252px;
+  padding: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.vs-cart-confirm-img {
+  display: inline;
+  float: left;
+  margin-right: 20px;
+  overflow: hidden;
+  position: relative;
+}
+.vs-cart-confirm-titles {
+  width: 260px;
+  float: left;
+  position: relative;
+}
+.vs-cart-confirm-titles h3 {
+  font-size: 14px;
+  letter-spacing: -.025em;
+  color: #1a1a1a;
+}
+.vs-cart-confirm-titles p.item-number {
+  color: #808080;
+  float: left;
+  margin: 5px 0;
+}
+.vs-cart-confirm-titles .item-specs {
+  clear: both;
+}
+.vs-cart-confirm-titles .item-specs p {
+  position: relative;
+  padding: 0 0 0 125px;
+}
+.vs-cart-confirm-titles .item-specs span {
+  position: absolute;
+  left: 0;
+  width: 125px;
+  color: #808080;
+  display: inline-block;
+}
+.vs-cart-confirm-price {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 125px;
+  float: right;
+  padding: 20px;
+}
+.vs-cart-confirm-price span {
+  float: right;
+  font-size: 14px;
+  letter-spacing: -.025em;
+}
+.vs-cart-confirm-footer {
+  bottom: 0;
+  width: 100%;
+  min-height: 79px;
+  background-color: #F5F5F5;
+  border-top: 1px solid #E5E5E5;
+  position: relative;
+}
+.vs-cart-confirm-footer-total {
+  color: gray;
+  background-color: #fff;
+  padding: 20px;
+  overflow: hidden;
+}
+.vs-cart-confirm-footer-total div {
+  float: left;
+  padding-top: 5px;
+}
+.vs-cart-confirm-footer-total div strong {
+  color: #000;
+}
+.vs-cart-confirm-footer-total h1 {
+  color: #f35c93;
+  float: right;
+  line-height: 1;
+  font-size: 21px;
+  letter-spacing: -.025em;
+  min-height: 21px;
+}
+.vs-cart-confirm-footer-buttons {
+  padding: 20px 0 20px 20px;
+  height: 42px;
+}
+.vs-cart-confirm-footer-buttons .footer-bar-buttons {
+  float: right;
+  position: relative;
+  margin-right: 20px;
+}
+.footer-bar-buttons .ui-button {
+  margin-left: 10px;
+  width: 183px;
+  float: left;
+  display: inline-block;
+  height: 24px;
+  padding: 14px 0 0 0;
+}
+a.btn-40-b, a.btn-40-b:link, a.btn-40-b:visited {
+  height: 24px;
+  padding: 14px 0 0 0;
+  font-size: 14px;
+  letter-spacing: -.025em;
+}
+.btn-40-b, a.btn-40-b:hover {
+  background-image: url(../images/white-40px.gif);
+  border: 1px solid #ccc;
+  color: #878787;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  background-repeat: repeat-x;
+  text-align: center;
+  white-space: nowrap;
+}
+button.btn-40 {
+  padding: 2px 20px 0 20px!important;
+  height: 40px!important;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  color: #fff;
+  font-size: 14px;
+  letter-spacing: -.025em;
+  cursor: pointer;
+}
+.btn-40 {
+  background-image: url(../images/pink-40px.gif);
+}
+.tooltip-error-left {
+  background: url(../images/tooltip-left.gif) no-repeat scroll right center;
+}
+.tooltip-error {
+  line-height: 29px;
+  height: 29px;
+  position: absolute;
+  z-index: 9999;
+}
+.tooltip-error p {
+  background-position: 10px 9px;
+  padding: 8px 10px 8px 27px;
+}
+.tooltip-error-left p {
+  margin-left: 0;
+  margin-right: 6px;
+}
+.tooltip-error p {
+  background-color: #F35B94;
+  background-image: url(../images/alert.gif);
+  background-repeat: no-repeat;
+  color: #FFF;
+  display: inline;
 }
