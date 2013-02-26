@@ -4,16 +4,38 @@ function vs_product_cart_form_alter (&$form, &$form_state, $form_id) {
   
 }
 
+  /**
+ * Implements hook_ctools_plugin_directory().
+ *
+ * @param string $owner
+ *   The system name of the module owning the plugin type for which a base
+ *   directory location is being requested.
+ *
+ * @param string $plugin_type
+ *   The name of the plugin type for which a base directory is being requested.
+ *
+ * @return path
+ *   The path where CTools' plugin system should search for plugin files,
+ *   relative to your module's root. Omit leading and trailing slashes.
+ */
+function vs_product_cart_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' &&  in_array($plugin_type, array('content_types'))) {
+    return 'plugins/' . $plugin_type;
+  }
+}
+
 function vs_product_cart_form_commerce_cart_add_to_cart_form_alter (&$form, &$form_state, $form_id) {
   $form['#theme'] = 'vs_product_cart_add_to_cart_form';
   $form['#attached']['js'][] = drupal_get_path('theme', 'victoria') . '/scripts/vs-product.js';
 //  $form['#attached']['js'][] = drupal_get_path('theme', 'victoria') . '/scripts/vs-popup.js';
   $form['submit']['#attributes']['class'][] = 'vs-button-3-steps';
   $form['submit']['#ajax']['callback'] = 'vs_product_cart_ajax_callback';
+  $form['submit']['#ajax']['effect'] = 'fade';
 }
 
 function vs_product_cart_ajax_callback($form, &$form_state){
   global $user;
+  $form_state['rebuild'] = TRUE;
   $commands = array();
   $order = commerce_cart_order_load($user->uid);
   $order_total_arr = field_get_items('commerce_order', $order, 'commerce_order_total');
@@ -34,6 +56,17 @@ function vs_product_cart_ajax_callback($form, &$form_state){
     'product' => $form_state['default_product'],
   ));
   $cart_header = theme('vs_product_cart_header_line');
+  // The next line allows different quantities
+  // to be submitted each time.
+  unset($form['quantity']['#value']);
+
+  // The next line allows different product_id
+  // to be submitted each time.
+  unset($form['product_id']['#value']);
+
+  // Rebuild form to allow resubmit and revalidation.
+  drupal_rebuild_form($form_id = $form['#form_id'], $form_state, $old_form = $form);
+  // New content.
   $commands[] = ajax_command_replace('.shopping-bag', $cart_header);
   $commands[] = ajax_command_html('#vs-cart-confirmation-ajax-wrapper', $content);
   return array('#type' => 'ajax', '#commands' => $commands);
@@ -71,6 +104,10 @@ function vs_product_cart_theme (){
     'vs_product_cart_header_line' => array (
       'path' => drupal_get_path('module', 'vs_product_cart') . '/theme',
       'template' => 'vs-product-cart-header-line',
+    ),
+    'vs_product_cart_view_pane' => array (
+      'path' => drupal_get_path('module', 'vs_product_cart') . '/theme',
+      'template' => 'vs-product-cart-view-pane',
     ),
   );
 }
@@ -122,7 +159,10 @@ function vs_product_cart_get_count_products() {
       if (!isset($result['sum']) || !is_numeric($result['sum'])) {
         return FALSE;
       }
-      return round($result['sum']);
+      return array(
+        'product_count' => round($result['sum']),
+        'order_id' => $order->order_id,
+      );
     }
   }
   return FALSE;

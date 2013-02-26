@@ -608,3 +608,72 @@ button.btn-40 {
   color: #FFF;
   display: inline;
 }
+#viewbag {
+  background-color: white;
+}
+.panel-open .panel-title {
+  padding: 20px 20px 15px 20px;
+}
+.bagitem {
+  position: relative;
+  background: url(../images/rule-dot-gray.gif) repeat-x 0 bottom transparent;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  height: 117px;
+}
+.bagitem-image {
+  margin-right: 20px;
+  float: left;
+  display: inline;
+}
+.bagitem .edit {
+  position: relative;
+  clear: both;
+  margin-top: 5px;
+}
+.viewbag .bagitem-data {
+  width: 300px;
+  float: left;
+  position: relative;
+}
+.bagitem-price {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 125px;
+  float: right;
+}
+a.ui-callout, a.ui-callout:visited {
+  cursor: pointer;
+  background: url(../images/arrow-gray.gif) no-repeat scroll left 5px transparent;
+  color: #808080;
+  padding-left: 9px;
+  text-decoration: none;
+}
+.bagitem-data .item-name {
+  width: 190px;
+  margin-bottom: 5px;
+}
+.small {
+  font-size: 14px;
+  letter-spacing: -.025em;
+}
+.bagitem-data .item-number {
+  color: #808080;
+  background: url(/themes/base/candice/graphics/white/misc/pipe.gif) no-repeat right 0 transparent;
+  float: left;
+  margin-right: 5px;
+  padding-right: 5px;
+}
+.bagitem-data .item-specs {
+  margin-top: 5px;
+  clear: both;
+}
+.bagitem-data .item-specs span {
+  color: #808080;
+  display: inline-block;
+  width: 45px;
+}
+.bagitem-price .item-total span {
+  float: right;
+}

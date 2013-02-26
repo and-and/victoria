@@ -30,7 +30,7 @@
       <div class="vs-cart-confirm-footer-total">
         <?php $cart_qty = vs_product_cart_get_count_products(); ?>
         <div>
-          <strong><?php print $cart_qty; ?> </strong> Продукт<?php print vs_product_get_num_ending($cart_qty); ?> в вашей корзине.
+          <strong><?php print $cart_qty['product_count']; ?> </strong> Продукт<?php print vs_product_get_num_ending($cart_qty['product_count']); ?> в вашей корзине.
         </div>
         <h1 class="large cufon-replaced" id="subtotal"><?php print $order_total; ?></h1>
       </div>

@@ -20,16 +20,17 @@ function validationProductDisplay(wrapper) {
   var has_errors = false;
       elements = $(wrapper).each(function() {
     if ($(this).find('p a.selected').size() == 0) {
-      var has_errors = true;
-          t_top = $(this).offset().top - 2;
-          t_left = $(this).offset().left;
-          tooltip = '<div class="tooltip-error grp tooltip-error-left"><p>Please select a <span class="ui-caps">Cup Size&nbsp;</span></p></div>'
+      has_errors = true;
+      t_top = $(this).offset().top - 2;
+      t_left = $(this).offset().left;
+      tooltip = '<div class="tooltip-error grp tooltip-error-left"><p>Please select a <span class="ui-caps">Cup Size&nbsp;</span></p></div>'
       $('body').append(tooltip);
       var width = $('.tooltip-error-left:not(.tooltip-error-left-processed)').width();
-          t_left = t_left - width;
+        t_left = t_left - width;
       $('.tooltip-error-left:not(.tooltip-error-left-processed)').css({'top' : t_top, 'left': t_left}).addClass('tooltip-error-left-processed');
     }
   });
+  console.log(has_errors);
   return has_errors;
 }(jQuery);
 
@@ -37,15 +38,16 @@ function tooltipErrorsDelete(wrapper) {
   $(wrapper).find('.tooltip-error-left-processed').remove();
 }(jQuery);
 
-(function($) {alert("$");
-  $('.vs-product-display-add-to-bag .add-to-bag-button').mousedown(function(){
-    alert("h");
-    tooltipErrorsDelete('body');
-    var err = validationProductDisplay('.vs-product-display-variants');
-    console.log(err);
-    if (!err) {
-      $('.vs-product-display-add-to-bag input').mousedown();
-      popupConfirmStart();
-    }
+(function($) {
+  $(document).ready(function(){
+    $('.vs-product-display-add-to-bag .add-to-bag-button').click(function(){
+      tooltipErrorsDelete('body');
+      var err = validationProductDisplay('.vs-product-display-variants');
+      console.log(err);
+      if (!err) {
+        $('.vs-product-display-add-to-bag input').mousedown();
+        popupConfirmStart();
+      }
+    });
   });
 })(jQuery);
