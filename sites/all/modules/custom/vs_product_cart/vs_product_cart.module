@@ -1,9 +1,25 @@
 <?php
 
 function vs_product_cart_form_alter (&$form, &$form_state, $form_id) {
-  
+  if ($form_id == 'views_form_commerce_cart_form_default') {
+    unset($form['#action']);
+    drupal_add_js(drupal_get_path('theme', 'victoria') . '/scripts/vs-checkout.js');
+    foreach (element_children($form['edit_delete']) as $key) {
+      $form['edit_delete'][$key]['#ajax']['callback'] = 'vs_product_cart_delete_item_ajax';
+      $form['edit_delete'][$key]['#ajax']['effect'] = 'fade';
+    }
+  }
 }
 
+function vs_product_cart_delete_item_ajax($form, &$form_state) {
+  if (isset($form_state['triggering_element']['#line_item_id'])) {
+    $line_item_id = $form_state['triggering_element']['#line_item_id'];
+  }
+  $wrapper = '.' . $line_item_id . '-cart-line-item-id';
+//  dsm($wrapper);
+  $commands[] = ajax_command_remove($wrapper);
+  return array('#type' => 'ajax', '#commands' => $commands);  
+}
   /**
  * Implements hook_ctools_plugin_directory().
  *
@@ -62,7 +78,7 @@ function vs_product_cart_ajax_callback($form, &$form_state){
 
   // The next line allows different product_id
   // to be submitted each time.
-  unset($form['product_id']['#value']);
+//  unset($form['product_id']['#value']);
 
   // Rebuild form to allow resubmit and revalidation.
   drupal_rebuild_form($form_id = $form['#form_id'], $form_state, $old_form = $form);

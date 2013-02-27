@@ -15,7 +15,7 @@
       <span class="offer-upsell" style="display: none;"></span>
     </div>
     <div class="panel-content" style="height: auto;">
-      <div class="jScrollPaneContainer" style="height: 314px; width: 470px;" tabindex="0">
+      <div class="jScrollPaneContainer" style="width: 470px;" tabindex="0">
         <div class="viewbag-items" style="height: auto; width: 430px; overflow: hidden; padding: 20px; border-left-style: none;">
           <?php foreach ($rows as $id => $row): ?>
             <div class="<?php print $classes_array[$id]; ?>"><?php print $row; ?></div>
@@ -30,8 +30,10 @@
     </div>
     <div class="panel-footer " style="border-style: solid none none; border-top-width: 1px; border-top-color: rgb(229, 229, 229);">
       <div id="bagTotal" class="bagtotal grp">
-        <p id="totalLabel">Merchandise Subtotal</p>
-        <h1 id="totalPrice" class="large cufon-replaced">$286.00</h1>
+        <p id="totalLabel">Сумма покупки</p>
+        <h1 id="totalPrice" class="large">
+          <?php print $variables['view']->result[0]->field_commerce_order_total[0]['rendered']['#markup']; ?>
+        </h1>
       </div>
     </div>
   </div>

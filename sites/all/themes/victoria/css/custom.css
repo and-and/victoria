@@ -91,7 +91,6 @@ form.single-field button {
   list-style-type: none;
 }
 #header .utilities li {
-  background: url(/sites/default/files/images/pipe.gif) no-repeat;
   padding: 0 5px 0 6px;
   float: left;
 }
@@ -660,7 +659,6 @@ a.ui-callout, a.ui-callout:visited {
 }
 .bagitem-data .item-number {
   color: #808080;
-  background: url(/themes/base/candice/graphics/white/misc/pipe.gif) no-repeat right 0 transparent;
   float: left;
   margin-right: 5px;
   padding-right: 5px;
@@ -672,8 +670,26 @@ a.ui-callout, a.ui-callout:visited {
 .bagitem-data .item-specs span {
   color: #808080;
   display: inline-block;
-  width: 45px;
+  width: 125px;
 }
 .bagitem-price .item-total span {
   float: right;
+}
+.bagtotal {
+  padding: 20px 20px 20px 103px;
+  height: 21px;
+}
+.bagtotal p {
+  float: left;
+  font-weight: bold;
+  margin-top: 5px;
+}
+.bagtotal h1 {
+  float: right;
+  color: #f35c93;
+}
+.viewbag-items .views-row-last .bagitem {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  background-image: none;
 }
