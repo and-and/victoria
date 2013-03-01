@@ -1,0 +1,43 @@
+<?php
+
+/**
+ * hook_feeds_processor_targets_alter()
+ */
+function vs_feeds_feeds_processor_targets_alter(&$target, $type, $bundle) {
+  if ($type == 'commerce_product' && $bundle == 'product') {
+    $target['field_options'] = array(
+      'name' => t('Options reference'),
+      'description' => t('Option references'),
+      'callback' => 'vs_feeds_set_target',
+//      'real_target' => 'field_data_field_options', // Specify real target field on node.
+    );
+  }
+}
+
+/**
+ * Callback for mapping. Here is where the actual mapping happens.
+ *
+ * When the callback is invoked, $target contains the name of the field the
+ * user has decided to map to and $value contains the value of the feed item
+ * element the user has picked as a source.
+ */
+function vs_feeds_set_target($source, $entity, $target, $value) {
+//dsm($source);
+//dsm($entity);
+//dsm($target);
+//dsm($value);
+  if (empty($value)) {
+    return;
+  }
+  $attributes = array(
+    '1' => 'one_attribute',
+    '2' => 'two_attributes',
+  );
+  $result = $attributes[$value];
+  if (!isset($result)) {
+    return;
+  }
+  $entity_wrapper = entity_metadata_wrapper('commerce_product', $entity);
+//  dsm($entity_wrapper->value());
+  $entity_wrapper->{$target} = $result;
+}

@@ -16,7 +16,6 @@ function vs_product_cart_delete_item_ajax($form, &$form_state) {
     $line_item_id = $form_state['triggering_element']['#line_item_id'];
   }
   $wrapper = '.' . $line_item_id . '-cart-line-item-id';
-//  dsm($wrapper);
   $commands[] = ajax_command_remove($wrapper);
   return array('#type' => 'ajax', '#commands' => $commands);  
 }
