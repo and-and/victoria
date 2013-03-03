@@ -102,10 +102,10 @@
       </div>
       <ul class="utilities" style="visibility: visible;">
         <li id="welcome" style="display: none;">Welcome <!-- mp_trans_disable_start --><span id="nickname"></span><!-- mp_trans_disable_end --></li>
-        <li id="signIn" class="first"><a href="https://secure.victoriassecret.com/commerce/signin.vs?namespace=main&amp;origin=myMain.jsp&amp;event=link.login">Sign In</a></li>
-        <li id="account"><a href="https://secure.victoriassecret.com/commerce/main/acctMenu.jsf?namespace=main&amp;origin=myMain.jsp&amp;event=link.yourAccount">Account</a></li>
-        <li id="getEmail"><a href="http://www.victoriassecret.com/CustomerService/SignUp/SignUpForEmail">Get Email</a></li>
-        <li id="spanish"><a href="http://espanol.victoriassecret.com/" onclick="cmCreateConversionEventTag('Global', '2', 'espanol', '0'); var switchLanguage = function(lang){MP.SrcUrl=unescape('mp_js_orgin_url');MP.UrlLang='mp_js_current_lang';MP.init();MP.switchLanguage(MP.UrlLang==lang?'en':lang);return false;}; return switchLanguage('es');">Español</a></li>
+        <li id="signIn" class="first"><a href="/user">Sign In</a></li>
+        <li id="account"><a href="/user">Account</a></li>
+        <li id="getEmail"><a href="#">Get Email</a></li>
+        <!--<li id="spanish"><a href="http://espanol.victoriassecret.com/" onclick="cmCreateConversionEventTag('Global', '2', 'espanol', '0'); var switchLanguage = function(lang){MP.SrcUrl=unescape('mp_js_orgin_url');MP.UrlLang='mp_js_current_lang';MP.init();MP.switchLanguage(MP.UrlLang==lang?'en':lang);return false;}; return switchLanguage('es');">Español</a></li>-->
         <li id="english" style="display: none;"><a href="http://www.victoriassecret.com/" onclick="cmCreateConversionEventTag('Global', '2', 'english', '0'); var switchLanguage = function(lang){MP.SrcUrl=unescape('mp_js_orgin_url');MP.UrlLang='mp_js_current_lang';MP.init();MP.switchLanguage(MP.UrlLang==lang?'en':lang);return false;}; return switchLanguage('en');"><!-- mp_trans_disable_start -->English<!-- mp_trans_disable_end --></a></li>
         <li id="signOut" style="display: none;"><a href="https://secure.victoriassecret.com/commerce/logoff.vs?namespace=main&amp;origin=myMain.jsp&amp;event=link.logout">Sign out</a></li>			
       </ul>

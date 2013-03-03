@@ -20,19 +20,20 @@ function vs_product_field_group_info() {
   $field_group->mode = 'form';
   $field_group->parent_name = 'group_main';
   $field_group->data = array(
-    'label' => 'Locked',
-    'weight' => '6',
+    'label' => 'Additional',
+    'weight' => '7',
     'children' => array(
       0 => 'status',
     ),
     'format_type' => 'htab',
     'format_settings' => array(
-      'formatter' => 'closed',
+      'label' => 'Additional',
       'instance_settings' => array(
-        'description' => '',
-        'classes' => '',
         'required_fields' => 1,
+        'classes' => '',
+        'description' => '',
       ),
+      'formatter' => 'closed',
     ),
   );
   $export['group_locked|commerce_product|product|form'] = $field_group;
@@ -53,9 +54,10 @@ function vs_product_field_group_info() {
       0 => 'commerce_price',
       1 => 'field_old_price',
       2 => 'field_product_description',
-      3 => 'sku',
-      4 => 'title',
-      5 => 'group_locked',
+      3 => 'field_collection',
+      4 => 'sku',
+      5 => 'title',
+      6 => 'group_locked',
     ),
     'format_type' => 'tab',
     'format_settings' => array(

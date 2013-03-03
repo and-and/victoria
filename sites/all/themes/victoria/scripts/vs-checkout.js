@@ -6,4 +6,14 @@
       $(this).parents('.views-row').css({'opacity': '0.25'});
     })
   });
+  $(document).ready(function(){
+    $('.vs-checkout-login').click(function(){
+      $('.vs-checkout-login-submit input').click();
+      return false;
+    });
+    $('.vs-checkout-continue-guest').click(function(){
+      $('.vs-checkout-continue-guest-submit input').click();
+      return false;
+    });
+  });
 }(jQuery));

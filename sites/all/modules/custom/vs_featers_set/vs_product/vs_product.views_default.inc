@@ -131,6 +131,33 @@ function vs_product_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'product' => 'product',
   );
+  $translatables['product_display'] = array(
+    t('Master'),
+    t('more'),
+    t('Apply'),
+    t('Reset'),
+    t('Sort by'),
+    t('Asc'),
+    t('Desc'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« first'),
+    t('‹ previous'),
+    t('next ›'),
+    t('last »'),
+    t('Product ID'),
+    t('Add to Cart form'),
+    t('Price'),
+    t('SKU'),
+    t('Title'),
+    t('Изображение главное'),
+    t('Опции'),
+    t('Старая цена'),
+    t('Описание'),
+    t('Доступные размеры'),
+    t('All'),
+  );
   $export['product_display'] = $view;
 
   return $export;

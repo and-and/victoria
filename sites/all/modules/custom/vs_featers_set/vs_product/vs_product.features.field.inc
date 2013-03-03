@@ -331,7 +331,7 @@ function vs_product_field_default_fields() {
           'currency_code' => 'default',
         ),
         'type' => 'commerce_price_full',
-        'weight' => '5',
+        'weight' => '6',
       ),
     ),
   );
@@ -564,7 +564,7 @@ function vs_product_field_default_fields() {
           'summary_rows' => 5,
         ),
         'type' => 'text_textarea_with_summary',
-        'weight' => '3',
+        'weight' => '4',
       ),
     ),
   );

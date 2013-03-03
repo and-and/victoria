@@ -11,7 +11,7 @@
 <div class="col col-a">
   <div id="viewbag" class="panel panel-open first-panel viewbag delivery-open" style="border: 1px solid rgb(229, 229, 229);">
     <div class="panel-title" style="border-style: none none solid; border-bottom-width: 1px; border-bottom-color: rgb(229, 229, 229);">
-      <h1 class="large cufon-replaced">SHOPPING BAG</h1>
+      <h1 class="large cufon-replaced">КОРЗИНА</h1>
       <span class="offer-upsell" style="display: none;"></span>
     </div>
     <div class="panel-content" style="height: auto;">
