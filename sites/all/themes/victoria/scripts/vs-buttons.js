@@ -17,4 +17,15 @@
       });
     }
   }
+  Drupal.behaviors.uiLoaderAjax ={
+    attach:function(){
+      $('.ui-loader').click(function(){
+        var txt = $(this).find('span').html();
+            throbber = '<div class="vs-ajax-submit-throbber"></div>'
+        $(this).html('<span>' + txt + '</span>' + throbber);
+        $(this).addClass('ui-loader-processed');
+        return true;
+      })
+    }
+  }
 }(jQuery));

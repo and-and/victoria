@@ -30,7 +30,6 @@ function validationProductDisplay(wrapper) {
       $('.tooltip-error-left:not(.tooltip-error-left-processed)').css({'top' : t_top, 'left': t_left}).addClass('tooltip-error-left-processed');
     }
   });
-  console.log(has_errors);
   return has_errors;
 }(jQuery);
 
@@ -43,7 +42,6 @@ function tooltipErrorsDelete(wrapper) {
     $('.vs-product-display-add-to-bag .add-to-bag-button').click(function(){
       tooltipErrorsDelete('body');
       var err = validationProductDisplay('.vs-product-display-variants');
-      console.log(err);
       if (!err) {
         $('.vs-product-display-add-to-bag input').mousedown();
         popupConfirmStart();

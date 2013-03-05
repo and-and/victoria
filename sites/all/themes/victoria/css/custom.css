@@ -696,6 +696,19 @@ a.ui-callout, a.ui-callout:visited {
   padding-bottom: 0;
   background-image: none;
 }
+.checkout-panel {
+  border: 1px solid #E5E5E5;
+  padding: 20px 20px 15px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+#checkoutStatus {
+  float: right;
+  vertical-align: top;
+}
+#checkoutClosed h1 {
+  float: left;
+}
 .panel-open {
   border: 1px solid #e5e5e5;
   background-color: white;
@@ -771,4 +784,10 @@ body .signin {
 .checkout button {
   width: 187px;
   margin-top: 10px;
+}
+.vs-ajax-submit-throbber {
+  background-image: url(../images/18px-white.gif);
+  width: 18px;
+  height: 18px;
+  float: right;
 }

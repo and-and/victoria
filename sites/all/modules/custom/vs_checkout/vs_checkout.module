@@ -26,15 +26,21 @@ function vs_checkout_form_alter(&$form, &$form_state, $form_id) {
   }
   if ($form_id == 'user_login_block' && arg(0) == 'checkout') {
     $form['#theme'] = 'vs_checkout_login_user';
-    $form['actions']['submit']['#value'] = 'Войти и заказать'; 
+    $form['actions']['submit']['#value'] = 'Войти и заказать';
+    $form['actions']['submit']['#ajax']['callback'] = 'vs_checkout_login_ajax';
+//    $form['actions']['submit']['#ajax']['event'] = 'vs_checkout_login_ajax';
     $form['name']['#title'] = 'Имя пользователя';
     $form['pass']['#title'] = 'Пароль';
-    $form['actions']['submit']['#attributes']['class'] = array('btn-40', 'small', 'ui-loader');
     $form['actions']['continue_guest'] = array(
       '#type' => 'button',
-      '#value' => 'Continue as guest'
+      '#value' => 'Continue as guest',
+      '#ajax' => array(
+        'callback' => 'vs_checkout_guest_ajax',
+      ),
     );
-    dsm($form);
+  }
+  if ($form_id == 'commerce_checkout_form_checkout') {
+    $form['#theme'] = 'vs_checkout_billing_information';
   }
 }
 
@@ -45,5 +51,29 @@ function vs_checkout_theme() {
       'template' => 'vs-checkout-login-user',
       'render element' => 'form',
     ),
+    'vs_checkout_billing_information' => array(
+      'path' => drupal_get_path('module', 'vs_checkout') . '/theme',
+      'template' => 'vs-checkout-billing-information',
+      'render element' => 'form',
+    ),
   );
+}
+
+function vs_checkout_login_ajax($form, &$form_state){
+  global $user;
+  if ($user->uid != 0) {
+    $commands[] = ajax_command_invoke('#checkoutPanel', 'addClass', array('element-hidden'));
+  }
+  else {
+    $commands[] = ajax_command_invoke('#checkoutPanel input', 'addClass', array('error'));
+    $commands[] = ajax_command_invoke('.vs-signin-error-msg', 'css', array('display', 'block'));
+    $commands[] = ajax_command_remove('.vs-ajax-submit-throbber');
+  }
+  
+  return array('#type' => 'ajax', '#commands' => $commands);  
+}
+
+function vs_checkout_guest_ajax($form, &$form_state) {
+//  $commands[] = ajax_command_remove($wrapper);
+  return array('#type' => 'ajax', '#commands' => $commands);  
 }

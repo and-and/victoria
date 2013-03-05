@@ -19,7 +19,7 @@
 <!--              <div class="password-help">
                 <a href="/commerce/forgotPassword.vs?namespace=user&amp;origin=logon.jsp&amp;event=link.forgotPassword" class="ui-callout">Password Help</a>
               </div>-->
-              <button class="btn-40 btn-40-p small ui-loader vs-checkout-login vs-button-3-steps" type="submit">Войти и заказать</button>
+              <button class="btn-40 btn-40-p small ui-loader vs-checkout-login vs-button-3-steps"><span>Войти и заказать</span></button>
               <div class="element-hidden vs-checkout-login-submit">
                 <?php print render($form['actions']['submit']); ?>
               </div>
@@ -32,7 +32,7 @@
           <!--<p>You'll have the option to register and save your information later in the checkout process.</p>-->
 
           <div class="panel-footer grp"> 
-            <button class="btn-40 btn-40-p btn-w-195 small ui-loader vs-checkout-continue-guest vs-button-3-steps">Заказать как гость</button>
+            <button class="btn-40 btn-40-p btn-w-195 small ui-loader vs-checkout-continue-guest vs-button-3-steps"><span>Заказать как гость</span></button>
             <div class="element-hidden vs-checkout-continue-guest-submit">
               <?php print render($form['actions']['continue_guest']); ?>
             </div>
