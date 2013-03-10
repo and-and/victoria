@@ -42,7 +42,7 @@ body {
   width: auto;
 }
 form.single-field {
-  background: url(/sites/default/files/images/search-input.gif) no-repeat;
+  background: url(../images/search-input.gif) no-repeat;
   width: 185px;
   height: 26px;
   padding: 4px 0 0 0;
@@ -73,7 +73,7 @@ input, textarea, select, a.button {
   font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
 }
 form.single-field button {
-  background: url(/sites/default/files/images/search-btn.gif) no-repeat;
+  background: url(../images/search-btn.gif) no-repeat;
   border: 0;
   cursor: pointer;
   text-indent: -9999px;
@@ -104,14 +104,14 @@ form.single-field button {
 #header .shopping-bag {
   float: right;
   margin-top: 24px;
-  background: url(/sites/default/files/images/bag.gif) no-repeat;
+  background: url(../images/bag.gif) no-repeat;
 }
 #header .shopping-bag a {
   
   padding: 1px 0 0 20px;
 }
 #nav {
-  background: url(/sites/default/files/images/nav-bg.png) repeat-x;
+  background: url(../images/nav-bg.png) repeat-x;
   font-size: 15px;
   height: 40px;
   min-width: 995px;
@@ -150,10 +150,10 @@ form.single-field button {
   margin-top: 0;
 }
 #nav ul li.active, #nav ul li.active-trail {
-  background: url(/sites/default/files/images/nav-select.png) repeat-x;
+  background: url(../images/nav-select.png) repeat-x;
 }
 #nav ul li:hover {
-  background: url(/sites/default/files/images/nav-select.png) repeat-x;
+  background: url(../images/nav-select.png) repeat-x;
 }
 .pane-vs-menu-panel ul {
   list-style: none;
@@ -172,7 +172,7 @@ a, a:link, a:visited {
   text-decoration: none;
 }
 #main-wrapper, #vs-content-wrapper {
-  background-image: url(/sites/default/files/images/small-bg.gif);
+  background-image: url(../images/small-bg.gif);
   background-position-x: -3px;
 }
 .category-header {
@@ -289,7 +289,7 @@ a.vs-category-product-link:hover {
   color: gray!important;
   padding-left: 17px;
   margin-bottom: 10px;
-  background: url(/sites/default/files/images/size-chart.gif) no-repeat;
+  background: url(../images/size-chart.gif) no-repeat;
   background-position: left 1px;
   text-decoration: none;
   display: inline-block;
@@ -358,7 +358,7 @@ input.form-submit, a.button {
   height: 28px;
   width: 165px;
   color: #FFF;
-  background-image: url('/sites/default/files/images/pink-40px.gif');
+  background-image: url('../images/pink-40px.gif');
   border: none;
   font-size: 14px;
   font-weight: lighter;

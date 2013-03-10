@@ -22,10 +22,6 @@ function vs_feeds_feeds_processor_targets_alter(&$target, $type, $bundle) {
  * element the user has picked as a source.
  */
 function vs_feeds_set_target($source, $entity, $target, $value) {
-//dsm($source);
-//dsm($entity);
-//dsm($target);
-//dsm($value);
   if (empty($value)) {
     return;
   }
@@ -40,4 +36,69 @@ function vs_feeds_set_target($source, $entity, $target, $value) {
   $entity_wrapper = entity_metadata_wrapper('commerce_product', $entity);
 //  dsm($entity_wrapper->value());
   $entity_wrapper->{$target} = $result;
+}
+
+function vs_feeds_menu() {
+  $items = array();
+  $items['images_import'] = array(
+    'tittle' => t('Импорт изображений'),
+    'page callback' => 'vs_feeds_image_importer_page',
+    'access callback' => 'feeds_page_access',
+  );
+  return $items;
+}
+
+function vs_feeds_image_importer_page() {
+  $form = drupal_get_form('vs_image_form_confirmation');
+  return drupal_render($form);
+}
+
+function vs_image_form_confirmation($form, &$form_state) {
+  $form['padding']['#markup'] = '<p>&nbsp</p>';
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Начать импорт изображений'),
+  );
+  $form['submit']['#submit'][] = 'vs_feeds_image_importer';
+  return $form;
+}
+
+function vs_feeds_image_importer() {
+  $_images_count = 5;
+
+  $products = entity_load('commerce_product');
+  foreach ($products as $product) {
+    $operations[] = array('vs_feeds_image_update_batch', array($product, $_images_count));
+  }
+  $batch = array(
+    'operations' => $operations,
+  );
+  batch_set($batch);
+}
+
+function vs_feeds_image_update_batch($product, $images_count) {
+  if (!empty($product->field_prod_main_image)) {
+    return;
+  }
+  $sku = $product->sku;
+  $import_filename_path = 'public://import/';
+  $final_filename_path = 'public://images/';
+  for ($i = 0; $i < $images_count; $i ++) {
+    if ($i == 0) {
+      $num = '';
+    }
+    else {
+      $num = '.' . $i;
+    }
+    
+    $import_filename = $import_filename_path . $sku . $num . '.jpg';
+    $final_filename = $final_filename_path . $sku . $num . '.jpg';
+    if (file_exists($import_filename)) {
+      $image = file_get_contents($import_filename);
+      $file = file_save_data($image, $final_filename, FILE_EXISTS_REPLACE);
+      $product_wrapper = entity_metadata_wrapper('commerce_product', $product);
+      $product_wrapper->field_prod_main_image[] = (array)$file;
+      $product_wrapper->save();
+    }
+  }
 }

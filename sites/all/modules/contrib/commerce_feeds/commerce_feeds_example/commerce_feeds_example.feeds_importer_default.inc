@@ -5,18 +5,18 @@
  */
 
 /**
- * Implementation of hook_feeds_importer_default().
+ * Implements hook_feeds_importer_default().
  */
 function commerce_feeds_example_feeds_importer_default() {
   $export = array();
 
-  $feeds_importer = new stdClass;
+  $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'product_importer';
   $feeds_importer->config = array(
-    'name' => 'Product Importer',
-    'description' => 'Grab books from CSV and turn them into products',
+    'name' => 'Импорт продуктов',
+    'description' => 'Import the commerce products',
     'fetcher' => array(
       'plugin_key' => 'FeedsFileFetcher',
       'config' => array(
@@ -35,7 +35,8 @@ function commerce_feeds_example_feeds_importer_default() {
       'plugin_key' => 'FeedsCommerceProductProcessor',
       'config' => array(
         'product_type' => 'product',
-        'author' => '1',
+        'author' => 0,
+        'tax_rate' => '',
         'mappings' => array(
           0 => array(
             'source' => 'SKU',
@@ -43,35 +44,61 @@ function commerce_feeds_example_feeds_importer_default() {
             'unique' => 1,
           ),
           1 => array(
-            'source' => 'Title',
-            'target' => 'title',
+            'source' => 'Коллекция',
+            'target' => 'field_collection',
             'unique' => FALSE,
           ),
           2 => array(
-            'source' => 'Image',
-            'target' => 'field_image',
+            'source' => 'Название',
+            'target' => 'title',
             'unique' => FALSE,
           ),
           3 => array(
-            'source' => 'Price',
+            'source' => 'Описание',
+            'target' => 'field_product_description',
+            'unique' => FALSE,
+          ),
+          4 => array(
+            'source' => 'Цена',
             'target' => 'commerce_price:amount',
+            'unique' => FALSE,
+          ),
+          5 => array(
+            'source' => 'Старая цена',
+            'target' => 'field_old_price:amount',
+            'unique' => FALSE,
+          ),
+          6 => array(
+            'source' => 'Заголовки размеров',
+            'target' => 'field_size_labels',
+            'unique' => FALSE,
+          ),
+          7 => array(
+            'source' => 'Доступные размеры',
+            'target' => 'field_valid_attributes',
+            'unique' => FALSE,
+          ),
+          8 => array(
+            'source' => 'Кол-во опций',
+            'target' => 'field_options',
             'unique' => FALSE,
           ),
         ),
         'update_existing' => '2',
-        'input_format' => NULL,
+        'input_format' => 'plain_text',
+        'skip_hash_check' => 0,
       ),
     ),
     'content_type' => '',
     'update' => 0,
-    'import_period' => 1800,
+    'import_period' => '-1',
     'expire_period' => 3600,
-    'import_on_create' => TRUE,
-    'process_in_background' => FALSE,
+    'import_on_create' => 1,
+    'process_in_background' => 0,
   );
   $export['product_importer'] = $feeds_importer;
 
-  $feeds_importer = new stdClass;
+  $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
   $feeds_importer->id = 'product_reference_importer';

@@ -31,6 +31,29 @@ function vs_product_views_api() {
 function vs_product_image_default_styles() {
   $styles = array();
 
+  // Exported image style: cart_thumb.
+  $styles['cart_thumb'] = array(
+    'name' => 'cart_thumb',
+    'effects' => array(
+      8 => array(
+        'label' => 'Scale',
+        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
+        'effect callback' => 'image_scale_effect',
+        'dimensions callback' => 'image_scale_dimensions',
+        'form callback' => 'image_scale_form',
+        'summary theme' => 'image_scale_summary',
+        'module' => 'image',
+        'name' => 'image_scale',
+        'data' => array(
+          'width' => '63',
+          'height' => '84',
+          'upscale' => 0,
+        ),
+        'weight' => '1',
+      ),
+    ),
+  );
+
   // Exported image style: confirm_add_cart.
   $styles['confirm_add_cart'] = array(
     'name' => 'confirm_add_cart',
