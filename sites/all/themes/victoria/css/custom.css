@@ -133,6 +133,7 @@ form.single-field button {
   float: left;
   height: 40px;
   position: relative;
+  margin: 0;
 }
 #nav a, #nav a:link, #nav a:visited {
   color: #fff;
@@ -215,6 +216,9 @@ a:hover, a:focus {
 .vs-category-content td {
   padding: 0 10px 40px 0;
   border: none;
+}
+.vs-category-content td:not(.col-last) {
+  width: 185px;
 }
 .vs-category-content td.col-last {
   padding-right: 0;

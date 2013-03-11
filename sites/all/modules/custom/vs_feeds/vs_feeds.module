@@ -102,3 +102,21 @@ function vs_feeds_image_update_batch($product, $images_count) {
     }
   }
 }
+
+function vs_feeds_entity_presave($entity, $type) {
+  if ($type != 'commerce_product') {
+    return;
+  }
+  $entity_wrapper = entity_metadata_wrapper('commerce_product', $entity);
+  $attrs = $entity_wrapper->field_valid_attributes->value();
+  $old_price = $entity_wrapper->field_old_price->value();
+  if (is_array($attrs) && isset($attrs[1]) && $attrs[1] != '') {
+    $entity->field_options[LANGUAGE_NONE][0]['set_id'] = 'two_attibutes';
+  }
+  elseif (is_array($attrs) && isset($attrs[0]) && $attrs[0] != '') {
+    $entity->field_options[LANGUAGE_NONE][0]['set_id'] = 'one_attribute';
+  }
+  if (!empty($old_price) && $old_price['amount'] == 0) {
+    unset($entity->field_old_price);
+  }
+}

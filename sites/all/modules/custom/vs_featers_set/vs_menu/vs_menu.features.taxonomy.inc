@@ -1,19 +1,19 @@
 <?php
 /**
  * @file
- * vs_product.features.taxonomy.inc
+ * vs_menu.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function vs_product_taxonomy_default_vocabularies() {
+function vs_menu_taxonomy_default_vocabularies() {
   return array(
-    'categories' => array(
-      'name' => 'Категории в наличии',
-      'machine_name' => 'categories',
-      'description' => 'Категории раздела в наличии',
-      'hierarchy' => '0',
+    'categories_request' => array(
+      'name' => 'Категории под заказ',
+      'machine_name' => 'categories_request',
+      'description' => 'Категории раздела под заказ',
+      'hierarchy' => '1',
       'module' => 'taxonomy',
       'weight' => '0',
       'rdf_mapping' => array(

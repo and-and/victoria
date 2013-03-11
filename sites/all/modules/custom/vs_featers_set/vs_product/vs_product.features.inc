@@ -5,6 +5,29 @@
  */
 
 /**
+ * Implements hook_commerce_product_default_types().
+ */
+function vs_product_commerce_product_default_types() {
+  $items = array(
+    'product' => array(
+      'type' => 'product',
+      'name' => 'Продукт в наличии',
+      'description' => 'Продукт простой.',
+      'help' => '',
+      'revision' => '1',
+    ),
+    'product_request' => array(
+      'type' => 'product_request',
+      'name' => 'Продукт под заказ ',
+      'description' => 'Продут под заказ',
+      'help' => '',
+      'revision' => '1',
+    ),
+  );
+  return $items;
+}
+
+/**
  * Implements hook_ctools_plugin_api().
  */
 function vs_product_ctools_plugin_api() {
@@ -30,52 +53,6 @@ function vs_product_views_api() {
  */
 function vs_product_image_default_styles() {
   $styles = array();
-
-  // Exported image style: cart_thumb.
-  $styles['cart_thumb'] = array(
-    'name' => 'cart_thumb',
-    'effects' => array(
-      8 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
-        'name' => 'image_scale',
-        'data' => array(
-          'width' => '63',
-          'height' => '84',
-          'upscale' => 0,
-        ),
-        'weight' => '1',
-      ),
-    ),
-  );
-
-  // Exported image style: confirm_add_cart.
-  $styles['confirm_add_cart'] = array(
-    'name' => 'confirm_add_cart',
-    'effects' => array(
-      6 => array(
-        'label' => 'Scale',
-        'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
-        'effect callback' => 'image_scale_effect',
-        'dimensions callback' => 'image_scale_dimensions',
-        'form callback' => 'image_scale_form',
-        'summary theme' => 'image_scale_summary',
-        'module' => 'image',
-        'name' => 'image_scale',
-        'data' => array(
-          'width' => '146',
-          'height' => '195',
-          'upscale' => 0,
-        ),
-        'weight' => '1',
-      ),
-    ),
-  );
 
   // Exported image style: large_product_image.
   $styles['large_product_image'] = array(

@@ -64,7 +64,7 @@
     <?php print $fields['field_product_description']->content; ?>
   </div>
   <div class="vs-category-product-price vs-product-display-price">
-    <?php if (!empty($fields['field_old_price']->content)) : ?>
+    <?php if (!empty($fields['field_old_price']->content) && $row->field_field_old_price[0]['raw']['amount'] != 0) : ?>
       <span class="vs-category-product-old-price"><div class="field-content"><?php print $fields['field_old_price']->content; ?></div> </span>
       <span class="vs-category-product-new-price"><div class="field-content"><?php print $fields['commerce_price']->content; ?></div></span>
     <?php else : ?>
@@ -74,9 +74,11 @@
   <div class="vs-product-display-sku">
     <?php print $fields['sku']->content; ?>
   </div>
-  <div class="vs-product-display-sizefit">
-    <span>Size&fit</span>
-  </div>
+  <?php if (!empty($row->field_field_valid_attributes)) : ?>
+    <div class="vs-product-display-sizefit">
+      <span>Size&fit</span>
+    </div>
+  <?php  endif; ?>
   <div class="attributes">
     <?php print $fields['add_to_cart_form']->content; ?>
   </div>

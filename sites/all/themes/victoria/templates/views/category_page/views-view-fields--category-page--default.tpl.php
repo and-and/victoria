@@ -33,7 +33,7 @@
       <strong><?php print $fields['title']->content; ?></strong>
     </div>
     <div class="vs-category-product-price">
-      <?php if (isset($fields['field_old_price'])) : ?>
+      <?php if (isset($fields['field_old_price']) && $row->field_field_old_price[0]['raw']['amount'] != 0) : ?>
         <span class="vs-category-product-old-price"><?php print $fields['field_old_price']->content; ?> </span>
         <span class="vs-category-product-new-price"><?php print $fields['commerce_price']->content; ?></span>
       <?php else : ?>

@@ -12,11 +12,11 @@
 
 $plugin = array(
   'single' => TRUE,
-  'title' => t('VS Sidebar menu'),
-  'description' => t('Provide sidebar menu panel'),
+  'title' => t('VS Sidebar request menu'),
+  'description' => t('Provide sidebar request menu panel'),
   'category' => t('VS'),
 //  'edit form' => 'querlain_checkout_suggestions_edit_form',
-  'render callback' => 'vs_sidebar_menu_render',
+  'render callback' => 'vs_sidebar_request_menu_render',
 //  'required context' => new ctools_context_required(t('Order'), 'commerce_order'),
 );
 
@@ -24,11 +24,11 @@ $plugin = array(
 /**
  * Output function for the querlain checkout suggestion block.
  */
-function vs_sidebar_menu_render($subtype, $conf, $panel_args, $context) {
+function vs_sidebar_request_menu_render($subtype, $conf, $panel_args, $context) {
   //Init variables
   $block = new stdClass();
   
-  $tree = taxonomy_get_tree(2, 0, 3);
+  $tree = taxonomy_get_tree(3, 0, 3);
   foreach ($tree as $term) {
     switch ($term->depth) {
       case 0:
@@ -46,8 +46,8 @@ function vs_sidebar_menu_render($subtype, $conf, $panel_args, $context) {
         }else {
           $alias = $tid;
         }
-        $term->link = l($term->name, 'v-nalichii/' . $alias, array('attributes' => array('class' => array('vs-sub-category-link'))));
-        if ('v-nalichii/' . $alias == $_GET['q']) {
+        $term->link = l($term->name, 'pod-zakaz/' . $alias, array('attributes' => array('class' => array('vs-sub-category-link'))));
+        if ('pod-zakaz/' . $alias == $_GET['q']) {
           $term->active = TRUE;
         }else {
           $term->active = FALSE;
@@ -56,7 +56,6 @@ function vs_sidebar_menu_render($subtype, $conf, $panel_args, $context) {
         continue;
     }
   }
-  
   $block->content = theme('vs_sidebar_instock_menu', array('menu' => $menu, 'title' => $category['title']));
 
   return $block;
