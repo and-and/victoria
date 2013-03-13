@@ -36,8 +36,8 @@
       </div>
       <div class="vs-cart-confirm-footer-buttons">
         <div class="grp footer-bar-buttons">
-          <a class="ui-button btn-40-b continue vs-button-3-steps">Продолжить покупки</a>
-          <button class="ui-button btn-40 btn-40-p checkout vs-button-3-steps">Оформить заказ</button>
+          <a class="ui-button btn-40-b continue vs-button-3-steps vs-close-popup-continue">Продолжить покупки</a>
+          <button class="ui-button btn-40 btn-40-p checkout vs-button-3-steps vs-cart-confirm-go_checkout" rel="/checkout/<?php print $order_id; ?>">Оформить заказ</button>
         </div>
       </div>
     </div>

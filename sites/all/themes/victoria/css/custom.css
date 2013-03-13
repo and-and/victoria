@@ -174,7 +174,7 @@ a, a:link, a:visited {
 }
 #main-wrapper, #vs-content-wrapper {
   background-image: url(../images/small-bg.gif);
-  background-position-x: -3px;
+  background-position: 50.3% 0%;
 }
 .category-header {
   margin: 40px 0 40px 0;
@@ -275,6 +275,10 @@ a.vs-category-product-link:hover {
 .vs-product-display-background {
   padding: 20px;
   background-color: white;
+  width: 764px;
+}
+.vs-product-display-view {
+  margin: 0 20px;
 }
 .panels-flexible-region-category_page_layout-center {
   width: auto;

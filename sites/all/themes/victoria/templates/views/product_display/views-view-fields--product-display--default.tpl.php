@@ -76,7 +76,7 @@
   </div>
   <?php if (!empty($row->field_field_valid_attributes)) : ?>
     <div class="vs-product-display-sizefit">
-      <span>Size&fit</span>
+      <span>Доступные размеры:</span>
     </div>
   <?php  endif; ?>
   <div class="attributes">

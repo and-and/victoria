@@ -165,7 +165,7 @@ function vs_pages_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'В наличии';
   $page->admin_description = 'Товары, которые есть в наличии';
-  $page->path = 'v-nalichii';
+  $page->path = 'v-nalichii/!sub_category/!commerce_product';
   $page->access = array();
   $page->menu = array(
     'type' => 'normal',
@@ -179,7 +179,22 @@ function vs_pages_default_page_manager_pages() {
       'weight' => '0',
     ),
   );
-  $page->arguments = array();
+  $page->arguments = array(
+    'sub_category' => array(
+      'id' => 1,
+      'identifier' => 'String',
+      'name' => 'string',
+      'settings' => array(
+        'use_tail' => 0,
+      ),
+    ),
+    'commerce_product' => array(
+      'id' => 1,
+      'identifier' => 'Commerce Product: ID',
+      'name' => 'entity_id:commerce_product',
+      'settings' => array(),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
@@ -202,6 +217,19 @@ function vs_pages_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'context_exists',
+          'settings' => array(
+            'exists' => '0',
+          ),
+          'context' => 'argument_entity_id:commerce_product_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'flexible';
@@ -256,6 +284,12 @@ function vs_pages_default_page_manager_pages() {
       'center' => NULL,
       'sidebar_menu' => NULL,
     ),
+    'sidebar_menu' => array(
+      'style' => 'naked',
+    ),
+    'center' => array(
+      'style' => 'naked',
+    ),
   );
   $display->cache = array();
   $display->title = '';
@@ -301,6 +335,117 @@ function vs_pages_default_page_manager_pages() {
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass();
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_in_stock_panel_context_3';
+  $handler->task = 'page';
+  $handler->subtask = 'in_stock';
+  $handler->handler = 'panel_context';
+  $handler->weight = 2;
+  $handler->conf = array(
+    'title' => 'Product',
+    'no_blocks' => 1,
+    'pipeline' => 'standard',
+    'body_classes_to_remove' => '',
+    'body_classes_to_add' => '',
+    'css_id' => '',
+    'css' => '',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'logic' => 'and',
+      'plugins' => array(
+        0 => array(
+          'name' => 'context_exists',
+          'settings' => array(
+            'exists' => '1',
+          ),
+          'context' => 'argument_entity_id:commerce_product_1',
+          'not' => FALSE,
+        ),
+      ),
+    ),
+  );
+  $display = new panels_display();
+  $display->layout = 'flexible:category_page_layout';
+  $display->layout_settings = array();
+  $display->panel_settings = array(
+    'style_settings' => array(
+      'default' => NULL,
+      'sidebar_menu' => NULL,
+      'center' => NULL,
+    ),
+    'center' => array(
+      'style' => 'naked',
+    ),
+    'style' => 'naked',
+  );
+  $display->cache = array();
+  $display->title = '%commerce_product:title';
+  $display->content = array();
+  $display->panels = array();
+    $pane = new stdClass();
+    $pane->pid = 'new-6';
+    $pane->panel = 'center';
+    $pane->type = 'views';
+    $pane->subtype = 'product_display';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array(
+      'override_pager_settings' => 0,
+      'use_pager' => 1,
+      'nodes_per_page' => '0',
+      'pager_id' => '0',
+      'offset' => '0',
+      'more_link' => 0,
+      'feed_icons' => 0,
+      'panel_args' => 1,
+      'link_to_view' => 0,
+      'args' => '%commerce_product',
+      'url' => '',
+      'display' => 'default',
+      'context' => array(
+        0 => 'argument_entity_id:commerce_product_1.product-id',
+      ),
+      'override_title' => 0,
+      'override_title_text' => '',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'vs-product-display-view',
+    );
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-6'] = $pane;
+    $display->panels['center'][0] = 'new-6';
+    $pane = new stdClass();
+    $pane->pid = 'new-7';
+    $pane->panel = 'sidebar_menu';
+    $pane->type = 'vs_menu_panel';
+    $pane->subtype = 'vs_menu_panel';
+    $pane->shown = TRUE;
+    $pane->access = array();
+    $pane->configuration = array();
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 0;
+    $pane->locks = array();
+    $display->content['new-7'] = $pane;
+    $display->panels['sidebar_menu'][0] = 'new-7';
+  $display->hide_title = PANELS_TITLE_NONE;
+  $display->title_pane = 'new-6';
+  $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
   $pages['in_stock'] = $page;
 
   $page = new stdClass();
@@ -310,7 +455,7 @@ function vs_pages_default_page_manager_pages() {
   $page->task = 'page';
   $page->admin_title = 'Под заказ';
   $page->admin_description = 'Товары под заказ';
-  $page->path = 'pod-zakaz';
+  $page->path = 'pod-zakaz/!sub-category/!commerce_product';
   $page->access = array();
   $page->menu = array(
     'type' => 'normal',
@@ -324,7 +469,22 @@ function vs_pages_default_page_manager_pages() {
       'weight' => '0',
     ),
   );
-  $page->arguments = array();
+  $page->arguments = array(
+    'sub-category' => array(
+      'id' => 1,
+      'identifier' => 'String',
+      'name' => 'string',
+      'settings' => array(
+        'use_tail' => 0,
+      ),
+    ),
+    'commerce_product' => array(
+      'id' => 1,
+      'identifier' => 'Commerce Product: ID',
+      'name' => 'entity_id:commerce_product',
+      'settings' => array(),
+    ),
+  );
   $page->conf = array(
     'admin_paths' => FALSE,
   );
@@ -347,6 +507,19 @@ function vs_pages_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'context_exists',
+          'settings' => array(
+            'exists' => '0',
+          ),
+          'context' => 'argument_entity_id:commerce_product_1',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display();
   $display->layout = 'flexible';
@@ -414,7 +587,7 @@ function vs_pages_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-6';
+    $pane->pid = 'new-8';
     $pane->panel = 'center';
     $pane->type = 'vs_category_request';
     $pane->subtype = 'vs_category_request';
@@ -429,10 +602,10 @@ function vs_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-6'] = $pane;
-    $display->panels['center'][0] = 'new-6';
+    $display->content['new-8'] = $pane;
+    $display->panels['center'][0] = 'new-8';
     $pane = new stdClass();
-    $pane->pid = 'new-7';
+    $pane->pid = 'new-9';
     $pane->panel = 'sidebar_menu';
     $pane->type = 'vs_menu_request';
     $pane->subtype = 'vs_menu_request';
@@ -451,46 +624,22 @@ function vs_pages_default_page_manager_pages() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-7'] = $pane;
-    $display->panels['sidebar_menu'][0] = 'new-7';
+    $display->content['new-9'] = $pane;
+    $display->panels['sidebar_menu'][0] = 'new-9';
   $display->hide_title = PANELS_TITLE_PANE;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
-  $pages['pod_zakaz'] = $page;
-
-  $page = new stdClass();
-  $page->disabled = FALSE; /* Edit this to true to make a default page disabled initially */
-  $page->api_version = 1;
-  $page->name = 'product_page';
-  $page->task = 'page';
-  $page->admin_title = 'Product page';
-  $page->admin_description = 'Display of a product';
-  $page->path = 'product/%commerce_product';
-  $page->access = array();
-  $page->menu = array();
-  $page->arguments = array(
-    'commerce_product' => array(
-      'id' => 1,
-      'identifier' => 'Commerce Product: ID',
-      'name' => 'entity_id:commerce_product',
-      'settings' => array(),
-    ),
-  );
-  $page->conf = array(
-    'admin_paths' => FALSE,
-  );
-  $page->default_handlers = array();
   $handler = new stdClass();
   $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
   $handler->api_version = 1;
-  $handler->name = 'page_product_page_panel_context';
+  $handler->name = 'page_pod_zakaz_panel_context_2';
   $handler->task = 'page';
-  $handler->subtask = 'product_page';
+  $handler->subtask = 'pod_zakaz';
   $handler->handler = 'panel_context';
-  $handler->weight = 0;
+  $handler->weight = 1;
   $handler->conf = array(
-    'title' => 'Product display',
+    'title' => 'zakaz-product',
     'no_blocks' => 1,
     'pipeline' => 'standard',
     'body_classes_to_remove' => '',
@@ -501,6 +650,16 @@ function vs_pages_default_page_manager_pages() {
     'relationships' => array(),
     'access' => array(
       'logic' => 'and',
+      'plugins' => array(
+        0 => array(
+          'name' => 'context_exists',
+          'settings' => array(
+            'exists' => '1',
+          ),
+          'context' => 'argument_entity_id:commerce_product_1',
+          'not' => FALSE,
+        ),
+      ),
     ),
   );
   $display = new panels_display();
@@ -522,7 +681,7 @@ function vs_pages_default_page_manager_pages() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-8';
+    $pane->pid = 'new-10';
     $pane->panel = 'center';
     $pane->type = 'views';
     $pane->subtype = 'product_display';
@@ -542,7 +701,7 @@ function vs_pages_default_page_manager_pages() {
       'url' => '',
       'display' => 'default',
       'context' => array(
-        0 => '',
+        0 => 'argument_entity_id:commerce_product_1.product-id',
       ),
       'override_title' => 0,
       'override_title_text' => '',
@@ -552,19 +711,19 @@ function vs_pages_default_page_manager_pages() {
       'settings' => NULL,
     );
     $pane->css = array(
-      'css_id' => 'ANDAND-ID',
-      'css_class' => 'ANDAND-CLASS',
+      'css_id' => '',
+      'css_class' => 'vs-product-display-view',
     );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-8'] = $pane;
-    $display->panels['center'][0] = 'new-8';
+    $display->content['new-10'] = $pane;
+    $display->panels['center'][0] = 'new-10';
     $pane = new stdClass();
-    $pane->pid = 'new-9';
+    $pane->pid = 'new-11';
     $pane->panel = 'sidebar_menu';
-    $pane->type = 'vs_menu_panel';
-    $pane->subtype = 'vs_menu_panel';
+    $pane->type = 'vs_menu_request';
+    $pane->subtype = 'vs_menu_request';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array();
@@ -572,17 +731,20 @@ function vs_pages_default_page_manager_pages() {
     $pane->style = array(
       'settings' => NULL,
     );
-    $pane->css = array();
+    $pane->css = array(
+      'css_id' => '',
+      'css_class' => 'pane-vs-menu-panel',
+    );
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $display->content['new-9'] = $pane;
-    $display->panels['sidebar_menu'][0] = 'new-9';
+    $display->content['new-11'] = $pane;
+    $display->panels['sidebar_menu'][0] = 'new-11';
   $display->hide_title = PANELS_TITLE_NONE;
-  $display->title_pane = 'new-8';
+  $display->title_pane = 'new-10';
   $handler->conf['display'] = $display;
   $page->default_handlers[$handler->name] = $handler;
-  $pages['product_page'] = $page;
+  $pages['pod_zakaz'] = $page;
 
   return $pages;
 

@@ -51,7 +51,7 @@ function vs_category_content_request_render($subtype, $conf, $panel_args, $conte
     $img['style_name'] = 'category_main';
     $img_rendered = theme_image_style($img);
   }
-  $view = views_embed_view('category_page', 'default', $term->tid);
+  $view = views_embed_view('category_page', 'panel_pane_2', $term->tid);
 //  dsm($img_rendered);
   //Init variables
   $block = new stdClass();

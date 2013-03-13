@@ -79,16 +79,52 @@ function vs_menu_views_default_views() {
   $handler->display->display_options['fields']['field_old_price']['settings'] = array(
     'calculation' => FALSE,
   );
+
+  /* Display: category v nalichie */
+  $handler = $view->new_display('panel_pane', 'category v nalichie', 'panel_pane_1');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Commerce Product: Категория (field_category) */
   $handler->display->display_options['arguments']['field_category_tid']['id'] = 'field_category_tid';
   $handler->display->display_options['arguments']['field_category_tid']['table'] = 'field_data_field_category';
   $handler->display->display_options['arguments']['field_category_tid']['field'] = 'field_category_tid';
-  $handler->display->display_options['arguments']['field_category_tid']['default_action'] = 'access denied';
+  $handler->display->display_options['arguments']['field_category_tid']['default_action'] = 'not found';
   $handler->display->display_options['arguments']['field_category_tid']['default_argument_type'] = 'fixed';
-  $handler->display->display_options['arguments']['field_category_tid']['default_argument_skip_url'] = TRUE;
   $handler->display->display_options['arguments']['field_category_tid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_category_tid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['field_category_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Commerce Product: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'commerce_product';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'product' => 'product',
+  );
+
+  /* Display: category pod zakaz */
+  $handler = $view->new_display('panel_pane', 'category pod zakaz', 'panel_pane_2');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Commerce Product: Категория (field_category_req) */
+  $handler->display->display_options['arguments']['field_category_req_tid']['id'] = 'field_category_req_tid';
+  $handler->display->display_options['arguments']['field_category_req_tid']['table'] = 'field_data_field_category_req';
+  $handler->display->display_options['arguments']['field_category_req_tid']['field'] = 'field_category_req_tid';
+  $handler->display->display_options['arguments']['field_category_req_tid']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['field_category_req_tid']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_category_req_tid']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_category_req_tid']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_category_req_tid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filter criterion: Commerce Product: Type */
+  $handler->display->display_options['filters']['type']['id'] = 'type';
+  $handler->display->display_options['filters']['type']['table'] = 'commerce_product';
+  $handler->display->display_options['filters']['type']['field'] = 'type';
+  $handler->display->display_options['filters']['type']['value'] = array(
+    'product_request' => 'product_request',
+  );
   $translatables['category_page'] = array(
     t('Master'),
     t('more'),
@@ -105,7 +141,10 @@ function vs_menu_views_default_views() {
     t('Изображение главное'),
     t('Price'),
     t('Старая цена'),
+    t('category v nalichie'),
     t('All'),
+    t('View panes'),
+    t('category pod zakaz'),
   );
   $export['category_page'] = $view;
 

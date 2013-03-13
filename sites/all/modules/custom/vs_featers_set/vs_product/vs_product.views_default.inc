@@ -124,13 +124,6 @@ function vs_product_views_default_views() {
   $handler->display->display_options['arguments']['product_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['product_id']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['product_id']['summary_options']['items_per_page'] = '25';
-  /* Filter criterion: Commerce Product: Type */
-  $handler->display->display_options['filters']['type']['id'] = 'type';
-  $handler->display->display_options['filters']['type']['table'] = 'commerce_product';
-  $handler->display->display_options['filters']['type']['field'] = 'type';
-  $handler->display->display_options['filters']['type']['value'] = array(
-    'product' => 'product',
-  );
   $translatables['product_display'] = array(
     t('Master'),
     t('more'),

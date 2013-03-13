@@ -23,8 +23,13 @@
  *
  * @ingroup views_templates
  */
+
 ?>
-<a href="/product/<?php print $row->product_id; ?>" class="vs-category-product-link">
+  <?php if (is_null(arg(1))) : ?>
+    <a href="/<?php print arg(0); ?>/main/<?php print $row->product_id; ?>" class="vs-category-product-link">
+  <?php else : ?>
+    <a href="/<?php print arg(0); ?>/<?php print arg(1); ?>/<?php print $row->product_id; ?>" class="vs-category-product-link">
+  <?php endif; ?>
   <div class="vs-category-product-image">
     <?php print $fields['field_prod_main_image']->content; ?>
   </div>

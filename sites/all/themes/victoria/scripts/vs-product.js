@@ -23,7 +23,7 @@ function validationProductDisplay(wrapper) {
       has_errors = true;
       t_top = $(this).offset().top - 2;
       t_left = $(this).offset().left;
-      tooltip = '<div class="tooltip-error grp tooltip-error-left"><p>Please select a <span class="ui-caps">Cup Size&nbsp;</span></p></div>'
+      tooltip = '<div class="tooltip-error grp tooltip-error-left"><p>Пожалуйста выберите <span class="ui-caps">размер&nbsp;</span></p></div>'
       $('body').append(tooltip);
       var width = $('.tooltip-error-left:not(.tooltip-error-left-processed)').width();
         t_left = t_left - width;
@@ -49,3 +49,22 @@ function tooltipErrorsDelete(wrapper) {
     });
   });
 })(jQuery);
+(function($) {
+  Drupal.behaviors.popupCartConfirmButtonContinue = {
+    attach:function() {
+      $('.vs-close-popup-continue').click(function() {
+        jQuery.fancybox.close();
+      });
+    }
+  }
+}(jQuery));
+(function($) {
+  Drupal.behaviors.popupCartConfirmGoCheckout = {
+    attach:function() {
+      $('.vs-cart-confirm-go_checkout').click(function() {
+        var checkout = $(this).attr('rel');
+        location.href = checkout;
+      });
+    }
+  }
+}(jQuery));

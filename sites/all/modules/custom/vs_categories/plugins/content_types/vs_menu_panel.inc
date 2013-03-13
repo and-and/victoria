@@ -47,7 +47,7 @@ function vs_sidebar_menu_render($subtype, $conf, $panel_args, $context) {
           $alias = $tid;
         }
         $term->link = l($term->name, 'v-nalichii/' . $alias, array('attributes' => array('class' => array('vs-sub-category-link'))));
-        if ('v-nalichii/' . $alias == $_GET['q']) {
+        if ($alias == arg(1)) {
           $term->active = TRUE;
         }else {
           $term->active = FALSE;

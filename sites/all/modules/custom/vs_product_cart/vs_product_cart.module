@@ -69,6 +69,7 @@ function vs_product_cart_ajax_callback($form, &$form_state){
     'order_total' => $order_total,
     'line_item' => $form_state['line_item'], 
     'product' => $form_state['default_product'],
+    'order_id' => $order->order_id,
   ));
   $cart_header = theme('vs_product_cart_header_line');
   // The next line allows different quantities
