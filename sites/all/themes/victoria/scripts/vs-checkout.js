@@ -20,14 +20,28 @@
 (function($) {
   $(document).ready(function(){
     $('.vs-checkout-login').click(function(){
-      $('.vs-checkout-login-submit input').mousedown();
+      $('#edit-continue').mousedown();
+      $('#edit-continue').click();
       return false;
     });
     $('.vs-checkout-continue-guest').click(function(){
       $('.vs-checkout-continue-guest-submit input').mousedown();
+      $('.vs-checkout-continue-guest-submit input').click();
+      return false;
+    });
+    $('.vs-checkout-billing-confirm').click(function(){
+      $(this).parent().find('.checkout-continue').mousedown();
+      $(this).parent().find('.checkout-continue').click();
       return false;
     });
       
   });
 })(jQuery);
+(function($) {
+  Drupal.behaviors.test = {
+    attach:function() {
+      $('#edit-customer-profile-billing-commerce-customer-address-und-0-country').selectbox();
+    }
+  }
+}(jQuery));
 

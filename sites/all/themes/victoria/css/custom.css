@@ -209,6 +209,7 @@ a:hover, a:focus {
 .vs-category-content-background {
   padding: 20px;
   background-color: white;
+  width: 764px;
 }
 .panels-flexible-region-1-center {
   width: auto;
@@ -759,18 +760,18 @@ body .signin {
   color: #c93567;
   padding: 10px 9px;
 }
-.checkout input {
+.checkout input,#addresses input {
   background-color: #FFF;
   border: 1px solid #CCC;
   color: #1A1A1A;
   font-size: 11px;
   padding: 5px 7px;
 }
-.checkout input:focus {
+.checkout input:focus,#addresses input:focus {
   border: 1px solid #b3b3b3;
   background-color: #f2f2f2;
 }
-.checkout input.error {
+.checkout input.error,#addresses input.error {
   background-color: #FFE5EE;
   border: 1px solid #EDB5C9;
   color: #C93567;
@@ -797,5 +798,27 @@ body .signin {
   background-image: url(../images/18px-white.gif);
   width: 18px;
   height: 18px;
+  float: right;
+}
+#addresses .panel-content {
+  padding-left: 20px; 
+}
+#addresses input {
+  width: 195px;
+}
+#addresses .thoroughfare,#addresses .premise{
+  width: 417px;
+}
+.form-item label {
+  font-size: 1em;
+  font-weight: normal;
+  padding-bottom: 3px;
+}
+#addresses .panel-footer {
+  padding: 20px;
+  overflow: hidden;
+  zoom: 1;
+}
+#addresses .panel-footer button{
   float: right;
 }

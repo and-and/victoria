@@ -9,6 +9,7 @@ stylesheets[all][] = css/style.css
 stylesheets[all][] = css/colors.css
 stylesheets[all][] = css/custom.css
 stylesheets[all][] = css/jquery.fancybox.css
+stylesheets[all][] = css/jquery.selectbox.css
 stylesheets[print][] = css/print.css
 
 scripts[] = scripts/vs-buttons.js

@@ -29,7 +29,7 @@ function addressfield_format_address_generate(&$format, $address, $context = arr
     '#weight' => 0,
   );
   $format['street_block']['thoroughfare'] = array(
-    '#title' => t('Address 1'),
+    '#title' => t('Адрес'),
     '#tag' => 'div',
     '#attributes' => array('class' => array('thoroughfare')),
     '#size' => 30,
@@ -37,7 +37,7 @@ function addressfield_format_address_generate(&$format, $address, $context = arr
     '#required' => TRUE,
   );
   $format['street_block']['premise'] = array(
-    '#title' => t('Address 2'),
+    '#title' => t('Дополнительный адрес'),
     '#tag' => 'div',
     '#attributes' => array('class' => array('premise')),
     '#size' => 30,
@@ -62,7 +62,7 @@ function addressfield_format_address_generate(&$format, $address, $context = arr
     '#attributes' => array('class' => array('locality')),
   );
   $format['country'] = array(
-    '#title' => t('Country'),
+    '#title' => t('Страна'),
     '#options' => _addressfield_country_options_list(),
     '#required' => TRUE,
     '#attributes' => array('class' => array('country')),
@@ -426,4 +426,30 @@ function addressfield_format_address_generate(&$format, $address, $context = arr
       $format['country']['#empty_value'] = '';
     }
   }
+  //Custom changes.
+  global $user;
+  drupal_add_js(path_to_theme() . '/scripts/jquery.selectbox-0.2.js');
+  // Add additional fields.
+  $format['phones']['phone1'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Контактный телефонный номер',
+    '#required' => TRUE,
+  );
+  $format['phones']['phone2'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Дополнительный телефонный номер',
+  );
+  
+  $format['mail'] = array(
+    '#type' => 'textfield',
+    '#title' => 'E-mail адрес',
+    '#default_value' => $user->mail,
+  );
+  // Custom fields.
+  $format['counrty']['#title'] = 'Страна';
+  $format['country']['#options']['UA'] = 'Украина';
+  $format['locality_block']['locality']['#title'] = 'Город';
+  unset($format['country']['#ajax']);
+  unset($format['locality_block']['postal_code']);
+  unset($format['locality_block']['administrative_area']);
 }

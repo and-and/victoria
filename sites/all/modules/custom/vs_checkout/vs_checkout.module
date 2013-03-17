@@ -24,22 +24,25 @@ function vs_checkout_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'views_form_commerce_cart_form_default' && arg(0) == 'checkout') {
     unset($form['actions']);
   }
-  if ($form_id == 'user_login_block' && arg(0) == 'checkout') {
+  if ($form_id == 'commerce_checkout_form_login' && arg(0) == 'checkout') {
+    dsm($form);
     $form['#theme'] = 'vs_checkout_login_user';
-    $form['actions']['submit']['#value'] = 'Войти и заказать';
-    $form['actions']['submit']['#ajax']['callback'] = 'vs_checkout_login_ajax';
+//    $form['actions']['submit']['#value'] = 'Войти и заказать';
+//    $form['actions']['submit']['#ajax']['callback'] = 'vs_checkout_login_ajax';
 //    $form['actions']['submit']['#ajax']['event'] = 'vs_checkout_login_ajax';
-    $form['name']['#title'] = 'Имя пользователя';
-    $form['pass']['#title'] = 'Пароль';
-    $form['actions']['continue_guest'] = array(
-      '#type' => 'button',
+    $form['login_pane']['name']['#title'] = 'Имя пользователя';
+    $form['login_pane']['pass']['#title'] = 'Пароль';
+    $form['login_pane']['actions']['continue_guest'] = array(
+      '#type' => 'submit',
       '#value' => 'Continue as guest',
-      '#ajax' => array(
-        'callback' => 'vs_checkout_guest_ajax',
-      ),
+      '#limit_validation_errors' => array(),
+      '#submit' => array('vs_checkout_guest_continue_submit'),
+//      '#ajax' => array(
+//        'callback' => 'vs_checkout_guest_ajax',
+//      ),
     );
   }
-  if ($form_id == 'commerce_checkout_form_checkout') {
+  if ($form_id == 'commerce_checkout_form_vs_address') {
     $form['#theme'] = 'vs_checkout_billing_information';
   }
 }
@@ -77,3 +80,45 @@ function vs_checkout_guest_ajax($form, &$form_state) {
 //  $commands[] = ajax_command_remove($wrapper);
   return array('#type' => 'ajax', '#commands' => $commands);  
 }
+function vs_checkout_form_commerce_checkout_form_vs_address_alter(&$form, &$form_state, $form_id) {
+  $form['customer_profile_billing']['#type'] = 'container';  
+}
+function vs_checkout_guest_continue_submit($form, &$form_state) {
+//  dsm($form_state, __FUNCTION__);
+  $form_state['order'] = commerce_order_status_update($form_state['order'], 'checkout_' . $form_state['checkout_page']['next_page'], FALSE, TRUE, t('Customer was redirected to next page since (s)he was checkout as guest.'));
+  drupal_goto('checkout/' . $form_state['order']->order_id . '/' . $form_state['checkout_page']['next_page']);
+//  $form_state['redirect'] = 
+}
+//
+///**
+// * Implements hook_commerce_checkout_page_info().
+// */
+//function vs_checkout_commerce_checkout_page_info() {
+//  $page = array();
+//  $page['vs_address'] = array(
+//    'title' => 'VS address',
+//    'weight' => 10,
+//    'status_cart' => TRUE,
+//  );
+//  return $page;
+//}
+//
+///**
+// * Implements hook_commerce_checkout_pane_info().
+// */
+//function vs_checkout_commerce_checkout_pane_info() {
+//  $pane = array();
+//  $pane['vs_login'] = array(
+//    'title' => 'VS Login',
+//    'page' => 'vs_address',
+//    'review' => FALSE,
+//    'file' => 'includes/vs_checkout.checkout_pane.inc',
+//    'base' => 'vs_checkout_login',
+//  );
+//  return $pane;
+//}
+//function and_and_and($form, &$form_state) {
+//  dsm(__FUNCTION__);
+//  dsm($form);
+//  dsm($form_state)
+//}
