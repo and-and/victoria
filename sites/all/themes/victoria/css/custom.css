@@ -41,6 +41,10 @@ body {
   margin: 18px 40px 0 0;
   width: auto;
 }
+#content .section {
+  padding: 20px 25px;
+  
+}
 form.single-field {
   background: url(../images/search-input.gif) no-repeat;
   width: 185px;
@@ -582,7 +586,7 @@ a.btn-40-b, a.btn-40-b:link, a.btn-40-b:visited {
   text-align: center;
   white-space: nowrap;
 }
-button.btn-40 {
+button.btn-40, input.form-submit {
   padding: 2px 20px 0 20px!important;
   height: 40px!important;
   padding-top: 15px;
@@ -592,8 +596,11 @@ button.btn-40 {
   letter-spacing: -.025em;
   cursor: pointer;
 }
-.btn-40 {
+.btn-40, input.form-submit {
   background-image: url(../images/pink-40px.gif);
+}
+input.form-submit:hover {
+  background-position: 0% 50%;
 }
 .tooltip-error-left {
   background: url(../images/tooltip-left.gif) no-repeat scroll right center;
@@ -821,4 +828,27 @@ body .signin {
 }
 #addresses .panel-footer button{
   float: right;
+}
+.vs-complete-message-wrapper {
+  padding: 20px;
+  background-color: white;
+  border: 1px solid #E5E5E5;
+  border-top: none;
+  overflow: hidden;
+  zoom: 1;
+  /*height: 200px;*/
+}
+.vs-order-complete-message-title {
+  padding: 20px 20px 15px 20px;
+  background-color: white;
+  border: 1px solid #E5E5E5;
+}
+.checkout_completion_message p {
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}
+.vs-complete-message-wrapper button {
+  float: right;
+  margin-top: 25px;
 }

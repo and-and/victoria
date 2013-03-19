@@ -1068,7 +1068,7 @@ div.password-confirm {
 
 /* ---------------- Buttons    ---------------- */
 
-input.form-submit,
+/*input.form-submit,*/
 a.button {
   background: #fff url(../images/buttons.png) 0 0 repeat-x;
   border: 1px solid #e4e4e4;
@@ -1211,7 +1211,7 @@ textarea.form-textarea,
 select.form-select {
   border: 1px solid #ccc;
 }
-input.form-submit:hover,
+/*input.form-submit:hover,*/
 input.form-submit:focus {
   background: #dedede;
 }

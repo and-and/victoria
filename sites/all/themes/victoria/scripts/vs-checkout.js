@@ -34,7 +34,10 @@
       $(this).parent().find('.checkout-continue').click();
       return false;
     });
-      
+    $('.vs-complete-message-button').click(function(){
+      location.href = '/';
+      return false;
+    });
   });
 })(jQuery);
 (function($) {

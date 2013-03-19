@@ -28,10 +28,13 @@ function vs_checkout_panel_render($subtype, $conf, $panel_args, $context) {
   //Init variables
   module_load_include('inc', 'commerce_checkout', 'includes/commerce_checkout.pages');
   $block = new stdClass();
-  drupal_add_js(path_to_theme() . '/scripts/jquery.selectbox-0.2.min.js');
+  drupal_add_js(drupal_get_path('theme', 'victoria') . '/scripts/jquery.selectbox-0.2.min.js');
   $order = $context->data;
   $checkout_pages = commerce_checkout_pages();
   $page = str_replace('checkout_', '', $order->status);
+  if ($page == 'pending') {
+    $page = 'complete';
+  }
   $checkout_page = $checkout_pages[$page];
   $block->content = commerce_checkout_router($order, $checkout_page);
 

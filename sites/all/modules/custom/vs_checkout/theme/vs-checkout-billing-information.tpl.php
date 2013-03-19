@@ -26,8 +26,9 @@
         </div>
         <p>&nbsp</p>
         <?php print drupal_render($form['customer_profile_billing']['commerce_customer_address']['und'][0]['name_block']); ?>
-        <?php print drupal_render($form['customer_profile_billing']['commerce_customer_address']['und'][0]['mail']); ?>
-        <?php print drupal_render($form['customer_profile_billing']['commerce_customer_address']['und'][0]['phones']); ?>
+        <?php print drupal_render($form['customer_profile_billing']['field_address_mail']); ?>
+        <?php print drupal_render($form['customer_profile_billing']['field_user_phone']); ?>
+        <?php print drupal_render($form['customer_profile_billing']['field_user_phone_1']); ?>
         <?php print drupal_render($form['customer_profile_billing']['commerce_customer_address']['und'][0]['country']); ?>
         <?php print drupal_render($form['customer_profile_billing']['commerce_customer_address']['und'][0]['locality_block']); ?>
         <?php print drupal_render($form['customer_profile_billing']['commerce_customer_address']['und'][0]['street_block']); ?>

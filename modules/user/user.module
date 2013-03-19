@@ -2136,8 +2136,8 @@ function user_login_authenticate_validate($form, &$form_state) {
       $form_state['flood_control_user_identifier'] = $identifier;
 
       // Don't allow login if the limit for this user has been reached.
-      // Default is to allow 5 failed attempts every 6 hours.
-      if (!flood_is_allowed('failed_login_attempt_user', variable_get('user_failed_login_user_limit', 5), variable_get('user_failed_login_user_window', 21600), $identifier)) {
+      // Default is to allow 15 failed attempts every 6 hours.
+      if (!flood_is_allowed('failed_login_attempt_user', variable_get('user_failed_login_user_limit', 15), variable_get('user_failed_login_user_window', 21600), $identifier)) {
         $form_state['flood_control_triggered'] = 'user';
         return;
       }

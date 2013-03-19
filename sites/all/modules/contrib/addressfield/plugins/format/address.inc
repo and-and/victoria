@@ -430,21 +430,22 @@ function addressfield_format_address_generate(&$format, $address, $context = arr
   global $user;
   drupal_add_js(path_to_theme() . '/scripts/jquery.selectbox-0.2.js');
   // Add additional fields.
-  $format['phones']['phone1'] = array(
-    '#type' => 'textfield',
-    '#title' => 'Контактный телефонный номер',
-    '#required' => TRUE,
-  );
-  $format['phones']['phone2'] = array(
-    '#type' => 'textfield',
-    '#title' => 'Дополнительный телефонный номер',
-  );
+//  $format['phones']['phone1'] = array(
+//    '#type' => 'textfield',
+//    '#title' => 'Контактный телефонный номер',
+//    '#required' => TRUE,
+//  );
+//  $format['phones']['phone2'] = array(
+//    '#type' => 'textfield',
+//    '#title' => 'Дополнительный телефонный номер',
+//  );
   
-  $format['mail'] = array(
-    '#type' => 'textfield',
-    '#title' => 'E-mail адрес',
-    '#default_value' => $user->mail,
-  );
+//  $format['mail'] = array(
+//    '#type' => 'textfield',
+//    '#title' => 'E-mail адрес',
+//    '#default_value' => $user->mail,
+//    '#required' => TRUE,
+//  );
   // Custom fields.
   $format['counrty']['#title'] = 'Страна';
   $format['country']['#options']['UA'] = 'Украина';
