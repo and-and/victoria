@@ -852,3 +852,7 @@ body .signin {
   float: right;
   margin-top: 25px;
 }
+.section {
+  background-color: white;
+  margin-top: 20px;
+}

@@ -1,0 +1,35 @@
+<?php
+
+  /**
+ * Implements hook_ctools_plugin_directory().
+ *
+ * @param string $owner
+ *   The system name of the module owning the plugin type for which a base
+ *   directory location is being requested.
+ *
+ * @param string $plugin_type
+ *   The name of the plugin type for which a base directory is being requested.
+ *
+ * @return path
+ *   The path where CTools' plugin system should search for plugin files,
+ *   relative to your module's root. Omit leading and trailing slashes.
+ */
+function vs_userzone_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' &&  in_array($plugin_type, array('content_types'))) {
+    return 'plugins/' . $plugin_type;
+  }
+}
+
+function vs_userzone_form_user_login_alter(&$form, &$form_state, $form_id) {
+  $form['#theme'] = 'vs_userzone_login_form';
+}
+
+function vs_userzone_theme() {
+  return array(
+    'vs_userzone_login_form' => array(
+      'render element' => 'form',
+      'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
+      'template' => 'vs-userzone-login-form',
+    ),
+  );
+}

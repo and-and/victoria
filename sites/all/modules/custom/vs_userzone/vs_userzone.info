@@ -1,6 +1,5 @@
-name = VS Uesr
+name = VS UserZone
 description = Provide user zone
 core = 7.x
 package = VS
 version = 7.x-1.0
-dependencies[] = commerce_checkout
