@@ -104,35 +104,15 @@
       <?php print theme('vs_product_cart_header_line'); ?>
     </div> <!--header-inner END-->
   </div> <!-- /.section, /#header -->
-  <?php if ($main_menu): ?>
-    <div id="nav" style="visibility: visible;">
-      <div class="container">
-        <div id="navInner" class="grp">
-          <div id="main-menu" class="navigation">
-            <?php print theme('links__system_main_menu', array(
-              'links' => $main_menu,
-              'attributes' => array(
-                'id' => 'main-menu-links',
-                'class' => array('links', 'clearfix'),
-              ),
-              'heading' => array(
-                'text' => t('Main menu'),
-                'level' => 'h2',
-                'class' => array('element-invisible'),
-              ),
-            )); ?>
-          </div> <!-- /#main-menu -->
-        </div>
-      </div>
-    </div>
-  <?php endif; ?>
+  
   <div id="vs-content-wrapper">
+    <h1>ANDAND</h1>
   <?php if ($messages): ?>
     <div id="messages"><div class="section clearfix">
       <?php print $messages; ?>
     </div></div> <!-- /.section, /#messages -->
   <?php endif; ?>
-
+<h1>ANDAND</h1>
   <?php if ($page['featured']): ?>
     <div id="featured"><div class="section clearfix">
       <?php print render($page['featured']); ?>
@@ -140,7 +120,7 @@
   <?php endif; ?>
 
   <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
-
+<h1>ANDAND</h1>
     <?php if ($page['sidebar_first']): ?>
       <div id="sidebar-first" class="column sidebar"><div class="section">
         <?php print render($page['sidebar_first']); ?>

@@ -21,7 +21,18 @@ function vs_userzone_ctools_plugin_directory($owner, $plugin_type) {
 }
 
 function vs_userzone_form_user_login_alter(&$form, &$form_state, $form_id) {
+  drupal_add_js(path_to_theme() . '/scripts/vs-userzone.js');
   $form['#theme'] = 'vs_userzone_login_form';
+  unset($form['name']['#description']);
+  unset($form['pass']['#description']);
+}
+
+function vs_userzone_form_user_register_form_alter(&$form, &$form_state) {
+  drupal_add_js(path_to_theme() . '/scripts/vs-checkout.js');
+  $form['#theme'] = 'vs_userzone_register_form';
+  $form['field_user_address']['und'][0]['#type'] = 'container';
+  $form['field_user_phone']['#access'] = TRUE;
+  $form['field_user_phone_1']['#access'] = TRUE;
 }
 
 function vs_userzone_theme() {
@@ -30,6 +41,16 @@ function vs_userzone_theme() {
       'render element' => 'form',
       'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
       'template' => 'vs-userzone-login-form',
+    ),
+    'vs_userzone_register_form' => array(
+      'render element' => 'form',
+      'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
+      'template' => 'vs-userzone-register-form',
+    ),
+    'vs_header_user_block' => array(
+//      'render element' => 'form',
+      'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
+      'template' => 'vs-header-user-block',
     ),
   );
 }

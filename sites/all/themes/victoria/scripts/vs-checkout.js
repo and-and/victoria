@@ -41,9 +41,9 @@
   });
 })(jQuery);
 (function($) {
-  Drupal.behaviors.test = {
+  Drupal.behaviors.checkoutCountry = {
     attach:function() {
-      $('#edit-customer-profile-billing-commerce-customer-address-und-0-country').selectbox();
+      $('#edit-customer-profile-billing-commerce-customer-address-und-0-country, #edit-field-user-address-und-0-country').selectbox();
     }
   }
 }(jQuery));

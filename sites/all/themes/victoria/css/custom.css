@@ -45,6 +45,26 @@ body {
   padding: 20px 25px;
   
 }
+.main-page-slider #main {
+  width: auto;
+  margin: 0 auto;
+}
+.main-page-slider .section {
+  margin: 0;
+  padding: 0!important;
+}
+.main-page-slider .views-nivo-slider-view {
+  padding: 0px;
+}
+.main-page-slider #views-nivo-slider-main_slider-block {
+  margin: 0;
+}
+.main-page-slider .nivo-controlNav {
+  position: relative;
+  top: -25px;
+  height: 0px;
+  text-align: center;
+}
 form.single-field {
   background: url(../images/search-input.gif) no-repeat;
   width: 185px;
@@ -125,6 +145,8 @@ form.single-field button {
 }
 #main {
   width: 995px;
+  overflow: hidden;
+  zoom: 1;
 }
 .container {
   width: 995px;
@@ -178,7 +200,7 @@ a, a:link, a:visited {
 }
 #main-wrapper, #vs-content-wrapper {
   background-image: url(../images/small-bg.gif);
-  background-position: 50.3% 0%;
+  background-position: 50% 0%;
 }
 .category-header {
   margin: 40px 0 40px 0;
@@ -855,4 +877,73 @@ body .signin {
 .section {
   background-color: white;
   margin-top: 20px;
+}
+.col-b {
+  margin: 0 0 0 40px;
+  width: 785px;
+}
+.col {
+  display: inline;
+  float: left;
+  overflow: hidden;
+}
+.col-b .col-476 {
+  margin: 0px 0 0 250px;
+  width: 477px;
+}
+.lyt-even-split .col-b {
+  width: 195px;
+}
+.lyt-even-split .col-a {
+  margin: 0 40px 0 0;
+}
+.lyt-even-split .col-a {
+  width: 198px;
+}
+.signin input {
+  width: 175px;
+}
+.col-476 .lyt-even-split .col-a {
+  width: 198px;
+}
+.signin .ui-vr {
+  height: 270px;
+}
+.ui-vr {
+  background: url(../images/dotted-rule-vert.gif) repeat-y;
+  width: 1px;
+  display: inline-block;
+}
+.signin h1, .vs-register h1 {
+  margin: 40px 0;
+}
+.signin h3 {
+  margin: 10px 0;
+}
+.signin input[type=submit],.vs-register input[type=submit] {
+  color: white;
+  border: none;
+  font-size: 14px;
+  margin-top: 10px; 
+}
+.vs-register .col-a {
+  margin-left: 300px;
+  width: 560px;
+}
+.vs-register input:not([type=submit]) {
+  width: 250px;
+}
+.vs-register .ui-alert {
+  margin-bottom: 10px;
+}
+#welcome {
+  background: none!important;
+  color: #808080;
+  margin: 0 10px 0 0;
+  padding: 0;
+}
+#header .utilities li {
+  background: url(../images/pipe.gif) no-repeat;
+  padding: 0 5px 0 6px;
+  float: left;
 }

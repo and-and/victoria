@@ -45,6 +45,7 @@ function vs_checkout_form_alter(&$form, &$form_state, $form_id) {
     global $user;
     $user_wrapper = entity_metadata_wrapper('user', $user);
     $form['#theme'] = 'vs_checkout_billing_information';
+    unset($form['customer_profile_billing']['commerce_customer_address']['und'][0]['name_block']['last_name']['#prefix']);
     $form['customer_profile_billing']['field_address_mail']['und'][0]['value']['#default_value'] = $user->mail;
     $form['customer_profile_billing']['field_user_phone']['und'][0]['value']['#default_value'] = $user_wrapper->field_user_phone->value();
     $form['customer_profile_billing']['field_user_phone_1']['und'][0]['value']['#default_value'] = $user_wrapper->field_user_phone_1->value();
