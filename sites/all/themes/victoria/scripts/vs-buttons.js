@@ -28,4 +28,12 @@
       })
     }
   }
+  Drupal.behaviors.uiLoaderNonAjax ={
+    attach:function(){
+      $('.ui-loader-non-ajax').click(function(){console.log("s");
+        $('body').append('<div class="vs-non-ajax-loader"></div>');
+        return;
+      })
+    }
+  }
 }(jQuery));

@@ -27,7 +27,12 @@ function vs_product_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Сбросить';
   $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« первая';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ предыдущая';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'следующая ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'последняя »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   $handler->display->display_options['row_options']['inline'] = array(
@@ -42,11 +47,11 @@ function vs_product_views_default_views() {
     'field_product_description' => 'field_product_description',
     'field_valid_attributes' => 'field_valid_attributes',
   );
-  /* Field: Commerce Product: Product ID */
+  /* Поле: Commerce Product: Product ID */
   $handler->display->display_options['fields']['product_id']['id'] = 'product_id';
   $handler->display->display_options['fields']['product_id']['table'] = 'commerce_product';
   $handler->display->display_options['fields']['product_id']['field'] = 'product_id';
-  /* Field: Commerce Product: Add to Cart form */
+  /* Поле: Commerce Product: Add to Cart form */
   $handler->display->display_options['fields']['add_to_cart_form']['id'] = 'add_to_cart_form';
   $handler->display->display_options['fields']['add_to_cart_form']['table'] = 'commerce_product';
   $handler->display->display_options['fields']['add_to_cart_form']['field'] = 'add_to_cart_form';
@@ -55,7 +60,7 @@ function vs_product_views_default_views() {
   $handler->display->display_options['fields']['add_to_cart_form']['combine'] = 0;
   $handler->display->display_options['fields']['add_to_cart_form']['display_path'] = 0;
   $handler->display->display_options['fields']['add_to_cart_form']['line_item_type'] = 0;
-  /* Field: Commerce Product: Price */
+  /* Поле: Commerce Product: Price */
   $handler->display->display_options['fields']['commerce_price']['id'] = 'commerce_price';
   $handler->display->display_options['fields']['commerce_price']['table'] = 'field_data_commerce_price';
   $handler->display->display_options['fields']['commerce_price']['field'] = 'commerce_price';
@@ -64,22 +69,22 @@ function vs_product_views_default_views() {
   $handler->display->display_options['fields']['commerce_price']['settings'] = array(
     'calculation' => '0',
   );
-  /* Field: Commerce Product: Product ID */
+  /* Поле: Commerce Product: Product ID */
   $handler->display->display_options['fields']['product_id_1']['id'] = 'product_id_1';
   $handler->display->display_options['fields']['product_id_1']['table'] = 'commerce_product';
   $handler->display->display_options['fields']['product_id_1']['field'] = 'product_id';
   $handler->display->display_options['fields']['product_id_1']['link_to_product'] = 0;
-  /* Field: Commerce Product: SKU */
+  /* Поле: Commerce Product: SKU */
   $handler->display->display_options['fields']['sku']['id'] = 'sku';
   $handler->display->display_options['fields']['sku']['table'] = 'commerce_product';
   $handler->display->display_options['fields']['sku']['field'] = 'sku';
   $handler->display->display_options['fields']['sku']['link_to_product'] = 0;
-  /* Field: Commerce Product: Title */
+  /* Поле: Commerce Product: Заголовок */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'commerce_product';
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['link_to_product'] = 0;
-  /* Field: Commerce Product: Изображение главное */
+  /* Поле: Commerce Product: Изображение главное */
   $handler->display->display_options['fields']['field_prod_main_image']['id'] = 'field_prod_main_image';
   $handler->display->display_options['fields']['field_prod_main_image']['table'] = 'field_data_field_prod_main_image';
   $handler->display->display_options['fields']['field_prod_main_image']['field'] = 'field_prod_main_image';
@@ -91,13 +96,13 @@ function vs_product_views_default_views() {
   $handler->display->display_options['fields']['field_prod_main_image']['delta_limit'] = '0';
   $handler->display->display_options['fields']['field_prod_main_image']['delta_offset'] = '0';
   $handler->display->display_options['fields']['field_prod_main_image']['multi_type'] = 'ul';
-  /* Field: Commerce Product: Опции */
+  /* Поле: Commerce Product: Опции */
   $handler->display->display_options['fields']['field_options']['id'] = 'field_options';
   $handler->display->display_options['fields']['field_options']['table'] = 'field_data_field_options';
   $handler->display->display_options['fields']['field_options']['field'] = 'field_options';
   $handler->display->display_options['fields']['field_options']['type'] = 'commerce_option_set_reference_attribute_view';
   $handler->display->display_options['fields']['field_options']['delta_offset'] = '0';
-  /* Field: Commerce Product: Старая цена */
+  /* Поле: Commerce Product: Старая цена */
   $handler->display->display_options['fields']['field_old_price']['id'] = 'field_old_price';
   $handler->display->display_options['fields']['field_old_price']['table'] = 'field_data_field_old_price';
   $handler->display->display_options['fields']['field_old_price']['field'] = 'field_old_price';
@@ -106,11 +111,11 @@ function vs_product_views_default_views() {
   $handler->display->display_options['fields']['field_old_price']['settings'] = array(
     'calculation' => FALSE,
   );
-  /* Field: Commerce Product: Описание */
+  /* Поле: Commerce Product: Описание */
   $handler->display->display_options['fields']['field_product_description']['id'] = 'field_product_description';
   $handler->display->display_options['fields']['field_product_description']['table'] = 'field_data_field_product_description';
   $handler->display->display_options['fields']['field_product_description']['field'] = 'field_product_description';
-  /* Field: Commerce Product: Доступные размеры */
+  /* Поле: Commerce Product: Доступные размеры */
   $handler->display->display_options['fields']['field_valid_attributes']['id'] = 'field_valid_attributes';
   $handler->display->display_options['fields']['field_valid_attributes']['table'] = 'field_data_field_valid_attributes';
   $handler->display->display_options['fields']['field_valid_attributes']['field'] = 'field_valid_attributes';
@@ -120,6 +125,7 @@ function vs_product_views_default_views() {
   $handler->display->display_options['arguments']['product_id']['table'] = 'commerce_product';
   $handler->display->display_options['arguments']['product_id']['field'] = 'product_id';
   $handler->display->display_options['arguments']['product_id']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['product_id']['exception']['title'] = 'Все';
   $handler->display->display_options['arguments']['product_id']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['product_id']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['product_id']['summary']['format'] = 'default_summary';
@@ -128,28 +134,28 @@ function vs_product_views_default_views() {
     t('Master'),
     t('more'),
     t('Apply'),
-    t('Reset'),
+    t('Сбросить'),
     t('Sort by'),
     t('Asc'),
     t('Desc'),
     t('Items per page'),
     t('- All -'),
     t('Offset'),
-    t('« first'),
-    t('‹ previous'),
-    t('next ›'),
-    t('last »'),
+    t('« первая'),
+    t('‹ предыдущая'),
+    t('следующая ›'),
+    t('последняя »'),
     t('Product ID'),
     t('Add to Cart form'),
     t('Price'),
     t('SKU'),
-    t('Title'),
+    t('Заголовок'),
     t('Изображение главное'),
     t('Опции'),
     t('Старая цена'),
     t('Описание'),
     t('Доступные размеры'),
-    t('All'),
+    t('Все'),
   );
   $export['product_display'] = $view;
 
