@@ -2533,29 +2533,29 @@ function user_view_page($account) {
  *   An array as expected by drupal_render().
  */
 function user_view($account, $view_mode = 'full', $langcode = NULL) {
-  if (!isset($langcode)) {
-    $langcode = $GLOBALS['language_content']->language;
-  }
-
-  // Retrieve all profile fields and attach to $account->content.
-  user_build_content($account, $view_mode, $langcode);
-
-  $build = $account->content;
-  // We don't need duplicate rendering info in account->content.
-  unset($account->content);
-
-  $build += array(
-    '#theme' => 'user_profile',
-    '#account' => $account,
-    '#view_mode' => $view_mode,
-    '#language' => $langcode,
-  );
-
-  // Allow modules to modify the structured user.
-  $type = 'user';
-  drupal_alter(array('user_view', 'entity_view'), $build, $type);
-
-  return $build;
+//  if (!isset($langcode)) {
+//    $langcode = $GLOBALS['language_content']->language;
+//  }
+//
+//  // Retrieve all profile fields and attach to $account->content.
+//  user_build_content($account, $view_mode, $langcode);
+//
+//  $build = $account->content;
+//  // We don't need duplicate rendering info in account->content.
+//  unset($account->content);
+//
+//  $build += array(
+//    '#theme' => 'user_profile',
+//    '#account' => $account,
+//    '#view_mode' => $view_mode,
+//    '#language' => $langcode,
+//  );
+//
+//  // Allow modules to modify the structured user.
+//  $type = 'user';
+//  drupal_alter(array('user_view', 'entity_view'), $build, $type);
+  $menu_html = render(module_invoke('vs_userzone', 'block_view', 'vs_userzone_menu_block'));
+  return '<div class="vs-userzone-wrapper account">' . $menu_html . theme('vs_userzone_main', array('user' => $account)) . '</div>';//$build;
 }
 
 /**

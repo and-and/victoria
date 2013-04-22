@@ -31,8 +31,48 @@ function vs_userzone_form_user_register_form_alter(&$form, &$form_state) {
   drupal_add_js(path_to_theme() . '/scripts/vs-checkout.js');
   $form['#theme'] = 'vs_userzone_register_form';
   $form['field_user_address']['und'][0]['#type'] = 'container';
+//  $form['field_n_']
   $form['field_user_phone']['#access'] = TRUE;
-  $form['field_user_phone_1']['#access'] = TRUE;
+//  $form['field_user_phone_1']['#access'] = TRUE;
+}
+
+function vs_userzone_form_user_profile_form_alter(&$form, &$form_state) {
+  $form['#theme'] = 'vs_userzone_edit_form';
+  $form['account']['mail']['#access'] = FALSE;
+  $form['account']['status']['#access'] = FALSE;
+  $form['account']['roles']['#access'] = FALSE;
+  $form['account']['notify']['#access'] = FALSE;
+  $form['ckeditor']['#access'] = FALSE;
+  $form['contact']['#access'] = FALSE;
+  $form['locale']['#access'] = FALSE;
+  $form['timezone']['#access'] = FALSE;
+  $form['field_user_address']['und'][0]['#type'] = 'container';
+  $form['account']['current_pass']['#description'] = 'Введите для смены <em class="placeholder">пароля</em>.';
+//  unset($form['account']['current_pass']['#description']);
+}
+
+function vs_userzone_block_info() {
+  return array(
+    'vs_userzone_menu_block' => array(
+      'info' => t('VS userzone menu'),
+      'cache' => DRUPAL_NO_CACHE,
+    ),
+  );
+}
+
+function vs_userzone_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'vs_userzone_menu_block':
+      $block['subject'] = t('VS userzone menu');
+      $block['content'] = array(
+        '#theme' => 'vs_userzone_menu',
+        '#title' => t('VS userzone menu'),
+      );
+      break;
+  }
+  return $block;
 }
 
 function vs_userzone_theme() {
@@ -52,5 +92,72 @@ function vs_userzone_theme() {
       'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
       'template' => 'vs-header-user-block',
     ),
+    'vs_userzone_main' => array(
+      'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
+      'template' => 'vs-userzone-main'
+    ),
+    'vs_userzone_menu' => array(
+      'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
+      'template' => 'vs-userzone-menu',
+    ),
+    'vs_userzone_edit_form' => array(
+      'render element' => 'form',
+      'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
+      'template' => 'vs-userzone-edit-form',
+    ),
   );
+}
+
+function template_preprocess_vs_userzone_main(&$vars) {
+  $user = $vars['user'];
+  $account_items = array();
+  
+  if (!empty($user->field_user_address['und'][0]['first_name'])) {
+    $account_items[] = array(
+      'label' => t('Имя'),
+      'val' => $user->field_user_address['und'][0]['first_name'],
+    );
+  }
+  if (!empty($user->field_user_address['und'][0]['last_name'])) {
+    $account_items[] = array(
+      'label' => t('Фамилия'),
+      'val' => $user->field_user_address['und'][0]['last_name'],
+    );
+  }
+  if (!empty($user->field_user_phone['und'][0]['value'])) {
+    $account_items[] = array(
+      'label' => t('Телефон'),
+      'val' => $user->field_user_phone['und'][0]['value'],
+    );
+  }
+  if (!empty($user->mail)) {
+    $account_items[] = array(
+      'label' => 'E-mail',
+      'val' => $user->mail,
+    );
+  }
+  if (!empty($user->field_user_address['und'][0]['locality'])) {
+    $account_items[] = array(
+      'label' => t('Город'),
+      'val' => $user->field_user_address['und'][0]['locality'],
+    );
+  }
+  $vars['account_items'] = $account_items;
+}
+
+/**
+ * Access callback for path /user.
+ *
+ * Displays user profile if user is logged in, or login form for anonymous
+ * users.
+ */
+function vs_userzone_user_page() {
+  global $user;
+  if ($user->uid) {
+    menu_set_active_item('user/' . $user->uid);
+    return menu_execute_active_handler(NULL, FALSE);
+  }
+  else {
+    return drupal_get_form('user_login');
+  }
 }

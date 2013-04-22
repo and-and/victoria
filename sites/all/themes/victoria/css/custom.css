@@ -985,6 +985,8 @@ body .signin {
 }
 #footer ul.footer-second-line li {
   font-size: 12px;
+  display: inline-block;
+  margin-left: 15px;
 }
 #footer {
   margin: 0 auto;
@@ -1016,4 +1018,66 @@ body .signin {
 .count-result td {
   border: 1px solid #AAA;
   empty-cells: show;
+}
+.account h1, .account h2 {
+  margin: 40px 0 10px 0;
+}
+.vs-userzone-menu-wrapper .col {
+  margin: 0 0 0 15px;
+  width: 170px;
+}
+.vs-userzone-menu-wrapper .category-header a{
+  font-size: 22px;
+  line-height: 30px;
+}
+.vs-userzone-menu-wrapper .category-header a:hover{
+  text-decoration: none;
+}
+.vs-userzone-menu-wrapper li {
+  margin: 10px 0;
+}
+.vs-userzone-menu-wrapper a.ui-callout, a.ui-callout:visited {
+  cursor: pointer;
+  background: url(../images/arrow-gray.gif) no-repeat scroll left 5px transparent;
+  color: #808080;
+  padding-left: 9px;
+  text-decoration: none;
+}
+.account .vs-register .col-a{
+  margin-left: 125px;
+}
+.account .col-b {
+  width: 600px;
+  margin-left: 125px;
+}
+.account h1.large {
+  height: 55px;
+  font-size: 22px;
+  text-transform: uppercase;
+}
+.account h3 {
+  font-size: 16px;
+  margin-bottom: 10px; 
+}
+.account .vs-account-item {
+  font-size: 12px;
+}
+.account .vs-account-item span.label{
+  
+  line-height: 24px;
+  color: #808080;
+  width: 75px;
+  display: inline-block;
+}
+.account .vs-account-item:last-of-type {
+  margin-bottom: 10px;
+}
+.account .vs-account-item span.val {
+  /*padding-left: 125px;*/
+  /*color: black;*/
+}
+.footer-border {
+  border-bottom: 1px solid #EEE;
+  padding-top: 35px;
+  margin: 0 90px;
 }
