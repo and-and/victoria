@@ -11,6 +11,9 @@ body {
   font: 11px/14px Arial,Verdana,sans-serif;
   color: #1a1a1a;
 }
+#page-title{
+  margin-bottom: 10px;
+}
 #site-name a{
   background-image: url('../images/vs-logo.gif');
   display: block;
@@ -1080,4 +1083,37 @@ body .signin {
   border-bottom: 1px solid #EEE;
   padding-top: 35px;
   margin: 0 90px;
+}
+.vs-podzakaz-page-wrapper p{
+  font: normal 11px/1.5em Arial, sans-serif;
+  color: #585858;
+}
+.vs-podzakaz-page-wrapper h2{
+  font-size: 18px;
+  line-height: 2.5em;
+  color: black;
+}
+.vs-podzakaz-page-wrapper h3{
+  line-height: 2.5em;
+}
+.vs-podzakaz-page-wrapper td,th {
+  padding: 6px 0 3px 10px;
+  border: 1px solid #e1e1e1;
+}
+.vs-podzakaz-page-wrapper {
+  font: normal 11px/1.5em Arial, sans-serif;
+  color: #585858;
+}
+.vs-podzakaz-page-wrapper a{
+  font: normal 11px/1.5em Arial, sans-serif;
+  color: #585858;
+}
+#field-city-add-more-wrapper .form-item {
+  position: relative;
+}
+#autocomplete {
+  z-index: 11000;
+}
+#main {
+  /*overflow: visible;*/
 }

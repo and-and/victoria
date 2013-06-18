@@ -58,7 +58,7 @@ function vs_categories_block_view($delta = '') {
   switch ($delta) {
     case 'footer':
       $block['subject'] = t('Footer');
-      $block['content'] = theme('vs_categories_footer', array('vs_categories_footer', 'vid' => 4));
+      $block['content'] = theme('vs_categories_footer', array('vs_categories_footer', 'vid' => 5));
       break;
 
   }

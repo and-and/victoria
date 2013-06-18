@@ -37,3 +37,14 @@
     }
   }
 }(jQuery));
+
+// Show overlay with loader for delivery order button.
+(function($) {
+  Drupal.behaviors.deliveryFormOpen = {
+    attach:function() {
+      $('.delivery-order-form-open').click(function(){
+        $('.fancy-delivery-order-form').trigger('click');
+      });
+    }
+  }
+}(jQuery));
