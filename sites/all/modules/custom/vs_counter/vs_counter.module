@@ -1,15 +1,5 @@
 <?php
 
-function vs_counter_theme() {
-  return array(
-//    'vs_checkout_login_user' => array(
-//      'path' => drupal_get_path('module', 'vs_checkout') . '/theme',
-//      'template' => 'vs-checkout-login-user',
-//      'render element' => 'form',
-//    ),
-  );
-}
-
 function vs_counter_menu() {
   return array(
     'number-counter' => array(
@@ -46,11 +36,6 @@ function vs_counter_form($form, &$form_state) {
     '#required' => TRUE,
     
   );
-//  $form['deep_level'] = array(
-//    '#type' => 'textfield',
-//    '#title' => 'Кол-во комбинаций',
-//    '#required' => TRUE,
-//  );
   $form['target_val'] = array(
     '#type' => 'textfield',
     '#title' => 'Требуемое значение',
@@ -95,13 +80,7 @@ function vs_counter_form($form, &$form_state) {
     }
     file_save_data($file_content, 'public://count-number/' . date('d-m-Y_H-i-s',REQUEST_TIME) . '.csv');
     $form['download'] = array(
-//      '#type' => 'submit',
-//      '#value' => 'Скачать',
-//      '#submit' => array(),
-//      '#ajax' => array(
-//        'callback' => 'vs_counter_download_ajax',
-//      ),
-        '#markup' => l('Скачать', file_create_url('public://count-number/' . date('d-m-Y_H-i-s',REQUEST_TIME) . '.csv'), array('html' => TRUE)),
+      '#markup' => l('Скачать', file_create_url('public://count-number/' . date('d-m-Y_H-i-s',REQUEST_TIME) . '.csv'), array('html' => TRUE)),
     );
     $form['#vs_final'] = $form_state['values']['vs_final'];
   }
@@ -110,9 +89,6 @@ function vs_counter_form($form, &$form_state) {
 }
 
 function vs_counter_form_validate($form, &$form_state) {
-//  if (!is_numeric($form_state['values']['deep_level'])) {
-//    form_set_error('deep_level');
-//  }
   if (!is_numeric($form_state['values']['target_val'])) {
     form_set_error('target_val');
   }
@@ -195,11 +171,4 @@ function vs_counter_rec($values, $target_val, $deep, $main_deep, $parent_values 
     $_count ++;
   }
   return FALSE;
-}
-
-function vs_counter_download_ajax($form, &$form_state) {
-  dsm($form, 'ajax');
-  drupal_add_http_header('Content-type', 'application/csv');
-  drupal_add_http_header('Content-Disposition', 'attachment; filename="downloaded.csv"');
-  return "and";
 }

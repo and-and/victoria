@@ -15,9 +15,7 @@ $plugin = array(
   'title' => t('VS Categoty request content'),
   'description' => t('Provide View with products in this category'),
   'category' => t('VS'),
-//  'edit form' => 'querlain_checkout_suggestions_edit_form',
   'render callback' => 'vs_category_content_request_render',
-//  'required context' => new ctools_context_required(t('Order'), 'commerce_order'),
 );
 
 
@@ -52,7 +50,7 @@ function vs_category_content_request_render($subtype, $conf, $panel_args, $conte
     $img_rendered = theme_image_style($img);
   }
   $view = views_embed_view('category_page', 'panel_pane_2', $term->tid);
-//  dsm($img_rendered);
+
   //Init variables
   $block = new stdClass();
   

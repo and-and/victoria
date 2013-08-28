@@ -1,5 +1,105 @@
 <?php
 
+function vs_checkout_menu() {
+  $items['popup/vs-payment-confirm'] = array(
+    'page callback' => 'vs_checkout_payment_confirm_callback',
+    'access callback' => TRUE,
+  );
+  
+  return $items;
+}
+
+function vs_checkout_payment_confirm_callback() {
+  drupal_set_title("Я оплатил");
+  
+  $form = drupal_get_form('vs_checkout_payment_confirm_form');
+
+  return drupal_render($form);
+}
+
+function vs_checkout_payment_confirm_form($form, &$form_state) {
+  $payment = order_payment_new();
+
+  field_attach_form('order_payment', $payment, $form, $form_state);
+  $form['#theme'] = 'vs_payment_confirm_form';
+  $form['finish'] = array(
+    '#type' => 'submit',
+    '#value' => t('Готово'),
+    '#ajax' => array(
+      'callback' => 'vs_checkout_payment_confirm_form_ajax',
+    ),
+  );
+
+  return $form;
+}
+
+function vs_checkout_payment_confirm_form_submit($form, &$form_state) {
+  $payment = $form['#entity'];
+
+  field_attach_submit($payment->type, $payment, $form, $form_state);
+  
+  order_payment_save($payment);
+}
+
+function vs_checkout_payment_confirm_form_ajax($form, &$form_state) {
+  $commands = array();
+  drupal_get_messages();
+  $html = '<script>jQuery.fancybox.hideLoading();</script>';
+  if (form_get_errors()) {
+    $form = drupal_rebuild_form($form['#form_id'], $form_state, $form);
+    $html .= drupal_render($form);
+    
+    $commands[] = ajax_command_replace('.vs-payment-confirm-form-content-wrapper', $html);
+  }
+  else {
+
+//    $complete_form = drupal_get_form('vs_delivery_order_complete_form', $form['delivery_order']['#entity']->id);
+    $html .= theme('vs_payment_confirm_form_confirm');//drupal_render($complete_form);
+    $commands[] = ajax_command_html('.vs-payment-confirm-form-content-wrapper', $html);
+  }
+  
+  return array('#type' => 'ajax','#commands' => $commands);
+}
+
+/**
+ * Returns an initialized order object.
+ *
+ * @param $uid
+ *   The uid of the owner of the order.
+ * @param $status
+ *   Optionally the order status of the new order.
+ * @param $type
+ *   The type of the order; defaults to the standard 'order' type.
+ *
+ * @return
+ *   An order object with all default fields initialized.
+ */
+function order_payment_new($uid = 0, $title = '', $type = 'order_payment') {
+
+  return entity_get_controller('order_payment')->create(array(
+    'id' => 0,
+    'type' =>$type,
+    'uid' => $uid,
+//    'status' => $status,
+    'title' => $title,
+  ));
+
+}
+
+/**
+ * Saves an order.
+ *
+ * @param $order
+ *   The full order object to save. If $order->order_id is empty, a new order
+ *     will be created.
+ *
+ * @return
+ *   SAVED_NEW or SAVED_UPDATED depending on the operation performed.
+ */
+function order_payment_save($payment) {
+  return entity_get_controller('order_payment')->save($payment);
+}
+
   /**
  * Implements hook_ctools_plugin_directory().
  *
@@ -55,7 +155,7 @@ function vs_checkout_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'commerce_checkout_form_complete') {
     global $base_url;
     $form['#theme'] = 'vs_checkout_complete_form';
-    $form['#vs_order_id'] = $form_state['order']->order_id;
+    $form['#vs_order_id'] = $form_state['order']->order_number;
     $form_state['redirect'] = $base_url;
   }
 }
@@ -77,6 +177,15 @@ function vs_checkout_theme() {
       'template' => 'vs-checkout-complete-form',
       'render element' => 'form',
     ),
+    'vs_payment_confirm_form' => array(
+      'path' => drupal_get_path('module', 'vs_checkout') . '/theme',
+      'template' => 'vs-payment-confirm-form',
+      'render element' => 'form',
+    ),
+    'vs_payment_confirm_form_confirm' => array(
+      'path' => drupal_get_path('module', 'vs_checkout') . '/theme',
+      'template' => 'vs-payment-confirm-form-confirm',
+    ),
   );
 }
 
@@ -95,50 +204,23 @@ function vs_checkout_login_ajax($form, &$form_state){
 }
 
 function vs_checkout_guest_ajax($form, &$form_state) {
-//  $commands[] = ajax_command_remove($wrapper);
+
   return array('#type' => 'ajax', '#commands' => $commands);  
 }
 
 function vs_checkout_guest_continue_submit($form, &$form_state) {
-//  dsm($form_state, __FUNCTION__);
+
   $form_state['order'] = commerce_order_status_update($form_state['order'], 'checkout_' . $form_state['checkout_page']['next_page'], FALSE, TRUE, t('Customer was redirected to next page since (s)he was checkout as guest.'));
   drupal_goto('checkout/' . $form_state['order']->order_id . '/' . $form_state['checkout_page']['next_page']);
-//  $form_state['redirect'] = 
+
 }
 
 function vs_checkout_commerce_checkout_page_info_alter(&$checkout_pages) {
   unset($checkout_pages['review']);
 }
-//
-///**
-// * Implements hook_commerce_checkout_page_info().
-// */
-//function vs_checkout_commerce_checkout_page_info() {
-//  $page = array();
-//  $page['vs_address'] = array(
-//    'title' => 'VS address',
-//    'weight' => 10,
-//    'status_cart' => TRUE,
-//  );
-//  return $page;
-//}
-//
-///**
-// * Implements hook_commerce_checkout_pane_info().
-// */
-//function vs_checkout_commerce_checkout_pane_info() {
-//  $pane = array();
-//  $pane['vs_login'] = array(
-//    'title' => 'VS Login',
-//    'page' => 'vs_address',
-//    'review' => FALSE,
-//    'file' => 'includes/vs_checkout.checkout_pane.inc',
-//    'base' => 'vs_checkout_login',
-//  );
-//  return $pane;
-//}
-//function and_and_and($form, &$form_state) {
-//  dsm(__FUNCTION__);
-//  dsm($form);
-//  dsm($form_state)
-//}
+
+function vs_checkout_commerce_checkout_complete($order) {
+  $order_wrapper = entity_metadata_wrapper('commerce_order', $order);
+  $order_wrapper->order_number = "S" . date("dmy", REQUEST_TIME) . $order->order_id;
+  $order_wrapper->save();
+}

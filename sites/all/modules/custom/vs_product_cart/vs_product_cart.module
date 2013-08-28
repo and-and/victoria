@@ -4,9 +4,11 @@ function vs_product_cart_form_alter (&$form, &$form_state, $form_id) {
   if ($form_id == 'views_form_commerce_cart_form_default') {
     unset($form['#action']);
     drupal_add_js(drupal_get_path('theme', 'victoria') . '/scripts/vs-checkout.js');
-    foreach (element_children($form['edit_delete']) as $key) {
-      $form['edit_delete'][$key]['#ajax']['callback'] = 'vs_product_cart_delete_item_ajax';
-      $form['edit_delete'][$key]['#ajax']['effect'] = 'fade';
+    if (isset($form['edit_delete'])) {
+      foreach (element_children($form['edit_delete']) as $key) {
+        $form['edit_delete'][$key]['#ajax']['callback'] = 'vs_product_cart_delete_item_ajax';
+        $form['edit_delete'][$key]['#ajax']['effect'] = 'fade';
+      }
     }
   }
 }
@@ -113,7 +115,6 @@ function vs_product_cart_theme (){
       'template' => 'vs-product-cart-add-to-cart-form',
     ),
     'vs_product_cart_add_to_cart_confirm' => array(
-//      'render element' => 'form',
       'path' => drupal_get_path('module', 'vs_product_cart') . '/theme',
       'template' => 'vs-product-cart-add-to-cart-confirm',
     ),
@@ -140,7 +141,6 @@ function template_preprocess_vs_product_cart_add_to_cart_form (&$vars) {
   $rendered_html = array();
   $count = 0;
   foreach (element_children($field_options) as $key) {
-//    dsm($product);
     $attr_str = $product->field_valid_attributes['und'][$count]['safe_value'];
     $attr_arr = explode('|', $attr_str);
     foreach ($attr_arr as $k => $v) {
@@ -154,11 +154,6 @@ function template_preprocess_vs_product_cart_add_to_cart_form (&$vars) {
   $vars['rendered_html'] = $rendered_html;
 }
 
-function vs_product_cart_preprocess_views_view_fields (&$vars) {
-  if ($vars['theme_hook_suggestion'] == 'views_view_fields__product_display__default') {
-//    dsm($vars['row']);
-  }
-}
 
 function vs_product_cart_get_count_products() {
   global $user;
@@ -182,4 +177,25 @@ function vs_product_cart_get_count_products() {
     }
   }
   return FALSE;
+}
+
+/**
+ * Implements of hook_entity_info_alter().
+ *
+ * Additional view modes for node (product content type)
+ */
+function vs_product_cart_entity_info_alter(&$entity_info) {
+  $entity_info['commerce_product']['view modes']['search_result'] = array(
+    'label' => t('Search Result'),
+    'custom settings' => TRUE,
+  );
+}
+
+/**
+ * Implements hook_view_mode_templates().
+ */
+function vs_product_cart_view_mode_templates() {
+  return array(
+    'commerce_product__product__search_result',
+  );
 }

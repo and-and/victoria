@@ -50,6 +50,32 @@ $items = array(
     ),
   ),
 ),
+       'delivery_product' => array(
+  'name' => 'delivery_product',
+  'label' => 'delivery_product',
+  'properties' => array(
+    'title' => array(
+      'label' => 'Title',
+      'type' => 'text',
+      'behavior' => 'title',
+    ),
+    'uid' => array(
+      'label' => 'Author',
+      'type' => 'integer',
+      'behavior' => 'author',
+    ),
+    'created' => array(
+      'label' => 'Created',
+      'type' => 'integer',
+      'behavior' => 'created',
+    ),
+    'changed' => array(
+      'label' => 'Changed',
+      'type' => 'integer',
+      'behavior' => 'changed',
+    ),
+  ),
+),
   );
   return $items;
 }

@@ -43,7 +43,24 @@
   Drupal.behaviors.deliveryFormOpen = {
     attach:function() {
       $('.delivery-order-form-open').click(function(){
-        $('.fancy-delivery-order-form').trigger('click');
+        jQuery('.fancy-delivery-order-form').click();
+      });
+    }
+  }
+  Drupal.behaviors.deliveryFormClose = {
+    attach:function() {
+      $('.vs-order-delivery-popup-close').click(function(){
+        jQuery.fancybox.close();
+        return false;
+      });
+    }
+  }
+  Drupal.behaviors.deliveryFormOrder = {
+    attach:function() {
+      $('.vs-order-delivery-order-button').click(function(){
+        $(this).parents('.footer-bar-buttons').find('input').mousedown();
+        jQuery.fancybox.showLoading();
+        return false;
       });
     }
   }

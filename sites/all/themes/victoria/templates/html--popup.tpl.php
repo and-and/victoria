@@ -43,7 +43,6 @@
  * @ingroup themeable
  */
 $ajax = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest' ? true : false;
-watchdog("a", $ajax);
 ?>
 <?php if (!$ajax) : ?>
   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
@@ -67,4 +66,7 @@ watchdog("a", $ajax);
 <?php if (!$ajax) : ?>
 </body>
 </html>
+<?php else: ?>
+  <?php print $settings; ?>
 <?php endif; ?>
+

@@ -1,4 +1,3 @@
-<?php dsm($user); ?>
 <div class="vs-userzone-main-wrapper account" >
   <div class="col col-b">
     <h1 class="large">Добро пожаловать, <?php print $user->name; ?>.</h1>

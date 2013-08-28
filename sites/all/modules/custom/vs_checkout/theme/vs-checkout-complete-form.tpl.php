@@ -4,5 +4,5 @@
 </div>
 <div class="vs-complete-message-wrapper">
   <?php print drupal_render($form['checkout_completion_message']); ?>
-  <button class="btn-40 vs-button-3-steps vs-complete-message-button">Вернуться на главную</button>
+    <button formaction="<?php print url('<front>'); ?>" class="btn-40 vs-button-3-steps vs-complete-message-button">Вернуться на главную</button>
 </div>

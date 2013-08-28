@@ -92,8 +92,9 @@
   <button class="btn-40 btn-40-p small vs-checkout-billing-confirm vs-button-3-steps delivery-order-form-open">
     <span>Заказать</span>
   </button>
-  <div class="element-hidden">
-    <?php print l('Заказать', 'popup/devlivery-order-form', array('attributes' => array('class' => array('fancy-delivery-order-form')))); ?>
-  </div>
+
 
 </div>
+  <div class="element-hidden">
+    <?php print l('Заказать', 'popup/delivery-order-form', array('attributes' => array('class' => array('fancy-delivery-order-form')))); ?>
+  </div>

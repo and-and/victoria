@@ -86,8 +86,8 @@
  */
 ?>
 
-<div class="vs-add-to-cart-confirmation-wrapper">
-  <div class="column-1">
+<div class="vs-add-to-cart-confirmation-wrapper vs-order-delivery-popup-header">
+  <div class="column-1" style="height: auto; <?php print isset($column_width) ? 'width:' . $column_width : ''; ?>">
     <a class="vs-close-popup vs-button-2-steps">close</a>
     <div class="title-bar  titlebar-on">
       <div class="grp titlebar-content">
@@ -98,9 +98,7 @@
         </h1>
       </div>
     </div>
-    <div class="vs-cart-confirm-content" style="height:auto;">
-      <?php print render($page['content']); ?>
-    </div>
+    <?php print render($page['content']); ?>
   </div>
 </div>
 

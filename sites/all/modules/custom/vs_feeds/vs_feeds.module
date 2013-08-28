@@ -9,7 +9,6 @@ function vs_feeds_feeds_processor_targets_alter(&$target, $type, $bundle) {
       'name' => t('Options reference'),
       'description' => t('Option references'),
       'callback' => 'vs_feeds_set_target',
-//      'real_target' => 'field_data_field_options', // Specify real target field on node.
     );
   }
 }
@@ -34,7 +33,7 @@ function vs_feeds_set_target($source, $entity, $target, $value) {
     return;
   }
   $entity_wrapper = entity_metadata_wrapper('commerce_product', $entity);
-//  dsm($entity_wrapper->value());
+
   $entity_wrapper->{$target} = $result;
 }
 

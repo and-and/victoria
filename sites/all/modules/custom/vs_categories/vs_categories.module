@@ -58,7 +58,7 @@ function vs_categories_block_view($delta = '') {
   switch ($delta) {
     case 'footer':
       $block['subject'] = t('Footer');
-      $block['content'] = theme('vs_categories_footer', array('vs_categories_footer', 'vid' => 5));
+      $block['content'] = theme('vs_categories_footer', array('vs_categories_footer', 'vid' => 4));
       break;
 
   }
@@ -72,18 +72,23 @@ function theme_vs_categories_footer(&$vars){
   $html = '';
   
   $terms = taxonomy_get_tree($vars['vid'], 0, 1);
+  // Sort content to first and second line.
   foreach ($terms as $term) {
     $term = taxonomy_term_load($term->tid);
     if (empty($term->field_footer_link)) {
       $second_line[] = $term;
     }else {
-      $first_line[] = $term;
+      $term_link = format_string($term->field_footer_link[LANGUAGE_NONE][0]['value'], array('!SizePopup' => '<a class="popup-sizes" href="/popup/sizes">' . $term->name . '</a>'));
+      if ($term_link == $term->field_footer_link[LANGUAGE_NONE][0]['value']) {
+        $term_link = l($term->name, $term->field_footer_link['und'][0]['value']);
+      }
+      $first_line[] = $term_link;
     }
   }
   if (!empty($first_line)) {
     $html .= '<ul class="footer-first-line">';
     foreach ($first_line as $term) {
-      $html .= '<li>' . l($term->name, $term->field_footer_link['und'][0]['value']) . '</li>';
+      $html .= '<li>' . $term . '</li>';
     }
     $html .= '</ul>';
   }
