@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the VS Search feature feature.
+ */
+
+include_once 'vs_search_feature.features.inc';

@@ -15,6 +15,18 @@ function vs_order_delivery_eck_bundle_info() {
   'name' => 'delivery_order',
   'label' => 'delivery_order',
 ),
+  'delivery_product_delivery_product' => array(
+  'machine_name' => 'delivery_product_delivery_product',
+  'entity_type' => 'delivery_product',
+  'name' => 'delivery_product',
+  'label' => 'delivery_product',
+),
+  'order_payment_order_payment' => array(
+  'machine_name' => 'order_payment_order_payment',
+  'entity_type' => 'order_payment',
+  'name' => 'order_payment',
+  'label' => 'order_payment',
+),
   );
   return $items;
 }
@@ -59,6 +71,27 @@ $items = array(
       'type' => 'text',
       'behavior' => 'title',
     ),
+    'uid' => array(
+      'label' => 'Author',
+      'type' => 'integer',
+      'behavior' => 'author',
+    ),
+    'created' => array(
+      'label' => 'Created',
+      'type' => 'integer',
+      'behavior' => 'created',
+    ),
+    'changed' => array(
+      'label' => 'Changed',
+      'type' => 'integer',
+      'behavior' => 'changed',
+    ),
+  ),
+),
+       'order_payment' => array(
+  'name' => 'order_payment',
+  'label' => 'order_payment',
+  'properties' => array(
     'uid' => array(
       'label' => 'Author',
       'type' => 'integer',

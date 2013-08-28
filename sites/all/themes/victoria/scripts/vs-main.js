@@ -1,13 +1,11 @@
 (function($) {
-  Drupal.behaviors.inputTitles = {
+  Drupal.behaviors.searchHeaderRedirect = {
     attach:function() {
-      $('input[type=text]').focus(function(){
-        var val =   $(this).val()
-            title = $(this).attr('title');
-        if (val === "") {
-          
-        }
-      });
+      $('#searchform .vs-header-search-submit').click(function(){
+        var path = '/product/search/' + $(this).parent().find('input[type=text]').val();
+        document.location.href = path;
+        return false;
+      })
     }
   }
-})(jQuery);
+}(jQuery));

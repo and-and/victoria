@@ -1,0 +1,13 @@
+name = VS Search feature
+core = 7.x
+package = VS
+version = 7.x-1.0
+project = vs_search_feature
+dependencies[] = entity
+dependencies[] = search_api
+dependencies[] = search_api_db
+dependencies[] = search_api_page
+features[features_api][] = api:1
+features[search_api_index][] = products_index
+features[search_api_page][] = product_search_page
+features[search_api_server][] = db_server

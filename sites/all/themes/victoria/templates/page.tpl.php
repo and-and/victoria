@@ -96,7 +96,7 @@
       <div class="right header-search yui-skin-sam search">
         <form method="post" id="searchform" name="searchform" action="<?php print url('product/search/'); ?>" class="single-field">
           <input class="yui-ac-input text input" id="atomz_query" name="q" value type="text" autocomplete="off" title="Recherche">
-          <button class="vs-button-2-steps" type="submit">Submit</button>
+          <button class="vs-button-2-steps vs-header-search-submit" type="submit">Submit</button>
         </form>
       </div>
       <?php print theme('vs_header_user_block'); ?>
