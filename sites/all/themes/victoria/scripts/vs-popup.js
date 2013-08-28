@@ -71,7 +71,7 @@ var GPopup = GPopup || { 'settings': {}, 'behaviors': {}, 'locale': {} };
             afterLoad      : function(){
               setTimeout(function(){
                 if (Drupal.attachBehaviors) {
-                  Drupal.attachBehaviors($('.vs-payment-confirm-popup'), GPopup.settings);
+                  Drupal.attachBehaviors(document, GPopup.settings);
                   GPopup = { 'settings': {}, 'behaviors': {}, 'locale': {} };
                 };
                 

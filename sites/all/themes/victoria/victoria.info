@@ -21,6 +21,7 @@ scripts[] = scripts/vs-popup.js
 scripts[] = scripts/mwheelIntent.js
 scripts[] = scripts/jquery.jscrollpane.min.js
 scripts[] = scripts/vs-main.js
+scripts[] = scripts/jquery.watermark.min.js
 
 regions[header] = Header
 regions[help] = Help

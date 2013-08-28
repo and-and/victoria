@@ -93,12 +93,7 @@
           <a class="vs-button-2-steps" href="<?php print $front_page; ?>" rel="home"><span><?php print $site_name; ?></span></a>
         </strong>
       </div>
-      <div class="right header-search yui-skin-sam search">
-        <form method="post" id="searchform" name="searchform" action="<?php print url('product/search/'); ?>" class="single-field">
-          <input class="yui-ac-input text input" id="atomz_query" name="q" value type="text" autocomplete="off" title="Recherche">
-          <button class="vs-button-2-steps" type="submit">Submit</button>
-        </form>
-      </div>
+      <?php print vs_search_header_search_form_html(); ?>
       <?php print theme('vs_header_user_block'); ?>
       <?php print theme('vs_product_cart_header_line'); ?>
     </div> <!--header-inner END-->
