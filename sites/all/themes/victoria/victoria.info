@@ -9,6 +9,8 @@ stylesheets[all][] = css/style.css
 stylesheets[all][] = css/colors.css
 stylesheets[all][] = css/custom.css
 stylesheets[all][] = css/jquery.fancybox.css
+stylesheets[all][] = css/jquery.selectbox.css
+stylesheets[all][] = css/jquery.jscrollpane.css
 stylesheets[print][] = css/print.css
 
 scripts[] = scripts/vs-buttons.js
@@ -16,6 +18,9 @@ scripts[] = scripts/jquery-1.9.0.min.js
 scripts[] = scripts/jquery.mousewheel-3.0.6.pack.js
 scripts[] = scripts/jquery.fancybox.pack.js
 scripts[] = scripts/vs-popup.js
+scripts[] = scripts/mwheelIntent.js
+scripts[] = scripts/jquery.jscrollpane.min.js
+scripts[] = scripts/vs-main.js
 
 regions[header] = Header
 regions[help] = Help

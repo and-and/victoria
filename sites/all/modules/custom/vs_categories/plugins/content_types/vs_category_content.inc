@@ -25,7 +25,7 @@ $plugin = array(
  * Output function for the querlain checkout suggestion block.
  */
 function vs_category_content_render($subtype, $conf, $panel_args, $context) {
-  drupal_add_js('/sites/all/themes/victoria/scripts/vs-category.js');
+  drupal_add_js(drupal_get_path('theme', 'victoria') . '/scripts/vs-category.js');
   $arg = arg(1);
   if (empty($arg)) {
     $tree = taxonomy_get_tree(2, 0, 1);
@@ -51,8 +51,7 @@ function vs_category_content_render($subtype, $conf, $panel_args, $context) {
     $img['style_name'] = 'category_main';
     $img_rendered = theme_image_style($img);
   }
-  $view = views_embed_view('category_page', 'default', $term->tid);
-//  dsm($img_rendered);
+  $view = views_embed_view('category_page', 'panel_pane_1', $term->tid);
   //Init variables
   $block = new stdClass();
   

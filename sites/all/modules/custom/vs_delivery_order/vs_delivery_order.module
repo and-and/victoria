@@ -1,0 +1,298 @@
+<?php
+
+  /**
+ * Implements hook_ctools_plugin_directory().
+ *
+ * @param string $owner
+ *   The system name of the module owning the plugin type for which a base
+ *   directory location is being requested.
+ *
+ * @param string $plugin_type
+ *   The name of the plugin type for which a base directory is being requested.
+ *
+ * @return path
+ *   The path where CTools' plugin system should search for plugin files,
+ *   relative to your module's root. Omit leading and trailing slashes.
+ */
+function vs_delivery_order_ctools_plugin_directory($owner, $plugin_type) {
+  if ($owner == 'ctools' &&  in_array($plugin_type, array('content_types'))) {
+    return 'plugins/' . $plugin_type;
+  }
+}
+
+/**
+ * Implements hook_menu.
+ */
+function vs_delivery_order_menu() {
+  $items = array();
+  
+  $items['popup/delivery-order-form'] = array(
+      'page callback' => 'vs_delivery_order_form_page',
+      'access callback' => TRUE,
+  );
+
+  return $items;
+}
+
+function vs_delivery_order_form_page() {
+  $form = drupal_get_form('vs_delivery_order_form');
+
+  return drupal_render($form);
+}
+
+function vs_delivery_order_theme() {
+  return array(
+    'vs_delivery_order_form' => array(
+      'render element' => 'form',
+      'path' => drupal_get_path('module', 'vs_delivery_order') . '/theme',
+      'template' => 'vs-delivery-order-form',
+    ),
+    'vs_delivery_order_form_confirm' => array(
+      'render element' => 'form',
+      'path' => drupal_get_path('module', 'vs_delivery_order') . '/theme',
+      'template' => 'vs-delivery-order-form-confirm',
+    ),   
+  );
+}
+/**
+ * Returns an initialized order object.
+ *
+ * @param $uid
+ *   The uid of the owner of the order.
+ * @param $status
+ *   Optionally the order status of the new order.
+ * @param $type
+ *   The type of the order; defaults to the standard 'order' type.
+ *
+ * @return
+ *   An order object with all default fields initialized.
+ */
+function delivery_order_new($uid = 0, $title = '', $type = 'delivery_order') {
+
+  return entity_get_controller('delivery_order')->create(array(
+    'id' => 0,
+    'type' =>$type,
+    'uid' => $uid,
+//    'status' => $status,
+    'title' => $title,
+  ));
+
+}
+
+/**
+ * Returns an initialized order object.
+ *
+ * @param $uid
+ *   The uid of the owner of the order.
+ * @param $status
+ *   Optionally the order status of the new order.
+ * @param $type
+ *   The type of the order; defaults to the standard 'order' type.
+ *
+ * @return
+ *   An order object with all default fields initialized.
+ */
+function delivery_product_new($uid = 0, $title = '', $type = 'delivery_product') {
+
+  return entity_get_controller('delivery_product')->create(array(
+    'id' => 0,
+    'type' =>$type,
+    'uid' => $uid,
+//    'status' => $status,
+    'title' => $title,
+  ));
+
+}
+
+/**
+ * Saves an order.
+ *
+ * @param $order
+ *   The full order object to save. If $order->order_id is empty, a new order
+ *     will be created.
+ *
+ * @return
+ *   SAVED_NEW or SAVED_UPDATED depending on the operation performed.
+ */
+function delivery_order_save($order) {
+  return entity_get_controller('delivery_order')->save($order);
+}
+
+/**
+ * Saves an order.
+ *
+ * @param $order
+ *   The full order object to save. If $order->order_id is empty, a new order
+ *     will be created.
+ *
+ * @return
+ *   SAVED_NEW or SAVED_UPDATED depending on the operation performed.
+ */
+function delivery_product_save($product) {
+  return entity_get_controller('delivery_product')->save($product);
+}
+/**
+ * Loads an order by ID.
+ */
+function delivery_order_load($order_id) {
+  $orders = entity_load('delivery_order', array($order_id));
+  return $orders ? reset($orders) : FALSE;
+}
+
+function vs_delivery_order_complete_form($form, &$form_state, $order_id = NULL) {
+  $form['continue_order'] = array(
+    '#type' => 'submit',
+    '#value' => t('Добавить еще продукт'),
+    '#ajax' => array(
+      'callback' => 'vs_delivery_order_confirmation_continue_ajax',
+    ),
+  );
+  if (!is_null($order_id)) {
+    $form['#delivery_order_id'] = $order_id;
+    $order_wrapper = entity_metadata_wrapper('delivery_order', $order_id);
+    $product_ids = $order_wrapper->field_delivery_products->raw();
+    $form['#delivery_products_quantity'] = count($product_ids);
+    $form['#delivery_order_number'] = $order_wrapper->field_order_number->value();
+  }
+  $form['#theme'] = 'vs_delivery_order_form_confirm';
+//  $form['#prefix'] = '<div class="vs-delivery-order-form-content-wrapper" >';
+//  $form['#suffix'] = '</div>';
+  
+  return $form;
+}
+
+function vs_delivery_order_confirmation_continue_ajax($form, &$form_state) {
+  $form = drupal_get_form('vs_delivery_order_form', $form['#delivery_order_id']);
+  $html = drupal_render($form);
+  
+  $commands[] = ajax_command_html('.vs-delivery-order-form-content-wrapper', $html);
+  
+  return array('#type' => 'ajax','#commands' => $commands);
+}
+
+function vs_order_delivery_form_ajax($form, &$form_state) {
+  $commands = array();
+  drupal_get_messages();
+  $html = '<script>jQuery.fancybox.hideLoading();</script>';
+  if (form_get_errors()) {
+    $form = drupal_rebuild_form($form['#form_id'], $form_state, $form);
+    $html .= drupal_render($form);
+    
+    $commands[] = ajax_command_replace('.vs-delivery-order-form-content-wrapper', $html);
+  }
+  else {
+
+    $complete_form = drupal_get_form('vs_delivery_order_complete_form', $form['delivery_order']['#entity']->id);
+    $html .= drupal_render($complete_form);
+    $commands[] = ajax_command_html('.vs-delivery-order-form-content-wrapper', $html);
+  }
+  
+  return array('#type' => 'ajax','#commands' => $commands);
+}
+
+function vs_delivery_order_form($form, &$form_state, $order_id = NULL) {
+  global $user;
+
+  
+  if (is_null($order_id) || !delivery_order_load($order_id)) {
+    $order = delivery_order_new();
+  }
+  else {
+    $order = delivery_order_load($order_id);
+  }
+  $order_wrapper = entity_metadata_wrapper('delivery_order', $order);
+  $product = delivery_product_new();
+
+  if ($user->uid != 0 && $order->is_new) {
+    $user_wrapper = entity_metadata_wrapper('user', $user);
+    $address = $user_wrapper->field_user_address->value();
+    $phone = $user_wrapper->field_user_phone->value(array('sanitize' => TRUE));
+    if (!empty($address['first_name']) || !empty($address['last_name'])) {
+      $order_wrapper->field_fname_lname = check_plain($address['first_name'] . ' ' . $address['last_name']);
+    }
+    if (!empty($address['locality'])) {
+      $order_wrapper->field_city = check_plain($address['locality']);
+    }
+    if (!empty($phone)) {
+      $order_wrapper->field_user_phone = $phone;
+    }
+  }
+  $form['delivery_order'] = array(
+    '#type' => 'container',
+    '#tree' => TRUE,
+  );
+  $form['delivery_product'] = array(
+    '#type' => 'container',
+    '#tree' => TRUE,
+  );
+  field_attach_form('delivery_order', $order_wrapper->value(), $form['delivery_order'], $form_state);
+  $form['delivery_order']['field_order_number']['#access'] = FALSE;
+  $form['delivery_order']['field_delivery_products']['#access'] = FALSE;
+  field_attach_form('delivery_product', $product, $form['delivery_product'], $form_state);
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Оформить заказ'),
+    '#ajax' => array(
+      'callback' => 'vs_order_delivery_form_ajax',
+    ),
+  );
+  $form['#theme'] = 'vs_delivery_order_form';
+
+  return $form;
+}
+
+function vs_delivery_order_form_submit($form, &$form_state) {
+  $order = $form['delivery_order']['#entity'];
+  $product = $form['delivery_product']['#entity'];
+  field_attach_submit($order->type, $order, $form['delivery_order'], $form_state);
+  field_attach_submit($product->type, $product, $form['delivery_product'], $form_state);
+
+  delivery_order_save($order);
+  delivery_product_save($product);
+
+  $order_wrapper = entity_metadata_wrapper('delivery_order', $order);
+  $order_wrapper->title = $order_wrapper->id->raw();
+  $order_wrapper->field_order_number = 'Z' . date("dmy", REQUEST_TIME) . $order_wrapper->id->raw();
+  $order_wrapper->field_delivery_products[] = $product->id;
+  
+  $order_wrapper->save();
+}
+
+function vs_delivery_order_form_validate($form, &$form_state) {
+  
+}
+
+function vs_delivery_order_preprocess_node(&$vars) {
+
+//  drupal_add_js(drupal_get_path('theme', 'victoria') . '/scripts/vs-product.js');
+//  drupal_add_js(drupal_get_path('theme', 'victoria') . '/scripts/vs-popup.js');
+  if ($vars['type'] == 'delivery_orders_page') {
+      $vars['form'] = drupal_get_form('vs_delivery_order_form');
+//    drupal_add_js('/misc/autocomplete.js');
+  }
+}
+
+function vs_delivery_order_block_info() {
+  return array(
+    'vs_delivery_order_form' => array(
+      'info' => t('VS order delivery form'),
+      'cache' => DRUPAL_NO_CACHE,
+    ),
+  );
+}
+
+function vs_delivery_order_block_view($delta = '') {
+  $block = array();
+
+  switch ($delta) {
+    case 'vs_delivery_order_form':
+      $block['subject'] = t('VS order delivery form');
+      $block['content'] = //drupal_get_form('vs_delivery_order_form');
+              array(
+        '#theme' => 'vs_userzone_menu',
+        '#title' => t('VS userzone menu'),
+      );
+      break;
+  }
+  return $block;
+}

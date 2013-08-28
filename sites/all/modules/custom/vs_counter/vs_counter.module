@@ -1,0 +1,174 @@
+<?php
+
+function vs_counter_menu() {
+  return array(
+    'number-counter' => array(
+      'title' => "Vs number counter",
+      'page callback' => 'vs_counter_page',
+      'access arguments' => array('counter page'),
+    ),
+  );
+}
+
+function vs_counter_permission() {
+  return array(
+    'counter page' => array(
+      'title' => 'VS number counter',
+      'description' => 'Access to vs numbers counter page',
+    ),
+  );
+}
+
+function vs_counter_page() {
+  $form = array();
+  
+  $form = drupal_get_form('vs_counter_form');
+  
+  return drupal_render($form);
+}
+
+function vs_counter_form($form, &$form_state) {
+  $form = array();
+  
+  $form['numbers'] = array(
+    '#type' => 'textarea',
+    '#title' => 'Числа',
+    '#required' => TRUE,
+    
+  );
+  $form['target_val'] = array(
+    '#type' => 'textfield',
+    '#title' => 'Требуемое значение',
+    '#required' => TRUE,
+    
+  );
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => 'Вычислить',
+    '#attributes' => array('class' => array('ui-loader-non-ajax')),
+  );
+  
+  $html = '';
+
+  if (isset($form_state['values']['vs_final'])) {
+    $html .= '<table><tbody>';
+    $max = 0;
+    foreach ($form_state['values']['vs_final'] as $val) {
+      if (count($val) > $max) {
+        $max = count($val);
+      }
+    }
+    $html .= '<tr><th class="big" colspan="' . $max . '">Результат</th></tr>';
+    foreach ($form_state['values']['vs_final'] as $key => $val) {
+      $html .= '<tr>';
+      foreach ($val as $k => $v) {
+        $html .= '<td>' . $v . '</td>';
+      }
+      for ($i = 0; $i < ($max - count($val)); $i ++) {
+        $html .= '<td>&nbsp</td>';
+      }
+      $html .= '</tr>';
+    }
+    $html .= '</tbody></table>';
+    $form['results'] = array(
+      '#type' => 'markup',
+      '#markup' => '<div class="count-result">' . $html . '</div>'
+    );
+    $file_content = '';
+    foreach ($form_state['values']['vs_final'] as $val) {
+      $file_content .=  implode(',', $val) . chr(13);
+    }
+    file_save_data($file_content, 'public://count-number/' . date('d-m-Y_H-i-s',REQUEST_TIME) . '.csv');
+    $form['download'] = array(
+      '#markup' => l('Скачать', file_create_url('public://count-number/' . date('d-m-Y_H-i-s',REQUEST_TIME) . '.csv'), array('html' => TRUE)),
+    );
+    $form['#vs_final'] = $form_state['values']['vs_final'];
+  }
+
+  return $form;
+}
+
+function vs_counter_form_validate($form, &$form_state) {
+  if (!is_numeric($form_state['values']['target_val'])) {
+    form_set_error('target_val');
+  }
+}
+
+function vs_counter_form_submit($form, &$form_state) {
+  $max_deep = 7;
+  
+  $form_state['rebuild'] = TRUE;
+  $target_val = $form_state['values']['target_val'];
+  $deep = $form_state['values']['deep_level'];
+  $values = explode(',', $form_state['values']['numbers']);
+  foreach ($values as $key => $val) {
+    if (!is_numeric($val)) {
+      unset($values[$key]);
+    }
+  }
+  
+  $size = count($values);
+  
+  global $_vs_res;
+  global $_count;
+  $_vs_res = array();
+  $vs_final_res = array();
+  for ($i = 1; $i <= $max_deep; $i ++) {
+    vs_counter_rec($values, $target_val, $i, $i, array(), 0);
+    $vs_final_res += $_vs_res;
+    foreach ($_vs_res as $val_arr) {
+      foreach ($val_arr as $unset_val) {
+        foreach ($values as $source_key => $source_val) {
+          if ($unset_val == $source_val) {
+            unset($values[$source_key]);
+            break;
+          }
+        }
+      }
+    }
+  }
+
+  $form_state['values']['vs_final'] = $vs_final_res;
+  $form_state['values']['count'] = $_count;
+}
+
+function vs_counter_rec($values, $target_val, $deep, $main_deep, $parent_values = array(), $parents_sum = 0) {
+  global $_vs_res;
+  global $_count;
+  
+  while (count($values) >= $deep) {
+    if ($deep != 1) {
+      $parent_values[$deep] = array_shift($values);
+      if ($parents_sum + $parent_values[$deep] < $target_val) {
+        $find_result = vs_counter_rec($values, $target_val, $deep - 1, $main_deep, $parent_values, $parents_sum + $parent_values[$deep]);
+        if ($find_result && $deep < $main_deep) {
+          return $find_result;
+        }
+        elseif ($find_result && $deep == $main_deep) {
+          foreach ($find_result as $key_res => $val_res) {
+            if ($key_res == $main_deep) {
+              continue;
+            }
+            foreach ($values as $key_input => $val_input) {
+              if ($val_res == $val_input) {
+                unset($values[$key_input]);
+                break;
+              }
+            }
+          }
+        }
+      }
+    }
+    else {
+      $child_val = array_shift($values);
+      if ($parents_sum + $child_val == $target_val) {
+        $res = $parent_values;
+        $res[] = $child_val;
+        $_vs_res[] = $res;
+        return $res;
+      }
+    }
+    $_count ++;
+  }
+  return FALSE;
+}

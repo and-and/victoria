@@ -1,0 +1,9 @@
+name = VS feeds
+description = Provide feeds importing
+core = 7.x
+package = VS
+version = 7.x-1.0
+dependencies[] = commerce_feeds
+dependencies[] = feeds
+dependencies[] = feed_import
+dependencies[] = feeds_tamper

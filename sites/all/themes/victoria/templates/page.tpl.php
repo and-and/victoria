@@ -88,30 +88,19 @@
 <div id="page-wrapper"><div id="page">
   <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>">
     <div id="header-inner">
-      <div id="site-name"<?php // if ($hide_site_name) { print ' class="element-invisible"'; } ?>>
+      <div id="site-name">
         <strong>
-          <a href="<?php print $front_page; ?>" rel="home"><span><?php print $site_name; ?></span></a>
+          <a class="vs-button-2-steps" href="<?php print $front_page; ?>" rel="home"><span><?php print $site_name; ?></span></a>
         </strong>
       </div>
       <div class="right header-search yui-skin-sam search">
-        <form method="get" id="searchform" name="searchform" action="" class="single-field">
-          <input class="yui-ac-input text input" id="atomz_query" name="q" value="Search" type="text" autocomplete="off">
-          <button type="submit">Submit</button>
-          <div class="yui-ac-container" id="autocomplete"><div class="yui-ac-content" style="display: none;"><div class="yui-ac-hd" style="display: none;"></div><div class="yui-ac-bd"><ul id="autocomplete-list"></ul></div><div class="yui-ac-ft" style="display: none; "></div></div><div class="yui-ac-shadow" style="display: none;"></div></div>
+        <form method="post" id="searchform" name="searchform" action="<?php print url('product/search/'); ?>" class="single-field">
+          <input class="yui-ac-input text input" id="atomz_query" name="q" value type="text" autocomplete="off" title="Recherche">
+          <button class="vs-button-2-steps" type="submit">Submit</button>
         </form>
       </div>
-      <ul class="utilities" style="visibility: visible;">
-        <li id="welcome" style="display: none;">Welcome <!-- mp_trans_disable_start --><span id="nickname"></span><!-- mp_trans_disable_end --></li>
-        <li id="signIn" class="first"><a href="https://secure.victoriassecret.com/commerce/signin.vs?namespace=main&amp;origin=myMain.jsp&amp;event=link.login">Sign In</a></li>
-        <li id="account"><a href="https://secure.victoriassecret.com/commerce/main/acctMenu.jsf?namespace=main&amp;origin=myMain.jsp&amp;event=link.yourAccount">Account</a></li>
-        <li id="getEmail"><a href="http://www.victoriassecret.com/CustomerService/SignUp/SignUpForEmail">Get Email</a></li>
-        <li id="spanish"><a href="http://espanol.victoriassecret.com/" onclick="cmCreateConversionEventTag('Global', '2', 'espanol', '0'); var switchLanguage = function(lang){MP.SrcUrl=unescape('mp_js_orgin_url');MP.UrlLang='mp_js_current_lang';MP.init();MP.switchLanguage(MP.UrlLang==lang?'en':lang);return false;}; return switchLanguage('es');">Español</a></li>
-        <li id="english" style="display: none;"><a href="http://www.victoriassecret.com/" onclick="cmCreateConversionEventTag('Global', '2', 'english', '0'); var switchLanguage = function(lang){MP.SrcUrl=unescape('mp_js_orgin_url');MP.UrlLang='mp_js_current_lang';MP.init();MP.switchLanguage(MP.UrlLang==lang?'en':lang);return false;}; return switchLanguage('en');"><!-- mp_trans_disable_start -->English<!-- mp_trans_disable_end --></a></li>
-        <li id="signOut" style="display: none;"><a href="https://secure.victoriassecret.com/commerce/logoff.vs?namespace=main&amp;origin=myMain.jsp&amp;event=link.logout">Sign out</a></li>			
-      </ul>
-      <div class="shopping-bag" style="visibility: visible;">
-        <a href="#">Shopping Bag</a> <em></em>
-      </div>
+      <?php print theme('vs_header_user_block'); ?>
+      <?php print theme('vs_product_cart_header_line'); ?>
     </div> <!--header-inner END-->
   </div> <!-- /.section, /#header -->
   <?php if ($main_menu): ?>
@@ -161,17 +150,13 @@
       <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
       <a id="main-content"></a>
       <?php print render($title_prefix); ?>
-      <?php if ($title): ?>
+      <?php if ($title && arg(0) != 'user'): ?>
         <h1 class="title" id="page-title">
           <?php print $title; ?>
         </h1>
       <?php endif; ?>
       <?php print render($title_suffix); ?>
-      <?php if ($tabs): ?>
-        <div class="tabs">
-          <?php print render($tabs); ?>
-        </div>
-      <?php endif; ?>
+
       <?php print render($page['help']); ?>
       <?php if ($action_links): ?>
         <ul class="action-links">

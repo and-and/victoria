@@ -36,6 +36,56 @@ function bartik_process_html(&$variables) {
   }
 }
 
+function victoria_preprocess_html(&$vars) {
+
+  // @Important. Required due to fancybox popups.
+  drupal_add_js('misc/ajax.js');
+  drupal_add_js('misc/jquery.form.js');
+//  drupal_add_js('misc/jquery.once.js');
+//  drupal_add_js('misc/autocomplete.js');
+  
+
+  if (arg(0) == 'popup') {
+
+    $vars['ajax'] = isset($_SERVER['HTTP_X_REQUESTED_WITH']) && $_SERVER['HTTP_X_REQUESTED_WITH'] == 'XMLHttpRequest' ? TRUE : FALSE;
+    if ($vars['ajax']) {
+
+      // Now add a command to merge changes and additions to Drupal.settings.
+      $scripts = drupal_add_js();
+
+      if (!empty($scripts['settings'])) {
+        $settings = $scripts['settings'];
+        $js_element = $element = array(
+          '#tag' => 'script',
+          '#value' => '',
+          '#attributes' => array(
+            'type' => 'text/javascript',
+          ),
+        );
+        $js_element['#value'] = 'jQuery.extend(GPopup.settings, ' . drupal_json_encode(drupal_array_merge_deep_array($settings['data'])) . ");";
+
+        $vars['settings'] = theme('html_tag', array('element' => $js_element));
+//                var_dump($vars['settings']);die(arg(0));
+      }
+    }
+  }
+
+  if (arg(0) == 'main') {
+    drupal_add_js(drupal_get_path('theme', 'victoria') . '/scripts/vs-category.js');
+  }
+}
+
+function victoria_preprocess_page(&$vars) {
+  if (arg(0) == 'popup' && arg(1) == 'delivery-order-form') {
+    $vars['title'] = t('Victoria\'s Secret под заказ');
+  }
+  elseif (arg(0) == 'popup' && arg(1) == 'sizes') {
+    $vars['title'] = t('Victoria\'s Secret размерная сетка');
+    $vars['column_width'] = '700px';
+  }
+}
+
+
 /**
  * Override or insert variables into the page template.
  */

@@ -10,10 +10,10 @@
 function vs_product_taxonomy_default_vocabularies() {
   return array(
     'categories' => array(
-      'name' => 'Категории',
+      'name' => 'Категории в наличии',
       'machine_name' => 'categories',
       'description' => 'Категории раздела в наличии',
-      'hierarchy' => '1',
+      'hierarchy' => '0',
       'module' => 'taxonomy',
       'weight' => '0',
       'rdf_mapping' => array(

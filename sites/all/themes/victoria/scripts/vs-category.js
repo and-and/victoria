@@ -7,5 +7,5 @@
         $(this).find('.vs-category-product-image').removeClass('hover');
         $(this).find('.vs-title-text').removeClass('hover');
     });
-  }); 
+  });
 })(jQuery);

@@ -1,0 +1,121 @@
+<?php
+
+/**
+ * hook_feeds_processor_targets_alter()
+ */
+function vs_feeds_feeds_processor_targets_alter(&$target, $type, $bundle) {
+  if ($type == 'commerce_product' && $bundle == 'product') {
+    $target['field_options'] = array(
+      'name' => t('Options reference'),
+      'description' => t('Option references'),
+      'callback' => 'vs_feeds_set_target',
+    );
+  }
+}
+
+/**
+ * Callback for mapping. Here is where the actual mapping happens.
+ *
+ * When the callback is invoked, $target contains the name of the field the
+ * user has decided to map to and $value contains the value of the feed item
+ * element the user has picked as a source.
+ */
+function vs_feeds_set_target($source, $entity, $target, $value) {
+  if (empty($value)) {
+    return;
+  }
+  $attributes = array(
+    '1' => 'one_attribute',
+    '2' => 'two_attributes',
+  );
+  $result = $attributes[$value];
+  if (!isset($result)) {
+    return;
+  }
+  $entity_wrapper = entity_metadata_wrapper('commerce_product', $entity);
+
+  $entity_wrapper->{$target} = $result;
+}
+
+function vs_feeds_menu() {
+  $items = array();
+  $items['images_import'] = array(
+    'tittle' => t('Импорт изображений'),
+    'page callback' => 'vs_feeds_image_importer_page',
+    'access callback' => 'feeds_page_access',
+  );
+  return $items;
+}
+
+function vs_feeds_image_importer_page() {
+  $form = drupal_get_form('vs_image_form_confirmation');
+  return drupal_render($form);
+}
+
+function vs_image_form_confirmation($form, &$form_state) {
+  $form['padding']['#markup'] = '<p>&nbsp</p>';
+  $form['submit'] = array(
+    '#type' => 'submit',
+    '#value' => t('Начать импорт изображений'),
+  );
+  $form['submit']['#submit'][] = 'vs_feeds_image_importer';
+  return $form;
+}
+
+function vs_feeds_image_importer() {
+  $_images_count = 5;
+
+  $products = entity_load('commerce_product');
+  foreach ($products as $product) {
+    $operations[] = array('vs_feeds_image_update_batch', array($product, $_images_count));
+  }
+  $batch = array(
+    'operations' => $operations,
+  );
+  batch_set($batch);
+}
+
+function vs_feeds_image_update_batch($product, $images_count) {
+  if (!empty($product->field_prod_main_image)) {
+    return;
+  }
+  $sku = $product->sku;
+  $import_filename_path = 'public://import/';
+  $final_filename_path = 'public://images/';
+  for ($i = 0; $i < $images_count; $i ++) {
+    if ($i == 0) {
+      $num = '';
+    }
+    else {
+      $num = '.' . $i;
+    }
+    
+    $import_filename = $import_filename_path . $sku . $num . '.jpg';
+    $final_filename = $final_filename_path . $sku . $num . '.jpg';
+    if (file_exists($import_filename)) {
+      $image = file_get_contents($import_filename);
+      $file = file_save_data($image, $final_filename, FILE_EXISTS_REPLACE);
+      $product_wrapper = entity_metadata_wrapper('commerce_product', $product);
+      $product_wrapper->field_prod_main_image[] = (array)$file;
+      $product_wrapper->save();
+    }
+  }
+}
+
+function vs_feeds_entity_presave($entity, $type) {
+  if ($type != 'commerce_product') {
+    return;
+  }
+  $entity_wrapper = entity_metadata_wrapper('commerce_product', $entity);
+  $attrs = $entity_wrapper->field_valid_attributes->value();
+  $old_price = $entity_wrapper->field_old_price->value();
+  if (is_array($attrs) && isset($attrs[1]) && $attrs[1] != '') {
+    $entity->field_options[LANGUAGE_NONE][0]['set_id'] = 'two_attibutes';
+  }
+  elseif (is_array($attrs) && isset($attrs[0]) && $attrs[0] != '') {
+    $entity->field_options[LANGUAGE_NONE][0]['set_id'] = 'one_attribute';
+  }
+  if (!empty($old_price) && $old_price['amount'] == 0) {
+    unset($entity->field_old_price);
+  }
+}

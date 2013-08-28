@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the VS order delivery feature.
+ */
+
+include_once 'vs_order_delivery.features.inc';

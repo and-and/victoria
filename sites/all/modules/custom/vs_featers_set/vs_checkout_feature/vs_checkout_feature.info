@@ -1,0 +1,13 @@
+name = VS checkout feature
+description = Provides checkout
+core = 7.x
+package = VS
+version = 7.x-1.0
+project = vs_checkout_feature
+dependencies[] = commerce_customer
+dependencies[] = commerce_customer_ui
+dependencies[] = commerce_features
+dependencies[] = features
+dependencies[] = vs_user
+features[commerce_customer_type][] = billing
+features[features_api][] = api:1

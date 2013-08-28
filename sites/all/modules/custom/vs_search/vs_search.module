@@ -1,0 +1,20 @@
+<?php
+
+function vs_search_form_search_api_page_search_form_alter(&$form, &$form_state, $form_id) {
+  drupal_add_js(drupal_get_path('theme', 'victoria') . '/scripts/vs-category.js');
+  $form['form']['keys_1']['#prefix'] = '<div class="vs-serch-page-form-input">';
+  $form['form']['keys_1']['#suffix'] = '</div>';
+  $form['form']['submit_1']['#prefix'] = '<div class="vs-serch-page-form-submit">';
+  $form['form']['submit_1']['#suffix'] = '</div>';
+  $form['#prefix'] = '<div class="vs-serch-page-form">';
+  $form['#suffix'] = '</div>';
+}
+
+function vs_search_header_search_form($form, &$form_state) {
+  $form['test'] = array(
+    '#type' => 'textfield',
+    '#title' => 'TEST_search',
+//    '#default_value' => "ARX",
+  );
+  return $form;
+}
