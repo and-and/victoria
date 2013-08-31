@@ -421,8 +421,8 @@ function vs_product_field_default_fields() {
           'label' => 'above',
           'module' => 'text',
           'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 9,
+          'type' => 'text_plain',
+          'weight' => '9',
         ),
         'line_item' => array(
           'label' => 'above',
@@ -823,7 +823,7 @@ function vs_product_field_default_fields() {
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 8,
+          'weight' => '8',
         ),
         'line_item' => array(
           'label' => 'above',

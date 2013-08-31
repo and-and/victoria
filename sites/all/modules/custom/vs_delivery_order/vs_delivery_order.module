@@ -145,6 +145,7 @@ function vs_delivery_order_complete_form($form, &$form_state, $order_id = NULL) 
     '#value' => t('Добавить еще продукт'),
     '#ajax' => array(
       'callback' => 'vs_delivery_order_confirmation_continue_ajax',
+      'progress' => array(),
     ),
   );
   if (!is_null($order_id)) {

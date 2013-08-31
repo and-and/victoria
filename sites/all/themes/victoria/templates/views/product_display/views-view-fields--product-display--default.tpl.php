@@ -60,6 +60,11 @@
   <div class="vs-product-display-title">
     <h1><?php print $fields['title']->content; ?></h1>
   </div>
+  <?php if (!empty($fields['field_collection'])) : ?>
+    <div class="vs-product-display-collection">
+      <h2><?php print $fields['field_collection']->content; ?></h2>
+    </div>
+  <?php endif; ?>
   <div class="vs-product-display-description">
     <?php print $fields['field_product_description']->content; ?>
   </div>

@@ -1197,6 +1197,7 @@ a.vs-clickable-main-news {
   line-height: 2.5em;
   color: black;
 }
-.watermark {
-  /*color: red!important;*/
+.vs-product-display-collection {
+  font-weight: bold;
+  margin: 10px 0 20px;
 }

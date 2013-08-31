@@ -120,6 +120,10 @@ function vs_product_views_default_views() {
   $handler->display->display_options['fields']['field_valid_attributes']['table'] = 'field_data_field_valid_attributes';
   $handler->display->display_options['fields']['field_valid_attributes']['field'] = 'field_valid_attributes';
   $handler->display->display_options['fields']['field_valid_attributes']['delta_offset'] = '0';
+  /* Поле: Commerce Product: Коллекция */
+  $handler->display->display_options['fields']['field_collection']['id'] = 'field_collection';
+  $handler->display->display_options['fields']['field_collection']['table'] = 'field_data_field_collection';
+  $handler->display->display_options['fields']['field_collection']['field'] = 'field_collection';
   /* Contextual filter: Commerce Product: Product ID */
   $handler->display->display_options['arguments']['product_id']['id'] = 'product_id';
   $handler->display->display_options['arguments']['product_id']['table'] = 'commerce_product';
@@ -155,6 +159,7 @@ function vs_product_views_default_views() {
     t('Старая цена'),
     t('Описание'),
     t('Доступные размеры'),
+    t('Коллекция'),
     t('Все'),
   );
   $export['product_display'] = $view;
