@@ -104,6 +104,15 @@ function delivery_product_new($uid = 0, $title = '', $type = 'delivery_product')
 
 }
 
+function vs_delivery_order_permission() {
+  return array(
+    'view delivery orders' => array(
+      'title' => 'View delivery orders',
+      'description' => 'Show delivery order and orders list',
+    ),
+  );
+}
+
 /**
  * Saves an order.
  *
