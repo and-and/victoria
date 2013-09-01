@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * Implements hook_schema().
+ */
+function commerce_entitycache_schema() {
+  $cache_schema = drupal_get_schema_unprocessed('system', 'cache');
+
+  $schema['cache_entity_commerce_product']  = $cache_schema;
+  $schema['cache_entity_commerce_product']['description'] = 'Cache table used to store commerce_product entity records.';
+
+  $schema['cache_entity_commerce_line_item']  = $cache_schema;
+  $schema['cache_entity_commerce_line_item']['description'] = 'Cache table used to store commerce_line_item entity records.';
+
+  $schema['cache_entity_commerce_order']  = $cache_schema;
+  $schema['cache_entity_commerce_order']['description'] = 'Cache table used to store commerce_order entity records.';
+   return $schema;
+}

@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Implements hook_entity_info_alter() for commerce entities.
+ */
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function commerce_entitycache_entity_info_alter(&$entity_info) {
+  $entity_info['commerce_product']['controller class'] = 'CommerceEntityCacheCommerceProductEntityController';
+  $entity_info['commerce_product']['field cache'] = FALSE;
+  $entity_info['commerce_product']['entity cache'] = TRUE;
+
+  $entity_info['commerce_order']['controller class'] = 'CommerceEntityCacheCommerceOrderEntityController';
+  $entity_info['commerce_order']['field cache'] = FALSE;
+  $entity_info['commerce_order']['entity cache'] = TRUE;
+
+  $entity_info['commerce_line_item']['controller class'] = 'CommerceEntityCacheCommerceLineItemEntityController';
+  $entity_info['commerce_line_item']['field cache'] = FALSE;
+  $entity_info['commerce_line_item']['entity cache'] = TRUE;
+
+}

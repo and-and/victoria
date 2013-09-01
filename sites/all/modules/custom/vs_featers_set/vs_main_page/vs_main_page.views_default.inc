@@ -60,7 +60,7 @@ function vs_main_page_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_label_colon'] = FALSE;
   $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => '',
+    'image_style' => 'main_slider',
     'image_link' => '',
   );
   /* Sort criterion: Содержимое: Post date */
@@ -78,7 +78,6 @@ function vs_main_page_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $translatables['main_slider'] = array(
     t('Master'),
     t('Слайдер'),
@@ -141,6 +140,12 @@ function vs_main_page_views_default_views() {
   $handler->display->display_options['fields']['body']['field'] = 'body';
   $handler->display->display_options['fields']['body']['label'] = '';
   $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  /* Поле: Поле: Ссылка */
+  $handler->display->display_options['fields']['field_vs_link']['id'] = 'field_vs_link';
+  $handler->display->display_options['fields']['field_vs_link']['table'] = 'field_data_field_vs_link';
+  $handler->display->display_options['fields']['field_vs_link']['field'] = 'field_vs_link';
+  $handler->display->display_options['fields']['field_vs_link']['label'] = '';
+  $handler->display->display_options['fields']['field_vs_link']['element_label_colon'] = FALSE;
   /* Sort criterion: Содержимое: Post date */
   $handler->display->display_options['sorts']['created']['id'] = 'created';
   $handler->display->display_options['sorts']['created']['table'] = 'node';
@@ -163,7 +168,6 @@ function vs_main_page_views_default_views() {
 
   /* Display: Block */
   $handler = $view->new_display('block', 'Block', 'block');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $translatables['news_blocks_homepage'] = array(
     t('Master'),
     t('more'),

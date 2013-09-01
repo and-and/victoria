@@ -81,7 +81,7 @@
   </div>
   <?php if (!empty($row->field_field_valid_attributes)) : ?>
     <div class="vs-product-display-sizefit">
-      <span>Доступные размеры:</span>
+      <a class="popup-sizes" href="/popup/sizes">Таблица размеров</a>
     </div>
   <?php  endif; ?>
   <div class="attributes">

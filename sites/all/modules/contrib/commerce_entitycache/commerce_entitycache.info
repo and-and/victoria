@@ -1,0 +1,15 @@
+name = Commerce EntityCache
+description = Commerce EntityCache implementation for products and line items
+core = 7.x
+dependencies[] = commerce
+dependencies[] = entitycache
+files[] = commerce_entitycache.product.inc
+files[] = commerce_entitycache.order.inc
+files[] = commerce_entitycache.line_item.inc
+
+; Information added by drupal.org packaging script on 2013-05-02
+version = "7.x-1.0"
+core = "7.x"
+project = "commerce_entitycache"
+datestamp = "1367471116"
+
