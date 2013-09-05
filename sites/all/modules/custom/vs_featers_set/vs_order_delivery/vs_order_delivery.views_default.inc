@@ -152,7 +152,7 @@ function vs_order_delivery_views_default_views() {
   $handler->display->display_options['relationships']['uid']['table'] = 'eck_delivery_order';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   $handler->display->display_options['path'] = 'admin/commerce/delivery-orders';
-  $handler->display->display_options['menu']['type'] = 'default tab';
+  $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Заказы доставки';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['context'] = 0;
@@ -160,6 +160,14 @@ function vs_order_delivery_views_default_views() {
 
   /* Display: Order */
   $handler = $view->new_display('block', 'Order', 'block_1');
+  $handler->display->display_options['defaults']['empty'] = FALSE;
+  /* No results behavior: Global: Unfiltered text */
+  $handler->display->display_options['empty']['area_text_custom']['id'] = 'area_text_custom';
+  $handler->display->display_options['empty']['area_text_custom']['table'] = 'views';
+  $handler->display->display_options['empty']['area_text_custom']['field'] = 'area_text_custom';
+  $handler->display->display_options['empty']['area_text_custom']['label'] = 'No products';
+  $handler->display->display_options['empty']['area_text_custom']['empty'] = TRUE;
+  $handler->display->display_options['empty']['area_text_custom']['content'] = 'Нет продуктов';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Entity Reference: Referenced Entity */
   $handler->display->display_options['relationships']['field_delivery_products_target_id']['id'] = 'field_delivery_products_target_id';
@@ -208,45 +216,6 @@ function vs_order_delivery_views_default_views() {
   $handler->display->display_options['fields']['id_1']['field'] = 'id';
   $handler->display->display_options['fields']['id_1']['relationship'] = 'field_delivery_products_target_id';
   $handler->display->display_options['fields']['id_1']['exclude'] = TRUE;
-  $translatables['delivery_orders'] = array(
-    t('Master'),
-    t('Delivery orders'),
-    t('more'),
-    t('Apply'),
-    t('Сбросить'),
-    t('Sort by'),
-    t('Asc'),
-    t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« первая'),
-    t('‹ предыдущая'),
-    t('следующая ›'),
-    t('последняя »'),
-    t('Пользователь'),
-    t('delivery_product entity referenced from field_delivery_products'),
-    t('Номер заказа'),
-    t('Создано'),
-    t('Название'),
-    t('Город'),
-    t('Фамилия Имя'),
-    t('Телефон'),
-    t('№ склада НП'),
-    t('Все'),
-    t('Orders list'),
-    t('Order'),
-    t('delivery_product'),
-    t('Код товара'),
-    t('Ссылка'),
-    t('Размер'),
-    t('Цвет'),
-    t('Цена'),
-    t('Примечание'),
-    t('Id'),
-    t('.'),
-    t(','),
-  );
   $export['delivery_orders'] = $view;
 
   return $export;

@@ -21,5 +21,8 @@
  * regardless of any changes in the aliasing that might happen if
  * the view is modified.
  */
+if (empty($output)) {
+  $output = $variables['row']->id;
+}
 ?>
-<?php print 'A';//$output; ?>
+<?php print l($output, 'admin/commerce/delivery-orders/' . $variables['row']->id); ?>

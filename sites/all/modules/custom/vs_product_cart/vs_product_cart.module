@@ -133,6 +133,7 @@ function template_preprocess_vs_product_cart_add_to_cart_form (&$vars) {
   drupal_add_js(drupal_get_path('module', 'cloud_zoom') . '/js/cloud_zoom.js');
   drupal_add_js(drupal_get_path('module', 'cloud_zoom') . '/libraries/cloud-zoom/cloud-zoom.1.0.3.min.js');
   $field_options = $vars['form']['field_options'][0];
+  dsm($vars);
   if (empty($field_options)) {
     return;
   }

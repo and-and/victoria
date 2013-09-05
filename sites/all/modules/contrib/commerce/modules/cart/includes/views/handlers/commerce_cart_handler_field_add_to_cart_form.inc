@@ -79,7 +79,7 @@ class commerce_cart_handler_field_add_to_cart_form extends views_handler_field_e
   function render($values) {
     // Attempt to load the specified product.
     $product = $this->get_value($values);
-
+dsm($product,"A");
     if (!empty($product)) {
       // Extract a default quantity for the Add to Cart form line item.
       $default_quantity = $this->options['default_quantity'] <= 0 ? 1 : $this->options['default_quantity'];
