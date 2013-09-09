@@ -357,7 +357,7 @@ a.vs-category-product-link:hover {
   margin: 0;
   position: static;
   padding: 0;
-  backbround: #FFF;
+  background: #FFF;
   line-height: 14px;
 }
 .ui-selectmenu-menu p, .drop-sel .ui-selectmenu-menu p {
@@ -848,6 +848,7 @@ body .signin {
   width: 18px;
   height: 18px;
   float: right;
+  z-index: 9999;
 }
 .vs-non-ajax-loader {
   background-image: url(../images/27px-gray.gif);

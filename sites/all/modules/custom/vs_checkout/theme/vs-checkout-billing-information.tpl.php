@@ -3,11 +3,13 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
+global $user;
+$user_name = ($user->uid == 0) ? 'Гость' : $user->name;
 ?>
 <div id="checkoutWrapper" class="checkout-wrapper">
   <div id="checkoutClosed" class="checkout-panel grp hide expand" style="display: block;">
     <h1 class="large" style="text-transform: uppercase;">Оформить заказ</h1>
-    <span id="checkoutStatus"> <b>Гость</b> <!--<a class="signInLink" href="#">Sign In</a>--> 
+    <span id="checkoutStatus"> <b><?php print $user_name; ?></b> <!--<a class="signInLink" href="#">Sign In</a>--> 
     </span>
     <div class="clearfix"></div>
   </div>
@@ -28,10 +30,7 @@
         <?php print drupal_render($form['customer_profile_billing']['commerce_customer_address']['und'][0]['name_block']); ?>
         <?php print drupal_render($form['customer_profile_billing']['field_address_mail']); ?>
         <?php print drupal_render($form['customer_profile_billing']['field_user_phone']); ?>
-        <?php // print drupal_render($form['customer_profile_billing']['field_user_phone_1']); ?>
-        <?php // print drupal_render($form['customer_profile_billing']['commerce_customer_address']['und'][0]['country']); ?>
         <?php print drupal_render($form['customer_profile_billing']['commerce_customer_address']['und'][0]['locality_block']); ?>
-        <?php // print drupal_render($form['customer_profile_billing']['commerce_customer_address']['und'][0]['street_block']); ?>
         <?php print drupal_render($form['customer_profile_billing']['field_n_sclada']); ?>
 
 
