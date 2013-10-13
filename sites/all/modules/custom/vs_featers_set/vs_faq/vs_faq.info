@@ -1,0 +1,16 @@
+name = VS FAQ
+core = 7.x
+package = VS
+version = 7.x-1.0
+project = vs_faq
+dependencies[] = ctools
+dependencies[] = features
+dependencies[] = field_sql_storage
+dependencies[] = node
+dependencies[] = text
+dependencies[] = views
+features[ctools][] = views:views_default:3.0
+features[features_api][] = api:1
+features[field][] = node-faq-body
+features[node][] = faq
+features[views_view][] = vs_faq

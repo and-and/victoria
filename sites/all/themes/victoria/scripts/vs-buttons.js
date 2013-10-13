@@ -20,6 +20,7 @@
   Drupal.behaviors.uiLoaderAjax ={
     attach:function(){
       $('.ui-loader').click(function(){
+        return true;
         var txt = $(this).find('span').html();
             throbber = '<div class="vs-ajax-submit-throbber"></div>'
         $(this).html('<span>' + txt + '</span>' + throbber);

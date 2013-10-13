@@ -215,7 +215,7 @@ $databases = array (
   array (
     'default' => 
     array (
-      'database' => 'vs1',
+      'database' => 'vs_3',
       'username' => 'root',
       'password' => '',
       'host' => 'localhost',

@@ -7,8 +7,8 @@
 <!--<div class="vs-delivery-order-form-content-wrapper" >-->
   <div class="vs-delivery-order-form-content checkout_completion_message" >
     <p>
-      <?php print t('Оплата успешно оформленна .
-Мы свяжемся с вами для подтверждения.'); ?>
+      <?php print t('Оплата успешно оформлена.</br>
+После проверки транзакции Вам на почту прийдет подтверждение оплаты и обновится статус заказа.'); ?>
     </p>
   </div>
   <div class="vs-cart-confirm-footer">

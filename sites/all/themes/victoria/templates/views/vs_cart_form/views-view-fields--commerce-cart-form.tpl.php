@@ -45,9 +45,11 @@ $options = vs_product_cart_get_html_options($row->_field_data['commerce_line_ite
       <p class="item-name small edit-btn cufon-replaced"><?php print $fields['line_item_title']->content; ?></p>
       <p class="item-number"><?php print $fields['sku']->content; ?></p>
       <div class="grp item-specs">
-        <?php foreach ($options as $option) : ?>
-          <p><span><?php print $option['label']; ?></span><?php print $option['value']; ?></p>
-        <?php endforeach; ?>
+        <?php if (!empty($options)) : ?>
+          <?php foreach ($options as $option) : ?>
+            <p><span><?php print $option['label']; ?></span><?php print $option['value']; ?></p>
+          <?php endforeach; ?>
+        <?php endif; ?>
         <p><span class="label">Количество</span><?php print $fields['quantity']->content; ?></p>
       </div>
     </div>

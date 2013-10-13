@@ -1,5 +1,6 @@
 <?php
 
+define('V_NALICHII_VID', 2);
 /**
  * @file
  * Commerce panels integration plugin nodeque suggestion product block.
@@ -28,7 +29,7 @@ function vs_sidebar_menu_render($subtype, $conf, $panel_args, $context) {
   //Init variables
   $block = new stdClass();
   
-  $tree = taxonomy_get_tree(2, 0, 3);
+  $tree = taxonomy_get_tree(V_NALICHII_VID, 0, 3);
   foreach ($tree as $term) {
     switch ($term->depth) {
       case 0:
@@ -36,6 +37,23 @@ function vs_sidebar_menu_render($subtype, $conf, $panel_args, $context) {
         continue;
       case 1:
         $tid = $term->tid; 
+        $childrens = taxonomy_get_children($tid, V_NALICHII_VID);
+        if (empty($childrens)) {
+          if (drupal_get_path_alias('taxonomy/term/' . $term->tid) && drupal_get_path_alias('taxonomy/term/' . $term->tid) != 'taxonomy/term/' . $term->tid) {
+            $alias = drupal_get_path_alias('taxonomy/term/' . $term->tid);
+          }else {
+            $alias = $tid;
+          }
+          $term->link = l($term->name, 'v-nalichii/' . $alias, array('attributes' => array('class' => array('vs-sub-category-link'))));
+          if ($alias == arg(1) && arg(0) != 'product') {
+            $term->active = TRUE;
+          }else {
+            $term->active = FALSE;
+          }
+        }
+        else {
+          $term->link = FALSE;
+        }
         $menu[$tid]['term'] = $term;
         continue;
       case 2:

@@ -8,4 +8,7 @@
         $(this).find('.vs-title-text').removeClass('hover');
     });
   });
+  $(document).ready(function() {
+    jQuery("#accordion").accordion({collapsible: true, autoHeight: false, active: false});
+  });
 })(jQuery);

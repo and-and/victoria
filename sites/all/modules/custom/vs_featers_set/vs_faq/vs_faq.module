@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the VS FAQ feature.
+ */
+
+include_once 'vs_faq.features.inc';

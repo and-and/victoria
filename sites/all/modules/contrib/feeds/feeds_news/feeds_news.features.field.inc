@@ -5,12 +5,12 @@
  */
 
 /**
- * Implements hook_field_default_fields().
+ * Implementation of hook_field_default_fields().
  */
 function feeds_news_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-feed_item-field_feed_item_description'.
+  // Exported field: 'node-feed_item-field_feed_item_description'
   $fields['node-feed_item-field_feed_item_description'] = array(
     'field_config' => array(
       'active' => '1',
@@ -31,7 +31,6 @@ function feeds_news_field_default_fields() {
           0 => 'format',
         ),
       ),
-      'locked' => '0',
       'module' => 'text',
       'settings' => array(),
       'translatable' => '1',

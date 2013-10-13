@@ -126,9 +126,6 @@ function vs_checkout_form_alter(&$form, &$form_state, $form_id) {
   }
   if ($form_id == 'commerce_checkout_form_login' && arg(0) == 'checkout') {
     $form['#theme'] = 'vs_checkout_login_user';
-//    $form['actions']['submit']['#value'] = 'Войти и заказать';
-//    $form['actions']['submit']['#ajax']['callback'] = 'vs_checkout_login_ajax';
-//    $form['actions']['submit']['#ajax']['event'] = 'vs_checkout_login_ajax';
     $form['login_pane']['name']['#title'] = 'Имя пользователя';
     $form['login_pane']['pass']['#title'] = 'Пароль';
     $form['login_pane']['actions']['continue_guest'] = array(
@@ -136,9 +133,6 @@ function vs_checkout_form_alter(&$form, &$form_state, $form_id) {
       '#value' => 'Continue as guest',
       '#limit_validation_errors' => array(),
       '#submit' => array('vs_checkout_guest_continue_submit'),
-//      '#ajax' => array(
-//        'callback' => 'vs_checkout_guest_ajax',
-//      ),
     );
   }
   if ($form_id == 'commerce_checkout_form_checkout') {
@@ -146,10 +140,12 @@ function vs_checkout_form_alter(&$form, &$form_state, $form_id) {
     $user_wrapper = entity_metadata_wrapper('user', $user);
     $form['#theme'] = 'vs_checkout_billing_information';
     unset($form['customer_profile_billing']['commerce_customer_address']['und'][0]['name_block']['last_name']['#prefix']);
-    $form['customer_profile_billing']['field_address_mail']['und'][0]['value']['#default_value'] = $user->mail;
-    $form['customer_profile_billing']['field_user_phone']['und'][0]['value']['#default_value'] = $user_wrapper->field_user_phone->value();
-    if (isset($user_wrapper->field_user_phone_1)) {
-      $form['customer_profile_billing']['field_user_phone_1']['und'][0]['value']['#default_value'] = $user_wrapper->field_user_phone_1->value();
+    $form['account']['login']['#access'] = FALSE;
+    if ($user->uid) {
+      $form['customer_profile_billing']['field_user_phone']['und'][0]['value']['#default_value'] = $user_wrapper->field_user_phone->value();
+      $form['customer_profile_billing']['field_address_mail']['und'][0]['value']['#default_value'] = $user->mail;
+      $form['customer_profile_billing']['commerce_customer_address']['und'][0]['#address'] = array_merge($form['customer_profile_billing']['commerce_customer_address']['und'][0]['#address'], $user_wrapper->field_user_address->value());
+      $form['customer_profile_billing']['field_n_sclada']['und'][0]['value']['#default_value'] = $user_wrapper->field_n_sclada->value();
     }
   }
   if ($form_id == 'commerce_checkout_form_complete') {
@@ -220,7 +216,31 @@ function vs_checkout_commerce_checkout_page_info_alter(&$checkout_pages) {
 }
 
 function vs_checkout_commerce_checkout_complete($order) {
+  global $user;
+  
   $order_wrapper = entity_metadata_wrapper('commerce_order', $order);
-  $order_wrapper->order_number = "S" . date("dmy", REQUEST_TIME) . $order->order_id;
+  $order_number = "S" . date("dmy", REQUEST_TIME) . $order->order_id;
+  $order_wrapper->order_number = $order_number;
   $order_wrapper->save();
+  
+  $billing_wrapper = $order_wrapper->commerce_customer_billing;
+  $user_mail = $billing_wrapper->field_address_mail->value();
+  if (empty($user_mail) || !valid_email_address($user_mail)) {
+    $user_mail = $order_wrapper->mail->raw();
+  }
+
+  $site_mail = variable_get('site_mail', '');
+  if (!empty($user_mail)) {
+    drupal_mail('vs_delivery_order', 'vs-order-notify', $user_mail, language_default(), array('name' => $user->name, 'order_number' => $order_number));
+  }
+  if ($user->uid != 0) {
+    if (!empty($site_mail)) {
+      drupal_mail('vs_delivery_order', 'vs-checkout-order-notify-admin', $site_mail, language_default(), array('name' => $user->name, 'order_number' => $order_number, 'order_id' => $order->order_id));
+    }
+  }
+  else {
+    if (!empty($site_mail)) {
+      drupal_mail('vs_delivery_order', 'vs-checkout-order-notify-admin', $site_mail, language_default(), array('name' => t("Аноним"), 'order_number' => $order_number, 'order_id' => $order->order_id));
+    }
+  }
 }

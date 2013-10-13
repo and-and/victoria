@@ -8,7 +8,7 @@
         <?php print l(t('Редактировать личные данные'), 'user/edit', array('attributes' => array('class' => array('ui-callout')))); ?>
       </li>												
       <li>													
-        <?php // print l(t('Ваши заказы'), 'user/orders', array('attributes' => array('class' => array('ui-callout')))); ?>
+        <?php print l(t('Ваши заказы'), 'user/orders', array('attributes' => array('class' => array('ui-callout')))); ?>
       </li>												
     </ul>									
   </div>

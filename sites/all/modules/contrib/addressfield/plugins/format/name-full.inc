@@ -24,16 +24,16 @@ function addressfield_format_name_full_generate(&$format, $address) {
     '#weight' => -100,
   );
   $format['name_block']['first_name'] = array(
-    '#title' => t('Имя'),
+    '#title' => t('First name'),
     '#size' => 30,
     '#required' => TRUE,
     '#attributes' => array('class' => array('first-name')),
   );
   $format['name_block']['last_name'] = array(
-    '#title' => t('Фамилия'),
+    '#title' => t('Last name'),
     '#size' => 30,
     '#required' => TRUE,
-    '#prefix' => ' ',
+    '#prefix' => ' ',
     '#attributes' => array('class' => array('last-name')),
   );
 }
