@@ -116,6 +116,18 @@ function vs_userzone_theme() {
       'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
       'template' => 'vs-userzone-edit-form',
     ),
+    'vs_user_orders_list' => array(
+      'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
+      'template' => 'vs-user-orders-list',
+    ),
+    'vs_user_commerce_order_view' =>array(
+      'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
+      'template' => 'vs-user-commerce-order-view',
+    ),
+    'vs_user_delivery_order_view' =>array(
+      'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
+      'template' => 'vs-user-delivery-order-view',
+    ),
   );
 }
 

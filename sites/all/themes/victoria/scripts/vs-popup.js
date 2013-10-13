@@ -45,7 +45,7 @@ var GPopup = GPopup || { 'settings': {}, 'behaviors': {}, 'locale': {} };
             afterLoad      : function(){
               setTimeout(function(){
                 if (Drupal.attachBehaviors) {
-                  Drupal.attachBehaviors($('.fancy-delivery-order-form'), GPopup.settings);
+                  Drupal.attachBehaviors(document, GPopup.settings);
                   GPopup = { 'settings': {}, 'behaviors': {}, 'locale': {} };
                 };
                 
