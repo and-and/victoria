@@ -97,7 +97,18 @@ function order_payment_new($uid = 0, $title = '', $type = 'order_payment') {
  *   SAVED_NEW or SAVED_UPDATED depending on the operation performed.
  */
 function order_payment_save($payment) {
-  return entity_get_controller('order_payment')->save($payment);
+  global $user;
+
+  $res = entity_get_controller('order_payment')->save($payment);
+  $site_mail = variable_get('site_mail', '');
+  if (!empty($site_mail)) {
+    if ($user->uid != 0) {
+      drupal_mail('vs_delivery_order', 'vs-order-payment-notify-admin', $site_mail, language_default(), array('name' => $user->name, 'order_payment' => $payment));
+    }
+    else {
+      drupal_mail('vs_delivery_order', 'vs-order-payment-notify-admin', $site_mail, language_default(), array('name' => t("Аноним"), 'order_payment' => $payment));
+    }
+  }
 }
 
   /**

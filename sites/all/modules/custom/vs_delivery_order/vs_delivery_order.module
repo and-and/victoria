@@ -348,5 +348,13 @@ function vs_delivery_order_mail($key, &$message, $params) {
       ));
       $message['body'][] = t('Ссылка на заказ !URL', array('!URL' => url('admin/commerce/orders/' . $params['order_id'] . '/view', array('absolute' => TRUE))));
       break;
+    case 'vs-order-payment-notify-admin':
+      $payment = $params['order_payment'];
+      $message['subject'] = t('Оплата номер @NUMBER', array('@NUMBER' => $payment->id));
+      $message['body'][] = t('Пользователем @NAME была добавлена информация об оплате', array(
+        '@NAME' => $params['name'],
+      ));
+      $message['body'][] = t('Ссылка для просмотра оплату !URL', array('!URL' => url('http://vs.dev/order_payment/order_payment/' . $payment->id, array('absolute' => TRUE))));
+      break;      
   }
 }

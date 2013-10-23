@@ -1229,6 +1229,7 @@ td#jivo-label-status {
   max-width: 90px;
   word-wrap: normal;
   overflow: hidden;
+  vertical-align: top;
 }
 table.vs-orders-list{
   border-spacing: 0px;
