@@ -189,6 +189,8 @@ function vs_delivery_order_complete_form($form, &$form_state, $order_id = NULL) 
     $form['#delivery_order_number'] = $order_wrapper->field_order_number->value();
   }
   $form['#theme'] = 'vs_delivery_order_form_confirm';
+  $form['#prefix'] = '<div id="vs-dellivery-order-form-wrapper">';
+  $form['#suffix'] = '</div>';
   
   return $form;
 }
@@ -197,7 +199,7 @@ function vs_delivery_order_confirmation_continue_ajax($form, &$form_state) {
   $form = drupal_get_form('vs_delivery_order_form', $form['#delivery_order_id']);
   $html = drupal_render($form);
   
-  $commands[] = ajax_command_html('.vs-delivery-order-form-content-wrapper', $html);
+  $commands[] = ajax_command_html('#vs-dellivery-order-form-wrapper', $html);
   
   return array('#type' => 'ajax','#commands' => $commands);
 }
@@ -209,14 +211,14 @@ function vs_order_delivery_form_ajax($form, &$form_state) {
   if (form_get_errors()) {
     $form = drupal_rebuild_form($form['#form_id'], $form_state, $form);
     $html .= drupal_render($form);
-    
-    $commands[] = ajax_command_replace('.vs-delivery-order-form-content-wrapper', $html);
+
+    $commands[] = ajax_command_replace('#vs-dellivery-order-form-wrapper', $html);
   }
   else {
 
     $complete_form = drupal_get_form('vs_delivery_order_complete_form', $form['delivery_order']['#entity']->id);
     $html .= drupal_render($complete_form);
-    $commands[] = ajax_command_html('.vs-delivery-order-form-content-wrapper', $html);
+    $commands[] = ajax_command_replace('#vs-dellivery-order-form-wrapper', $html);
   }
   
   return array('#type' => 'ajax','#commands' => $commands);
@@ -269,6 +271,8 @@ function vs_delivery_order_form($form, &$form_state, $order_id = NULL) {
     ),
   );
   $form['#theme'] = 'vs_delivery_order_form';
+  $form['#prefix'] = '<div id="vs-dellivery-order-form-wrapper">';
+  $form['#suffix'] = '</div>';
 
   return $form;
 }
@@ -348,5 +352,13 @@ function vs_delivery_order_mail($key, &$message, $params) {
       ));
       $message['body'][] = t('Ссылка на заказ !URL', array('!URL' => url('admin/commerce/orders/' . $params['order_id'] . '/view', array('absolute' => TRUE))));
       break;
+    case 'vs-order-payment-notify-admin':
+      $payment = $params['order_payment'];
+      $message['subject'] = t('Оплата номер @NUMBER', array('@NUMBER' => $payment->id));
+      $message['body'][] = t('Пользователем @NAME была добавлена информация об оплате', array(
+        '@NAME' => $params['name'],
+      ));
+      $message['body'][] = t('Ссылка для просмотра оплату !URL', array('!URL' => url('http://vs.dev/order_payment/order_payment/' . $payment->id, array('absolute' => TRUE))));
+      break;      
   }
 }

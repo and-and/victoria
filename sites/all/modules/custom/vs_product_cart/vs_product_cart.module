@@ -14,11 +14,14 @@ function vs_product_cart_form_alter (&$form, &$form_state, $form_id) {
 }
 
 function vs_product_cart_delete_item_ajax($form, &$form_state) {
+  commerce_order_calculate_total($form_state['order']);
+  $total_format = commerce_currency_format($form_state['order']->commerce_order_total['und'][0]['amount'], $form_state['order']->commerce_order_total['und'][0]['currency_code']);
   if (isset($form_state['triggering_element']['#line_item_id'])) {
     $line_item_id = $form_state['triggering_element']['#line_item_id'];
   }
   $wrapper = '.' . $line_item_id . '-cart-line-item-id';
   $commands[] = ajax_command_remove($wrapper);
+  $commands[] = ajax_command_replace('#bagTotal #totalPrice', '<h1 id="totalPrice" class="large">' . $total_format . '</h1>');
   return array('#type' => 'ajax', '#commands' => $commands);  
 }
   /**

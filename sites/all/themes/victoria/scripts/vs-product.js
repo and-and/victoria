@@ -13,28 +13,28 @@
   
 }(jQuery));
 function popupConfirmStart() {
-  $('.fancy-add-to-cart-confirm').click();
+  jQuery('.fancy-add-to-cart-confirm').click();
 }(jQuery);
 
 function validationProductDisplay(wrapper) {
   var has_errors = false;
-      elements = $(wrapper).each(function() {
-    if ($(this).find('p a.selected').size() == 0) {
+      elements = jQuery(wrapper).each(function() {
+    if (jQuery(this).find('p a.selected').size() == 0) {
       has_errors = true;
-      t_top = $(this).offset().top - 2;
-      t_left = $(this).offset().left;
+      t_top = jQuery(this).offset().top - 2;
+      t_left = jQuery(this).offset().left;
       tooltip = '<div class="tooltip-error grp tooltip-error-left"><p>Пожалуйста выберите <span class="ui-caps">размер&nbsp;</span></p></div>'
-      $('body').append(tooltip);
-      var width = $('.tooltip-error-left:not(.tooltip-error-left-processed)').width();
+      jQuery('body').append(tooltip);
+      var width = jQuery('.tooltip-error-left:not(.tooltip-error-left-processed)').width();
         t_left = t_left - width;
-      $('.tooltip-error-left:not(.tooltip-error-left-processed)').css({'top' : t_top, 'left': t_left}).addClass('tooltip-error-left-processed');
+      jQuery('.tooltip-error-left:not(.tooltip-error-left-processed)').css({'top' : t_top, 'left': t_left}).addClass('tooltip-error-left-processed');
     }
   });
   return has_errors;
 }(jQuery);
 
 function tooltipErrorsDelete(wrapper) {
-  $(wrapper).find('.tooltip-error-left-processed').remove();
+  jQuery(wrapper).find('.tooltip-error-left-processed').remove();
 }(jQuery);
 
 (function($) {
