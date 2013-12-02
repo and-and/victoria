@@ -27,13 +27,13 @@
 <div class="vs-product-display-column-1">
   <?php if (!empty($row->field_field_prod_main_image)) : ?>
     <div class="vs-product-dispay-main-image">
-      <a class="cloud-zoom" href="<?php print image_style_url('large_product_image', $row->field_field_prod_main_image[0]['rendered']['#item']['uri']); ?>" id='zoom1'>
+      <a class="cloud-zoom" href="#<?php // print image_style_url('large_product_image', $row->field_field_prod_main_image[0]['rendered']['#item']['uri']); ?>" id='zoom1'>
         <img src="<?php print image_style_url('product_dispaly_main', $row->field_field_prod_main_image[0]['raw']['uri']);; ?>">
       </a>
     </div>
   <?php endif; ?>
   <div class="vs-product-zoom-text">
-    <p class="zoom-text"><?php print 'Нажмите для увеличения'; ?></p>
+    <p class="zoom-text element-hidden"><?php print 'Нажмите для увеличения'; ?></p>
     <?php (count($row->field_field_prod_main_image) > 1)? print '<p>Дополнительные изображения:</p>': NULL; ?>
   </div>
   <?php if (count($row->field_field_prod_main_image) > 1) : ?>
@@ -44,7 +44,7 @@
         <?php $img_medium = image_style_url('product_dispaly_main', $img['raw']['uri']); ?>
         <?php $img_large = image_style_url('large_product_image', $img['raw']['uri']); ?>
         <a class="cloud-zoom-gallery <?php ($count == 0)? print ' selected ': NULL; ?>" 
-           href="<?php print $img_large; ?>" 
+           href="#<?php // print $img_large; ?>" 
            rel="useZoom: 'zoom1', smallImage: '<?php print $img_medium; ?>'" 
            mid="<?php print $img_medium; ?>">
             <span class="vs-thumb">

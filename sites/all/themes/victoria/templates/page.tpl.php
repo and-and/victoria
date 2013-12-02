@@ -122,7 +122,7 @@
   <?php endif; ?>
   <div id="vs-content-wrapper">
   <?php if ($messages): ?>
-    <div id="messages"><div class="section clearfix">
+    <div id="messages"><div class="section clearfix element-hidden">
       <?php print $messages; ?>
     </div></div> <!-- /.section, /#messages -->
   <?php endif; ?>

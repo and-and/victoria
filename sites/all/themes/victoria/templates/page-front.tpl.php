@@ -100,9 +100,8 @@
   </div> <!-- /.section, /#header -->
   
   <div id="vs-content-wrapper">
-    <h1>ANDAND</h1>
   <?php if ($messages): ?>
-    <div id="messages"><div class="section clearfix">
+    <div id="messages"><div class="section clearfix element-hidden">
       <?php print $messages; ?>
     </div></div> <!-- /.section, /#messages -->
   <?php endif; ?>
