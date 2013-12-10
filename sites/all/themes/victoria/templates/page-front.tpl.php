@@ -88,6 +88,9 @@
 <div id="page-wrapper"><div id="page">
   <div id="header" class="<?php print $secondary_menu ? 'with-secondary-menu': 'without-secondary-menu'; ?>">
     <div id="header-inner">
+      <div id="site-logo">
+        <a class="vs-button-2-steps" href="<?php print $front_page; ?>" rel="home"><img src="/<?php print drupal_get_path('theme', 'victoria'); ?>/images/logo-min.jpg"></a>
+      </div>
       <div id="site-name">
         <strong>
           <a class="vs-button-2-steps" href="<?php print $front_page; ?>" rel="home"><span><?php print $site_name; ?></span></a>
@@ -105,7 +108,6 @@
       <?php print $messages; ?>
     </div></div> <!-- /.section, /#messages -->
   <?php endif; ?>
-<h1>ANDAND</h1>
   <?php if ($page['featured']): ?>
     <div id="featured"><div class="section clearfix">
       <?php print render($page['featured']); ?>
@@ -113,7 +115,6 @@
   <?php endif; ?>
 
   <div id="main-wrapper" class="clearfix"><div id="main" class="clearfix">
-<h1>ANDAND</h1>
     <?php if ($page['sidebar_first']): ?>
       <div id="sidebar-first" class="column sidebar"><div class="section">
         <?php print render($page['sidebar_first']); ?>
