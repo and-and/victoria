@@ -62,7 +62,8 @@ function vs_product_cart_ajax_callback($form, &$form_state){
   $order_total = commerce_currency_format($order_total_arr[0]['amount'], $order_total_arr[0]['currency_code']);
   $price_arr = field_get_items('commerce_line_item', $form_state['line_item'], 'commerce_total');
   $price = commerce_currency_format($price_arr[0]['amount'], $price_arr[0]['currency_code']);
-  $product_img = $form_state['default_product']->field_prod_main_image['und'][0];
+  $product = commerce_product_load($form_state['values']['product_id']);
+  $product_img = $product->field_prod_main_image['und'][0];
   $product_img['path'] = $product_img['uri'];
   $product_img['style_name'] = 'confirm_add_cart';
   $options = vs_product_cart_get_html_options($form_state['line_item']->line_item_id, $form_state['default_product']);
