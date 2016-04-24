@@ -58,7 +58,7 @@ function vs_categories_block_view($delta = '') {
   switch ($delta) {
     case 'footer':
       $block['subject'] = t('Footer');
-      $block['content'] = theme('vs_categories_footer', array('vs_categories_footer', 'vid' => 4));
+      $block['content'] = theme('vs_categories_footer', array('vs_categories_footer', 'vid' => 5));
       break;
 
   }
@@ -107,4 +107,10 @@ function vs_categories_preprocess_page(&$vars) {
   unset($vars['page']['footer']['system_powered-by']);
   $block = module_invoke('vs_categories', 'block_view', 'footer');
   $vars['page']['footer']['#markup'] = $block['content'];
+}
+
+function vs_categories_preprocess_views_view(&$vars) {
+  drupal_add_library('system', 'ui.accordion');
+  drupal_add_js(drupal_get_path('theme', 'victoria') . '/scripts/vs-category.js');
+
 }

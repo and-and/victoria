@@ -468,4 +468,7 @@ function addressfield_format_address_generate(&$format, $address, $context = arr
       $format['country']['#empty_value'] = '';
     }
   }
+  unset($format['locality_block']['postal_code']);
+  unset($format['locality_block']['administrative_area']);
+  unset($format['street_block']);
 }

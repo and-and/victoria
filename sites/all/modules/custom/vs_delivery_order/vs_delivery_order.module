@@ -124,7 +124,31 @@ function vs_delivery_order_permission() {
  *   SAVED_NEW or SAVED_UPDATED depending on the operation performed.
  */
 function delivery_order_save($order) {
-  return entity_get_controller('delivery_order')->save($order);
+  global $user;
+
+  $new = FALSE;
+  if ($order->is_new) {
+    $new = TRUE;
+  }
+  $res = entity_get_controller('delivery_order')->save($order);
+  if ($new) {
+    $order_number = 'Z' . date("dmy", REQUEST_TIME) . $order->id;
+    $site_mail = variable_get('site_mail', '');
+    if ($user->uid != 0) {
+      if (!empty($user->mail)) {
+        drupal_mail('vs_delivery_order', 'vs-order-notify', $user->mail, language_default(), array('name' => $user->name, 'order_number' => $order_number));
+      }
+      if (!empty($site_mail)) {
+        drupal_mail('vs_delivery_order', 'vs-delivery-order-notify-admin', $site_mail, language_default(), array('name' => $user->name, 'order_number' => $order_number, 'order_id' => $order->id));
+      }
+    }
+    else {
+      if (!empty($site_mail)) {
+        drupal_mail('vs_delivery_order', 'vs-delivery-order-notify-admin', $site_mail, language_default(), array('name' => t("Аноним"), 'order_number' => $order_number, 'order_id' => $order->id));
+      }
+    }
+  }
+  return $res;
 }
 
 /**
@@ -165,8 +189,8 @@ function vs_delivery_order_complete_form($form, &$form_state, $order_id = NULL) 
     $form['#delivery_order_number'] = $order_wrapper->field_order_number->value();
   }
   $form['#theme'] = 'vs_delivery_order_form_confirm';
-//  $form['#prefix'] = '<div class="vs-delivery-order-form-content-wrapper" >';
-//  $form['#suffix'] = '</div>';
+  $form['#prefix'] = '<div id="vs-dellivery-order-form-wrapper">';
+  $form['#suffix'] = '</div>';
   
   return $form;
 }
@@ -175,7 +199,7 @@ function vs_delivery_order_confirmation_continue_ajax($form, &$form_state) {
   $form = drupal_get_form('vs_delivery_order_form', $form['#delivery_order_id']);
   $html = drupal_render($form);
   
-  $commands[] = ajax_command_html('.vs-delivery-order-form-content-wrapper', $html);
+  $commands[] = ajax_command_html('#vs-dellivery-order-form-wrapper', $html);
   
   return array('#type' => 'ajax','#commands' => $commands);
 }
@@ -187,14 +211,14 @@ function vs_order_delivery_form_ajax($form, &$form_state) {
   if (form_get_errors()) {
     $form = drupal_rebuild_form($form['#form_id'], $form_state, $form);
     $html .= drupal_render($form);
-    
-    $commands[] = ajax_command_replace('.vs-delivery-order-form-content-wrapper', $html);
+
+    $commands[] = ajax_command_replace('#vs-dellivery-order-form-wrapper', $html);
   }
   else {
 
     $complete_form = drupal_get_form('vs_delivery_order_complete_form', $form['delivery_order']['#entity']->id);
     $html .= drupal_render($complete_form);
-    $commands[] = ajax_command_html('.vs-delivery-order-form-content-wrapper', $html);
+    $commands[] = ajax_command_replace('#vs-dellivery-order-form-wrapper', $html);
   }
   
   return array('#type' => 'ajax','#commands' => $commands);
@@ -247,6 +271,8 @@ function vs_delivery_order_form($form, &$form_state, $order_id = NULL) {
     ),
   );
   $form['#theme'] = 'vs_delivery_order_form';
+  $form['#prefix'] = '<div id="vs-dellivery-order-form-wrapper">';
+  $form['#suffix'] = '</div>';
 
   return $form;
 }
@@ -273,12 +299,8 @@ function vs_delivery_order_form_validate($form, &$form_state) {
 }
 
 function vs_delivery_order_preprocess_node(&$vars) {
-
-//  drupal_add_js(drupal_get_path('theme', 'victoria') . '/scripts/vs-product.js');
-//  drupal_add_js(drupal_get_path('theme', 'victoria') . '/scripts/vs-popup.js');
   if ($vars['type'] == 'delivery_orders_page') {
       $vars['form'] = drupal_get_form('vs_delivery_order_form');
-//    drupal_add_js('/misc/autocomplete.js');
   }
 }
 
@@ -305,4 +327,38 @@ function vs_delivery_order_block_view($delta = '') {
       break;
   }
   return $block;
+}
+
+function vs_delivery_order_mail($key, &$message, $params) {
+  switch ($key) {
+    case 'vs-order-notify':
+      $message['subject'] = t('Victoria\'s Secret заказ оформлен');
+      $message['body'][] = t('Здравствуйте, @NAME', array('@NAME' => $params['name']));
+      $message['body'][] = t('Вами был успешно оформлен заказ номер @ORDER_NUMBER', array('@ORDER_NUMBER' => $params['order_number']));
+      break;
+    case 'vs-delivery-order-notify-admin':
+      $message['subject'] = t('Заказ на доставку @NUMBER', array('@NUMBER' => $params['order_number']));
+      $message['body'][] = t('Пользователем @NAME был совершен заказ на доставку под номером @NUMBER', array(
+        '@NAME' => $params['name'],
+        '@NUMBER' => $params['order_number'],
+      ));
+      $message['body'][] = t('Ссылка на заказ !URL', array('!URL' => url('admin/commerce/orders/' . $params['order_id'] . '/view', array('absolute' => TRUE))));
+      break;
+    case 'vs-checkout-order-notify-admin':
+      $message['subject'] = t('Заказ на сайте @NUMBER', array('@NUMBER' => $params['order_number']));
+      $message['body'][] = t('Пользователем @NAME был совершен заказ на сайте под номером @NUMBER', array(
+        '@NAME' => $params['name'],
+        '@NUMBER' => $params['order_number'],
+      ));
+      $message['body'][] = t('Ссылка на заказ !URL', array('!URL' => url('admin/commerce/orders/' . $params['order_id'] . '/view', array('absolute' => TRUE))));
+      break;
+    case 'vs-order-payment-notify-admin':
+      $payment = $params['order_payment'];
+      $message['subject'] = t('Оплата номер @NUMBER', array('@NUMBER' => $payment->id));
+      $message['body'][] = t('Пользователем @NAME была добавлена информация об оплате', array(
+        '@NAME' => $params['name'],
+      ));
+      $message['body'][] = t('Ссылка для просмотра оплату !URL', array('!URL' => url('http://vs.dev/order_payment/order_payment/' . $payment->id, array('absolute' => TRUE))));
+      break;      
+  }
 }

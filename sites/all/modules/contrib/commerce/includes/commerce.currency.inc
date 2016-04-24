@@ -1179,6 +1179,7 @@ function commerce_commerce_currency_info() {
       'code_placement' => 'hidden',
       'minor_unit' => t('Kopiyka'),
       'major_unit' => t('Hryvnia'),
+      'decimals' => 0,
     ),
     'UGX' => array(
       'code' => 'UGX',

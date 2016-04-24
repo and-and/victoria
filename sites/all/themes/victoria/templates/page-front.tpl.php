@@ -100,9 +100,8 @@
   </div> <!-- /.section, /#header -->
   
   <div id="vs-content-wrapper">
-    <h1>ANDAND</h1>
   <?php if ($messages): ?>
-    <div id="messages"><div class="section clearfix">
+    <div id="messages"><div class="section clearfix element-hidden">
       <?php print $messages; ?>
     </div></div> <!-- /.section, /#messages -->
   <?php endif; ?>
@@ -179,3 +178,8 @@
   </div></div> <!-- /.section, /#footer-wrapper -->
 
 </div></div> <!-- /#page, /#page-wrapper -->
+<!-- BEGIN JIVOSITE CODE {literal} -->
+<script type='text/javascript'>
+(function(){ var widget_id = '85076';
+var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = '//code.jivosite.com/script/widget/'+widget_id; var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(s, ss);})();</script>
+<!-- {/literal} END JIVOSITE CODE -->

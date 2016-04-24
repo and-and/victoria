@@ -57,6 +57,10 @@ function vs_userzone_block_info() {
       'info' => t('VS userzone menu'),
       'cache' => DRUPAL_NO_CACHE,
     ),
+    'vs_userzone_main_block' => array(
+      'info' => t('VS userzone main'),
+      'cache' => DRUPAL_NO_CACHE,
+    ),
   );
 }
 
@@ -69,6 +73,13 @@ function vs_userzone_block_view($delta = '') {
       $block['content'] = array(
         '#theme' => 'vs_userzone_menu',
         '#title' => t('VS userzone menu'),
+      );
+      break;
+    case 'vs_userzone_main_block':
+      $block['subject'] = t('VS userzone main');
+      $block['content'] = array(
+        '#theme' => 'vs_userzone_main',
+        '#title' => t('VS userzone main'),
       );
       break;
   }
@@ -104,6 +115,18 @@ function vs_userzone_theme() {
       'render element' => 'form',
       'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
       'template' => 'vs-userzone-edit-form',
+    ),
+    'vs_user_orders_list' => array(
+      'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
+      'template' => 'vs-user-orders-list',
+    ),
+    'vs_user_commerce_order_view' =>array(
+      'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
+      'template' => 'vs-user-commerce-order-view',
+    ),
+    'vs_user_delivery_order_view' =>array(
+      'path' => drupal_get_path('module', 'vs_userzone') . '/theme',
+      'template' => 'vs-user-delivery-order-view',
     ),
   );
 }

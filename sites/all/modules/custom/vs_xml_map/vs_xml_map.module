@@ -1,0 +1,177 @@
+<?php
+
+function vs_xml_map_cron() {
+  vs_xml_map_generate_yml_xmlwriter();
+}
+
+function vs_xml_map_generate_yml() {
+  $xml_header = '<?xml version="1.0" encoding="windows-1251"?><!DOCTYPE yml_catalog SYSTEM "shops.dtd"><yml_catalog></yml_catalog>';
+  $yml = new SimpleXMLElement($xml_header);
+  $yml->addAttribute('date', date('Y-m-d h:i', REQUEST_TIME));
+  $shop = $yml->addChild('shop');
+  $shop->addChild('name', 'Victoria\'s Secret');
+  $shop->addChild('company', 'Victoria\'s Secret Victoriassecrets.com.ua');
+  $shop->addChild('url', 'www.victoriassecrets.com.ua');
+  $currencies = $shop->addChild('currencies');
+  $currency = $currencies->addChild('currency');
+  $currency->addAttribute('id', 'UAH');
+  $currency->addAttribute('rate', '1');
+  $categories = $shop->addChild('categories');
+  $vocabulary = taxonomy_vocabulary_machine_name_load('categories');
+  $tree = taxonomy_get_tree($vocabulary->vid, 0, 3);
+  foreach ($tree as $key =>$term) {
+    switch ($term->depth) {
+      case 1:
+        $categories->addChild('category', $term->name)->addAttribute('id', $term->tid);
+        continue;
+      case 2:
+        $category = $categories->addChild('category', $term->name);
+        $category->addAttribute('id', $term->tid);
+        $category->addAttribute('parentId', reset($term->parents));
+        continue;
+    }
+  }
+  $products_query = db_select('commerce_product', 'cp');
+  $products_query->condition('cp.status', '1');
+  $products_query->fields('cp');
+  $products_id = $products_query->execute()->fetchAll();
+
+  $offers = $shop->addChild('offers');
+  foreach ($products_id as $product) {
+    $product_wrapper = entity_metadata_wrapper('commerce_product', $product->product_id);
+    $offer = $offers->addChild('offer');
+    $offer->addAttribute('id', $product->sku);
+    $offer->addAttribute('type', 'vendor.model');
+    $offer->addAttribute('available', $product->status ? 'true' : 'false');
+    $offer->addChild('url', url('product/' . $product->product_id, array('absolute' => TRUE)));
+    if (!empty($product_wrapper->commerce_price)) {
+      $price = $product_wrapper->commerce_price->value();
+      $offer->addChild('price', $price['amount']);
+      $offer->addChild('currencyId', 'UAH');
+    }
+    if (!empty($product_wrapper->field_category)) {
+      $product_category = $product_wrapper->field_category->value();
+      if (!empty($product_category)) {
+        if (is_array($product_category)) {
+          $product_category = reset($product_category);
+        }
+        $offer->addChild('categoryId', $product_category->tid);
+      }
+    }
+    if (!empty($product_wrapper->field_prod_main_image)) {
+      $images = $product_wrapper->field_prod_main_image->value();
+      $image = reset($images);
+      if (!empty($image['uri'])) {
+        $offer->addChild('picture', file_create_url($image['uri']));
+      }
+    }
+    $offer->addChild('vendor', 'Victoria\'s Secret');
+    $offer->addChild('model', $product_wrapper->title->raw());
+    $offer->addChild('vendorCode', $product_wrapper->sku->raw());
+    if (!empty($product_wrapper->field_product_description)) {
+      $description = $product_wrapper->field_product_description->value();
+      if (!empty($description['value'])) {
+        $description_coded = htmlspecialchars((preg_replace( '/[[:cntrl:]]+/', ' ', strip_tags($description['value']))));
+        $offer->addChild('description', $description_coded);
+      }
+    }
+  }
+
+}
+
+function vs_xml_map_generate_yml_xmlwriter() {
+  $xml_header = '<?xml version="1.0" encoding="windows-1251"?><!DOCTYPE yml_catalog SYSTEM "shops.dtd"><yml_catalog></yml_catalog>';
+  $yml = new XMLWriter();
+  $yml->openUri('vs.xml');
+  $yml->startDocument('1.0', 'windows-1251');
+  $yml->writeDtd('yml_catalog', NULL, 'shops.dtd');
+  $yml->startElement('yml_catalog');
+  $yml->writeAttribute('date', date('Y-m-d h:i', REQUEST_TIME));
+    $yml->startElement('shop');
+      $yml->writeElement('name', 'Victoria\'s Secret');
+      $yml->writeElement('company', 'Victoria\'s Secret Victoriassecrets.com.ua');
+      $yml->writeElement('url', 'www.victoriassecrets.com.ua');
+      $yml->startElement('currencies');
+        $yml->startElement('currency');
+        $yml->writeAttribute('id', 'UAH');
+        $yml->writeAttribute('rate', '1');
+        $yml->endElement(); // Currency
+      $yml->endElement(); // Currencies
+      $yml->startElement('categories');
+        $vocabulary = taxonomy_vocabulary_machine_name_load('categories');
+        $tree = taxonomy_get_tree($vocabulary->vid, 0, 3);
+        foreach ($tree as $key =>$term) {
+          switch ($term->depth) {
+            case 1:
+              $yml->startElement('category');
+              $yml->writeAttribute('id', $term->tid);
+              $yml->writeRaw($term->name);
+              $yml->endElement(); // category
+              continue;
+            case 2:
+              $yml->startElement('category');
+              $yml->writeAttribute('id', $term->tid);
+              $yml->writeAttribute('parentId', reset($term->parents));
+              $yml->writeRaw($term->name);
+              $yml->endElement(); // category
+              continue;
+          }
+        }
+      $yml->endElement(); // Categories
+      $products_query = db_select('commerce_product', 'cp');
+      $products_query->condition('cp.status', '1');
+      $products_query->fields('cp');
+      $products_id = $products_query->execute()->fetchAll();
+
+      $yml->startElement('offers');
+        foreach ($products_id as $product) {
+          $product_wrapper = entity_metadata_wrapper('commerce_product', $product->product_id);
+          $yml->startElement('offer');
+          $yml->writeAttribute('id', $product->sku);
+          $yml->writeAttribute('type', 'vendor.model');
+          $yml->writeAttribute('available', $product->status ? 'true' : 'false');
+            $yml->writeElement('url', url('product/' . $product->product_id, array('absolute' => TRUE)));
+          
+            if (!empty($product_wrapper->commerce_price)) {
+              $price = $product_wrapper->commerce_price->value();
+              $yml->writeElement('price', $price['amount']);
+              $yml->writeElement('currencyId', 'UAH');
+            }
+            if (!empty($product_wrapper->field_category)) {
+              $product_category = $product_wrapper->field_category->value();
+              if (!empty($product_category)) {
+                if (is_array($product_category)) {
+                  $product_category = reset($product_category);
+                }
+                $yml->writeElement('categoryId', $product_category->tid);
+              }
+            }
+            if (!empty($product_wrapper->field_prod_main_image)) {
+              $images = $product_wrapper->field_prod_main_image->value();
+              $image = reset($images);
+              if (!empty($image['uri'])) {
+                $yml->writeElement('picture', file_create_url($image['uri']));
+              }
+            }
+            $yml->writeElement('vendor', 'Victoria\'s Secret');
+            $yml->startElement('model');
+            $yml->writeCdata($product_wrapper->title->raw());
+            $yml->endElement(); // Model
+            $yml->writeElement('vendorCode', $product_wrapper->sku->raw());
+            if (!empty($product_wrapper->field_product_description)) {
+              $description = $product_wrapper->field_product_description->value();
+              if (!empty($description['value'])) {
+                $description_coded = strip_tags($description['value']);
+                $yml->startElement('description');
+                $yml->writeCdata($description_coded);
+                $yml->endElement(); // Description
+              }
+            }
+          $yml->endElement(); // Offer
+        }
+      $yml->endElement(); // Offers
+    $yml->endElement(); // Shop
+  $yml->endElement(); // yml_catalog
+  $yml->endDocument();
+
+}

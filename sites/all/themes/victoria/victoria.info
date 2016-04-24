@@ -14,7 +14,7 @@ stylesheets[all][] = css/jquery.jscrollpane.css
 stylesheets[print][] = css/print.css
 
 scripts[] = scripts/vs-buttons.js
-scripts[] = scripts/jquery-1.9.0.min.js
+;scripts[] = scripts/jquery-1.9.0.min.js
 scripts[] = scripts/jquery.mousewheel-3.0.6.pack.js
 scripts[] = scripts/jquery.fancybox.pack.js
 scripts[] = scripts/vs-popup.js
