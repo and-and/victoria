@@ -342,7 +342,7 @@ function vs_delivery_order_mail($key, &$message, $params) {
         '@NAME' => $params['name'],
         '@NUMBER' => $params['order_number'],
       ));
-      $message['body'][] = t('Ссылка на заказ !URL', array('!URL' => url('admin/commerce/orders/' . $params['order_id'] . '/view', array('absolute' => TRUE))));
+      $message['body'][] = t('Ссылка на заказ !URL', array('!URL' => url('admin/commerce/delivery-orders/' . $params['order_id'], array('absolute' => TRUE))));
       break;
     case 'vs-checkout-order-notify-admin':
       $message['subject'] = t('Заказ на сайте @NUMBER', array('@NUMBER' => $params['order_number']));

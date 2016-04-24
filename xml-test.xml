@@ -1,0 +1,1557 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd"><yml_catalog date="2013-10-16 03:16"><shop><name>Victoria's Secret</name><company>Victoria's Secret Victoriassecrets.com.ua</company><url>www.victoriassecrets.com.ua</url><currencies><currency id="UAH" rate="1"/></currencies><categories><category id="1">Белье</category><category id="4" parentId="1">Бюстгальтеры</category><category id="9" parentId="1">Трусики</category><category id="45" parentId="1">Комплекты</category><category id="6">Купальники и туники</category><category id="12" parentId="6">Купальники</category><category id="42" parentId="6">Пляжная одежда</category><category id="3">Одежда</category><category id="17" parentId="3">Платья, топы, футболки, свитера</category><category id="18" parentId="3">Спорт</category><category id="2">Пижамы и пеньюары</category><category id="15" parentId="2">Пижамы и одежда для дома</category><category id="16" parentId="2">Пеньюары</category><category id="5">Косметика</category><category id="11" parentId="5">Декоративная</category><category id="10" parentId="5">Лосьоны для тела</category><category id="44" parentId="5">Масла для тела</category><category id="43" parentId="5">Гели для душа и скрабы</category><category id="14">Аксессуары</category><category id="29">Обувь</category></categories><offers><offer id="CJ-281-356" type="vendor.model" available="true"><url>http://vs.dev/product/4</url><price>1650</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v358807.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Push-Up Bra]]></model><model>Push-Up Bra</model><vendorCode>CJ-281-356</vendorCode><description><![CDATA[Our #1 push-up bra, now sexier than ever. The Very Sexy Push-Up gives you the lift and cleavage you love with all-new plush padding for a softer, more natural feel and the sexiest shape imaginable. With glamorous little touches like a sparkling center rhinestone, it's a must-have for your low-cut necklines.
+Extreme lift
+Underwire cups
+Twinned, fully adjustable straps
+Wear classic and cross-back
+Infinity Edge technology for an invisible look under clothes
+Imported nylon/spandex]]></description></offer><offer id="297-539-1" type="vendor.model" available="true"><url>http://vs.dev/product/30</url><price>350</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/gbe_y-mjymq.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Бесшовный бюстгальтер с пушапом]]></model><model>Бесшовный бюстгальтер с пушапом</model><vendorCode>297-539-1</vendorCode><description><![CDATA[Бесшовный бюстгальтер c пушапом Secret Embrace: &#9679; Средний уровень пушапа &#9679; Регулируемые бретельки &#9679; Не содержит швов, благодаря чему совершенно не ощущается на теле &#9679; Состав: нейлон/спандекс
+]]></description></offer><offer id="297-539-2" type="vendor.model" available="true"><url>http://vs.dev/product/31</url><price>350</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/hizpdusnuu4.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Бесшовный бюстгальтер с пушапом]]></model><model>Бесшовный бюстгальтер с пушапом</model><vendorCode>297-539-2</vendorCode><description><![CDATA[Бесшовный бюстгальтер c пушапом Secret Embrace: &#9679; Средний уровень пушапа &#9679; Регулируемые бретельки &#9679; Не содержит швов, благодаря чему совершенно не ощущается на теле &#9679; Цвет внутренней части - леопард &#9679; Состав: нейлон/спандекс
+]]></description></offer><offer id="297-539-3" type="vendor.model" available="true"><url>http://vs.dev/product/32</url><price>350</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v277912_rcdl3_edit_xx_crop1.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Бесшовный бюстгальтер с пушапом]]></model><model>Бесшовный бюстгальтер с пушапом</model><vendorCode>297-539-3</vendorCode><description><![CDATA[Бесшовный бюстгальтер c пушапом Secret Embrace: &#9679; Средний уровень пушапа &#9679; Регулируемые бретельки &#9679; Не содержит швов, благодаря чему совершенно не ощущается на теле &#9679; Цвет внутренней части - леопард &#9679; Состав: нейлон/спандекс
+]]></description></offer><offer id="297-539-4" type="vendor.model" available="true"><url>http://vs.dev/product/33</url><price>350</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/wmzshl5omvy.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Бесшовный бюстгальтер с пушапом]]></model><model>Бесшовный бюстгальтер с пушапом</model><vendorCode>297-539-4</vendorCode><description><![CDATA[Бесшовный бюстгальтер c пушапом Secret Embrace: &#9679; Средний уровень пушапа &#9679; Регулируемые бретельки &#9679; Не содержит швов, благодаря чему совершенно не ощущается на теле &#9679; Цвет внутренней части - леопард &#9679; Состав: нейлон/спандекс
+]]></description></offer><offer id="277-367-1" type="vendor.model" available="true"><url>http://vs.dev/product/34</url><price>600</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v333096.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник с пушапом RIO]]></model><model>Купальник с пушапом RIO</model><vendorCode>277-367-1</vendorCode><description><![CDATA[Эффектный купальник из коллекции Very Sexy:
+
+	
+		Средний уровень пушапа
+	
+		Съемные пушап подушечки
+	
+		Наличие дополнительной съемной бретели, завязывается через шею
+	
+		Золотая застежка с логотипом VS
+	
+		Есть возможность регулировки объема
+	
+		Состав: нейлон/спандекс Lycra®
+
+]]></description></offer><offer id="297-477" type="vendor.model" available="true"><url>http://vs.dev/product/36</url><price>280</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v346772_large.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Бюстгальтер с пушапом ]]></model><model>Бюстгальтер с пушапом </model><vendorCode>297-477</vendorCode><description><![CDATA[Базовый бюстгальтер c пушапом Sexy Tee: &#9679; Хороший пушап &#9679; Яркие регулируемые бретельки &#9679; Гладкий, не заметен под одеждой &#9679; Состав: нейлон/спандекс
+]]></description></offer><offer id="277-383" type="vendor.model" available="true"><url>http://vs.dev/product/43</url><price>65000</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v334119_rc093.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник с двойным пушапом ]]></model><model>Купальник с двойным пушапом </model><vendorCode>277-383</vendorCode><description><![CDATA[Купальник из коллекции Bombshell. Главной особенностью этой серии является максимальный уровень пушапа:
+&#9679; Двойной пушап, увеличивает грудь на два размера!
+&#9679; Золотой логотип VS впереди и сзади на застежке
+&#9679; Возможность регулировки объема 
+&#9679; Состав: нейлон/спандекс Lycra®]]></description></offer><offer id="277-367-3" type="vendor.model" available="true"><url>http://vs.dev/product/44</url><price>600</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v326794_289.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник с пушапом]]></model><model>Купальник с пушапом</model><vendorCode>277-367-3</vendorCode><description><![CDATA[Эффектный купальник из коллекции Very Sexy:
+
+
+	Средний уровень пушапа
+	Съемные пушап подушечки
+	Наличие дополнительной съемной бретели, завязывается через шею
+	Золотая застежка с логотипом VS
+	Есть возможность регулировки объема
+	Состав: нейлон/спандекс Lycra®
+	Плавки, как на дополнительном фото (без завязок)
+
+]]></description></offer><offer id="277-384" type="vendor.model" available="true"><url>http://vs.dev/product/45</url><price>60000</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v324361_093.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник с двойным пушапом ]]></model><model>Купальник с двойным пушапом </model><vendorCode>277-384</vendorCode><description><![CDATA[Купальник из коллекции Bombshell. Главной особенностью этой серии является максимальный уровень пушапа: &#9679; Двойной пушап, увеличивает грудь на два размера! &#9679; Наличие дополнительной съемной бретели, завязывается через шею &#9679; Золотая застежка с логотипом VS &#9679; Возможность регулировки объема &#9679; Состав: нейлон/спандекс Lycra® *Вы можете выбрать желаемую форму плавок
+]]></description></offer><offer id="285-251" type="vendor.model" available="true"><url>http://vs.dev/product/47</url><price>490</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v342004.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо]]></model><model>Купальник бандо</model><vendorCode>285-251</vendorCode><description><![CDATA[Купальник из коллекции Beach Sexy: &#9679; Бежево-перламутровый фон выгодно подчеркивает сочные краски цветочного принта &#9679; Небольшой пушап за счет формы чашек &#9679; Наличие дополнительной съемной бретели &#9679; Возможность регулировки объема &#9679; Состав: нейлон/спандекс Lycra®
+]]></description></offer><offer id="444-1" type="vendor.model" available="true"><url>http://vs.dev/product/49</url><price>490</price><currencyId>UAH</currencyId><categoryId>3</categoryId><picture>http://vs.dev/sites/default/files/ky8qwrdntbo.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Кружевное платье]]></model><model>Кружевное платье</model><vendorCode>444-1</vendorCode></offer><offer id="444-4" type="vendor.model" available="true"><url>http://vs.dev/product/52</url><price>390</price><currencyId>UAH</currencyId><categoryId>3</categoryId><picture>http://vs.dev/sites/default/files/51bt8uwnkla.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Сочное вишневое платье]]></model><model>Сочное вишневое платье</model><vendorCode>444-4</vendorCode></offer><offer id="297-367" type="vendor.model" available="true"><url>http://vs.dev/product/54</url><price>450</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v347213.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Коттоновая пижама]]></model><model>Коттоновая пижама</model><vendorCode>297-367</vendorCode></offer><offer id="297-367-2" type="vendor.model" available="true"><url>http://vs.dev/product/56</url><price>450</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v347215.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Коттоновая пижама]]></model><model>Коттоновая пижама</model><vendorCode>297-367-2</vendorCode></offer><offer id="288-261" type="vendor.model" available="true"><url>http://vs.dev/product/57</url><price>450</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v348040.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Коттоновая термо-пижама]]></model><model>Коттоновая термо-пижама</model><vendorCode>288-261</vendorCode></offer><offer id="CN-250-184-4" type="vendor.model" available="true"><url>http://vs.dev/product/220</url><price>600</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v372435.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Кружевной пеньюар Sexy Little Things]]></model><model>Кружевной пеньюар Sexy Little Things</model><vendorCode>CN-250-184-4</vendorCode><description><![CDATA[Пеньюар из мягчайшего кружева, сзади украшен соблазнительными обрками и милым бантиком.&nbsp;
+
+	
+		Встроенные чашечки на тонком поролоне, небольшой пушап
+	
+		Регулируемые бретельки
+	
+		Застежка сзади
+	
+		Материал: нейлон
+
+]]></description></offer><offer id="666-3" type="vendor.model" available="true"><url>http://vs.dev/product/61</url><price>185</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/6iipevzglqc.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Пляжный набор Beach Sexy]]></model><model>Пляжный набор Beach Sexy</model><vendorCode>666-3</vendorCode><description><![CDATA[Набор Beach Sexy включает в себя: &#9679; Крем-автозагар (75мл) &#9679; Бронзирующий крем для сияния кожи (75мл) &#9679; Блеск для губ с мерцающими частичками (13гр) &#9679; Практичная пластиковая косметичка
+]]></description></offer><offer id="292-226" type="vendor.model" available="true"><url>http://vs.dev/product/62</url><price>170</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v353159.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Силиконовый чехол для iPhone 4/4S]]></model><model>Силиконовый чехол для iPhone 4/4S</model><vendorCode>292-226</vendorCode><description><![CDATA[Силиконовый чехол для iPhone 4/4S черного цвета.
+]]></description></offer><offer id="297-367-3" type="vendor.model" available="true"><url>http://vs.dev/product/64</url><price>450</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v347214_1.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Коттоновая пижама]]></model><model>Коттоновая пижама</model><vendorCode>297-367-3</vendorCode></offer><offer id="291-940-1" type="vendor.model" available="true"><url>http://vs.dev/product/65</url><price>28000</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/35283880_34473294_trimmed.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Коттоновое домашнее платье]]></model><model>Коттоновое домашнее платье</model><vendorCode>291-940-1</vendorCode></offer><offer id="291-940-2" type="vendor.model" available="true"><url>http://vs.dev/product/66</url><price>280</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/291-940-56.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Коттоновое домашнее платье]]></model><model>Коттоновое домашнее платье</model><vendorCode>291-940-2</vendorCode></offer><offer id="301-213" type="vendor.model" available="true"><url>http://vs.dev/product/250</url><price>180</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v369071.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Косметичка с логотипом ]]></model><model>Косметичка с логотипом </model><vendorCode>301-213</vendorCode><description><![CDATA[Стильная косметичка с логотипом&nbsp;Victoria's Secret украсит вашу сумочку.
+
+	
+		Прозрачное платстиковое покрытие предотвращает от загрязнения
+	
+		Цвет подкладки: черный в розовый горох
+	
+		Размер: длина 19 *ширина 6см * высота 7.5см
+
+]]></description></offer><offer id="297-928-2" type="vendor.model" available="true"><url>http://vs.dev/product/252</url><price>260</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v366311.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Футболка PINK]]></model><model>Футболка PINK</model><vendorCode>297-928-2</vendorCode><description><![CDATA[Эксклюзивная футболка из коллекции PINK MLB® Collection
+
+	
+		Принт с логотипом команды спереди и PINK сзади
+	
+		Хлопок
+
+]]></description></offer><offer id="297-928-1" type="vendor.model" available="true"><url>http://vs.dev/product/251</url><price>260</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v366303.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Футболка PINK]]></model><model>Футболка PINK</model><vendorCode>297-928-1</vendorCode><description><![CDATA[Эксклюзивная футболка из коллекции PINK MLB® Collection
+
+	
+		Принт с логотипом команды спереди и PINK сзади
+	
+		Хлопок
+
+]]></description></offer><offer id="267-927-1" type="vendor.model" available="true"><url>http://vs.dev/product/77</url><price>90</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v322618.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Love Spell]]></model><model>Лосьон для тела Love Spell</model><vendorCode>267-927-1</vendorCode><description><![CDATA[Лосьон для тела Love Spell (яркий цветочно-фруктовый аромат)
+
+	
+		Аромат: сочная смесь спелых персиков и цвета вишни
+	
+		Быстро впитывается и прекрасно увлажняет кожу
+	
+		Содержит экстракты алоэ, овса, виноградных косточек, витамины E и C
+	
+		Объем: 250мл
+
+]]></description></offer><offer id="267-927-2" type="vendor.model" available="true"><url>http://vs.dev/product/78</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/267-927-2.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Endless Love]]></model><model>Лосьон для тела Endless Love</model><vendorCode>267-927-2</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Endless Love. 
+&#9679; Аромат: иланг-иланг и цветы яблони
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-3" type="vendor.model" available="true"><url>http://vs.dev/product/79</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/v322630.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Amber Romance]]></model><model>Лосьон для тела Amber Romance</model><vendorCode>267-927-3</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Amber Romance. 
+&#9679; Аромат: имбирь и сливочный крем
+&#9679; Объем: 250мл"]]></description></offer><offer id="267-927-4" type="vendor.model" available="true"><url>http://vs.dev/product/80</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/267-927-4.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Pure Seduction]]></model><model>Лосьон для тела Pure Seduction</model><vendorCode>267-927-4</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Pure Seduction. 
+&#9679; Аромат: фрезия и  красная смородина
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-5" type="vendor.model" available="true"><url>http://vs.dev/product/81</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/v322660.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Secret Charm]]></model><model>Лосьон для тела Secret Charm</model><vendorCode>267-927-5</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Secret Charm. 
+&#9679; Аромат: жасмин и жимолость
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-6" type="vendor.model" available="true"><url>http://vs.dev/product/82</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/267-927-6.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Sheer Love]]></model><model>Лосьон для тела Sheer Love</model><vendorCode>267-927-6</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Sheer Love. 
+&#9679; Аромат: цветы хлопка и розовая лилия
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-8" type="vendor.model" available="true"><url>http://vs.dev/product/116</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/267-927-8.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Vanilla Lace]]></model><model>Лосьон для тела Vanilla Lace</model><vendorCode>267-927-8</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Vanilla Lace. 
+&#9679; Аромат: ваниль и мускус
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-7" type="vendor.model" available="true"><url>http://vs.dev/product/83</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/267-927-7.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Coconut Passion]]></model><model>Лосьон для тела Coconut Passion</model><vendorCode>267-927-7</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Coconut Passion. 
+&#9679; Аромат: ваниль и кокос
+&#9679; Объем: 250мл]]></description></offer><offer id="304-399" type="vendor.model" available="true"><url>http://vs.dev/product/84</url><price>500</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/biofit-swim-tops-by-vs_01.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник с пушапом]]></model><model>Купальник с пушапом</model><vendorCode>304-399</vendorCode></offer><offer id="297-084" type="vendor.model" available="true"><url>http://vs.dev/product/261</url><price>400</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v361991.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо Sequin ]]></model><model>Купальник бандо Sequin </model><vendorCode>297-084</vendorCode><description><![CDATA[
+	
+		Топ украшен паетками
+	
+		Тонкие вынимаемые вкладыши
+	
+		Завязки на спине и шее
+	
+		Длиные заавязки по бокам
+	
+		Полностью на подкладке
+	
+		Нейлон/Lycra® Спандекс
+
+]]></description></offer><offer id="281-749" type="vendor.model" available="true"><url>http://vs.dev/product/86</url><price>450</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/pastel-floral-halter-top-beach-sexy-victoria-s-secret-at-dillards.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Pastel Floral]]></model><model>Купальник Pastel Floral</model><vendorCode>281-749</vendorCode></offer><offer id="444-5" type="vendor.model" available="true"><url>http://vs.dev/product/131</url><price>450</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/1828938-p-4x.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Платье Max and Cleo]]></model><model>Платье Max and Cleo</model><vendorCode>444-5</vendorCode><description><![CDATA[Легкое летнее платье бирюзового цвета.&nbsp;
+	Бренд:&nbsp;Max and Cleo
+	&nbsp;
+]]></description></offer><offer id="CL-241-719" type="vendor.model" available="true"><url>http://vs.dev/product/111</url><price>320</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/images/CL-241-719.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Thong Panty]]></model><model>Thong Panty</model><vendorCode>CL-241-719</vendorCode><description><![CDATA[The world’s sexiest no-show: The Lacie, the supersoft stretch lace thong that started it all. Smooth and invisible under clothing, it's the ultimate no-show panty. In lots of candy colors and pretty prints to brighten your lingerie drawer.]]></description></offer><offer id="CL-283-259" type="vendor.model" available="true"><url>http://vs.dev/product/112</url><price>250</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/images/CL-283-259.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Lace-Trim Cheeky Panty]]></model><model>Lace-Trim Cheeky Panty</model><vendorCode>CL-283-259</vendorCode><description><![CDATA[A sweet way to show a little cheek. Trimmed in super soft lace, this sexy little panty comes in a rainbow of colors and prints–why not flirt in them all?]]></description></offer><offer id="aa" type="vendor.model" available="true"><url>http://vs.dev/product/113</url><price>1</price><currencyId>UAH</currencyId><vendor>Victoria's Secret</vendor><model><![CDATA[a]]></model><model>a</model><vendorCode>aa</vendorCode></offer><offer id="543-111" type="vendor.model" available="true"><url>http://vs.dev/product/114</url><price>350</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/lz5nbbcyhxk_0.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Замшевые туфли]]></model><model>Замшевые туфли</model><vendorCode>543-111</vendorCode><description><![CDATA[&#9679; Натуральная замша
+&#9679; Каблук 13,5см,платформа 3см]]></description></offer><offer id="567-768" type="vendor.model" available="true"><url>http://vs.dev/product/115</url><price>250</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/biud5ihb5s0_1.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Пляжная сумка Victoria Secret]]></model><model>Пляжная сумка Victoria Secret</model><vendorCode>567-768</vendorCode><description><![CDATA[Яркая розовая пляжная сумка Victoria Secret: &#9679; Верх прозрачный,низ из плотной ткани &#9679; Размеры: высота 38см,шырина 55см
+]]></description></offer><offer id="267-927-9" type="vendor.model" available="true"><url>http://vs.dev/product/117</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/267-927-9.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Strawberries and Champagne]]></model><model>Лосьон для тела Strawberries and Champagne</model><vendorCode>267-927-9</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Strawberries and Champagne. 
+&#9679; Аромат: земляника и шампанское
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-10" type="vendor.model" available="true"><url>http://vs.dev/product/118</url><price>90</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/267-927-10.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела True Escape]]></model><model>Лосьон для тела True Escape</model><vendorCode>267-927-10</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела True Escape. 
+&#9679; Аромат: жасмин и памело
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-11" type="vendor.model" available="true"><url>http://vs.dev/product/119</url><price>90</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/267-927-11.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Pear Glace]]></model><model>Лосьон для тела Pear Glace</model><vendorCode>267-927-11</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Pear Glace. 
+&#9679; Аромат: груша и дыня
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-12" type="vendor.model" available="true"><url>http://vs.dev/product/120</url><price>90</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/267-927-12.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Aqua Kiss]]></model><model>Лосьон для тела Aqua Kiss</model><vendorCode>267-927-12</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Aqua Kiss. 
+&#9679; Аромат: маргаритка и фрезия
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-13" type="vendor.model" available="true"><url>http://vs.dev/product/121</url><price>90</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/267-927-13.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Moonlight Dream]]></model><model>Лосьон для тела Moonlight Dream</model><vendorCode>267-927-13</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Moonlight Dream. 
+&#9679; Аромат: жимолость и орхидея
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-14" type="vendor.model" available="true"><url>http://vs.dev/product/122</url><price>90</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/267-927-14.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Secret Craving]]></model><model>Лосьон для тела Secret Craving</model><vendorCode>267-927-14</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Secret Craving. 
+&#9679; Аромат: черная смородина и ваниль
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-15" type="vendor.model" available="true"><url>http://vs.dev/product/123</url><price>90</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/267-927-15.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Such A Flirt]]></model><model>Лосьон для тела Such A Flirt</model><vendorCode>267-927-15</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Such A Flirt. 
+&#9679; Аромат: карамболь и орхидея
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-16" type="vendor.model" available="true"><url>http://vs.dev/product/124</url><price>90</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/267-927-16.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Mango Temptation]]></model><model>Лосьон для тела Mango Temptation</model><vendorCode>267-927-16</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Mango Temptation. 
+&#9679; Аромат: манго и гибискус
+&#9679; Объем: 250мл]]></description></offer><offer id="356-1" type="vendor.model" available="true"><url>http://vs.dev/product/249</url><price>399</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v359825_edit_hy361h.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Большой набор косметики]]></model><model>Большой набор косметики</model><vendorCode>356-1</vendorCode><description><![CDATA[
+	Большой набор косметики Victoria's Secret.
+
+	&nbsp;
+
+	4 идеально подобранных палитры, каждую из которых можно положить в компактный футляр с зеркалом и взять с собой в отпуск или на вечеринку.
+]]></description></offer><offer id="267-927-19" type="vendor.model" available="true"><url>http://vs.dev/product/127</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/267-927-19.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Midnight Dare]]></model><model>Лосьон для тела Midnight Dare</model><vendorCode>267-927-19</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Midnight Dare. 
+&#9679; Аромат: малина и сандал
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-20" type="vendor.model" available="true"><url>http://vs.dev/product/128</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/267-927-20.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Forever Pink]]></model><model>Лосьон для тела Forever Pink</model><vendorCode>267-927-20</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Forever Pink. 
+&#9679; Аромат: роза и груша
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-21" type="vendor.model" available="true"><url>http://vs.dev/product/129</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/267-927-21.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Sensual Blush]]></model><model>Лосьон для тела Sensual Blush</model><vendorCode>267-927-21</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Sensual Blush. 
+&#9679; Аромат: розовый лотос и влажный лес
+&#9679; Объем: 250мл]]></description></offer><offer id="267-927-22" type="vendor.model" available="true"><url>http://vs.dev/product/130</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/267-927-22.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Лосьон для тела Pure Daydream]]></model><model>Лосьон для тела Pure Daydream</model><vendorCode>267-927-22</vendorCode><description><![CDATA[Увлажнаяющий лосьон для тела Pure Daydream. 
+&#9679; Аромат: жемчужная орхидея и смородина
+&#9679; Объем: 250мл]]></description></offer><offer id="281-733-1" type="vendor.model" available="true"><url>http://vs.dev/product/132</url><price>700</price><currencyId>UAH</currencyId><categoryId/><picture>http://vs.dev/sites/default/files/v338345.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник с пайетками]]></model><model>Купальник с пайетками</model><vendorCode>281-733-1</vendorCode></offer><offer id="281-721-1" type="vendor.model" available="true"><url>http://vs.dev/product/133</url><price>600</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v338306_crop1.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник с шикарной брошью]]></model><model>Купальник с шикарной брошью</model><vendorCode>281-721-1</vendorCode><description><![CDATA[Купальник с шикарной многоуровневой брошью Beach Sexy.
+
+	
+		Верх со съемными поролоновыми вставками&nbsp;
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+		Возможность регулировки объема
+	
+		Состав: нейлон/спандекс
+	
+		Цвет плавок - голубой (см.&nbsp;дополнительное&nbsp;фото)
+
+]]></description></offer><offer id="293-998-2" type="vendor.model" available="true"><url>http://vs.dev/product/136</url><price>740</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v355957.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Gorgeous]]></model><model>Купальник Gorgeous</model><vendorCode>293-998-2</vendorCode><description><![CDATA[Эффектный купальник&nbsp;Gorgeous:
+
+	
+		Пуш-ап Gorgeous формирует шикарное декольте
+	
+		Хороший уровень пушапа
+	
+		Возможность регулировки объема
+	
+		Завязывается через шею
+	
+		Состав: полиэстер
+
+]]></description></offer><offer id="281-672" type="vendor.model" available="true"><url>http://vs.dev/product/137</url><price>650</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v338342.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник с брошью Fiesta]]></model><model>Купальник с брошью Fiesta</model><vendorCode>281-672</vendorCode><description><![CDATA[Купальник с брошью Fiesta из коллекции&nbsp;Beach Sexy
+
+	
+		Верх со съемными поролоновыми вставками,косточки по бокам для поддержки
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+		Возможность регулировки объема
+	
+		Веселые кружевные плавки на завязках
+	
+		Нейлон/Спандекс
+
+]]></description></offer><offer id="301-353" type="vendor.model" available="true"><url>http://vs.dev/product/140</url><price>510</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v347438_kopiya.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник коралловый в горох]]></model><model>Купальник коралловый в горох</model><vendorCode>301-353</vendorCode><description><![CDATA[Купальник из серии Beach Sexy кораллового цвета в черный горох.
+
+	
+		Бант на бандо и боковые вставки на плавках выполнены из контрастной ткани, великолепно сочетающейся с основным цветом купальника.&nbsp;
+	
+		Верх со съемными поролоновыми вставками&nbsp;
+	
+		Наличие дополнительной съемной бретели&nbsp;
+	
+		Сзади застежка, есть возможность регулировки объема&nbsp;
+	
+		Состав: нейлон/спандекс
+
+]]></description></offer><offer id="277-362" type="vendor.model" available="true"><url>http://vs.dev/product/141</url><price>600</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v324367_edit_xy.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник с пушапом Maldives]]></model><model>Купальник с пушапом Maldives</model><vendorCode>277-362</vendorCode><description><![CDATA[Купальник с пушапом Maldives черного цвета в золотой горошек.
+
+	
+		Средний уровень пушапа
+	
+		Завязывается через шею
+	
+		На правой бретели и на колечках на плавках&nbsp;- логотипы VS&nbsp;
+	
+		Золотая застежка с логотипом VS
+	
+		Есть возможность регулировки объема
+	
+		Состав: нейлон/спандекс
+
+]]></description></offer><offer id="277-658-2" type="vendor.model" available="true"><url>http://vs.dev/product/143</url><price>450</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v329254_133.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник мятный Madi]]></model><model>Купальник мятный Madi</model><vendorCode>277-658-2</vendorCode><description><![CDATA[Купальник из коллекции Beach Sexy:
+
+	
+		Яркий мятный оттенок отлично смотрится как в первый день отпуска, так и на шоколадном загаре
+	
+		Небольшой пушап за счет формы чашек
+	
+		Наличие дополнительной съемной бретели
+	
+		Возможность регулировки объема
+	
+		Состав: нейлон/спандекс&nbsp;
+
+]]></description></offer><offer id="292-940-1" type="vendor.model" available="true"><url>http://vs.dev/product/144</url><price>870</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v360475.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Бандо с пушапом RIO]]></model><model>Бандо с пушапом RIO</model><vendorCode>292-940-1</vendorCode><description><![CDATA[Яркое, эффектное бандо Very Sexy:
+
+	
+		Насыщенный зеленый цвет - хит продаж 2013 года!&nbsp;
+	
+		Съемные пушап подушечки
+	
+		Наличие дополнительной съемной бретели, завязывается через шею
+	
+		Золотая застежка с логотипом VS
+	
+		Есть возможность регулировки объема
+	
+		Состав: нейлон/спандекс Lycra®
+
+]]></description></offer><offer id="286-382-6" type="vendor.model" available="true"><url>http://vs.dev/product/152</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/imag1828_2.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Блеск для губ Yummy Berry]]></model><model>Блеск для губ Yummy Berry</model><vendorCode>286-382-6</vendorCode><description><![CDATA[Блеск для губ Victoria's Secret Shiny Kiss&nbsp;Yummy Berry
+
+	
+		Сладкий, с приятным ароматом
+	
+		На губах полупрозрачный
+	
+		Вес: 13г
+	
+		Производство: США
+
+]]></description></offer><offer id="286-382-5" type="vendor.model" available="true"><url>http://vs.dev/product/151</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/imag1824_11_0.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Блеск для губ Grapefruit Blast]]></model><model>Блеск для губ Grapefruit Blast</model><vendorCode>286-382-5</vendorCode><description><![CDATA[Блеск для губ Victoria's Secret Shiny Kiss&nbsp;Grapefruit Blast
+
+	
+		Сладкий, с приятным ароматом
+	
+		На губах полупрозрачный
+	
+		Вес: 13г
+	
+		Производство: США
+
+]]></description></offer><offer id="286-382-1" type="vendor.model" available="true"><url>http://vs.dev/product/147</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/v342851_3.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Блеск для губ Sugar High]]></model><model>Блеск для губ Sugar High</model><vendorCode>286-382-1</vendorCode><description><![CDATA[Блеск для губ Victoria's Secret Shiny Kiss&nbsp;Sugar High.&nbsp;
+
+	
+		Сладкий, с приятным ароматом
+	
+		На губах полупрозрачный
+	
+		Вес 13г
+	
+		Производство: США
+
+]]></description></offer><offer id="286-382-3" type="vendor.model" available="true"><url>http://vs.dev/product/148</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/imag1826_2.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Блеск для губ Taffy Go Lucky]]></model><model>Блеск для губ Taffy Go Lucky</model><vendorCode>286-382-3</vendorCode><description><![CDATA[Блеск для губ Victoria's Secret Shiny Kiss&nbsp;Taffy Go Lucky
+
+	
+		Сладкий, с приятным ароматом
+	
+		На губах полупрозрачный
+	
+		Вес: 13г
+	
+		Производство: США
+
+]]></description></offer><offer id="286-382-4" type="vendor.model" available="true"><url>http://vs.dev/product/149</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/imag1823_2.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Блеск для губ Cherry Bomb]]></model><model>Блеск для губ Cherry Bomb</model><vendorCode>286-382-4</vendorCode><description><![CDATA[Блеск для губ Victoria's Secret Shiny Kiss Cherry Bomb
+
+	
+		Сладкий, с приятным ароматом
+	
+		На губах полупрозрачный
+	
+		Вес: 13г
+	
+		Производство: США
+
+]]></description></offer><offer id="286-382-2" type="vendor.model" available="true"><url>http://vs.dev/product/150</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/imag1827_2.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Блеск для губ Strawberry Fizz]]></model><model>Блеск для губ Strawberry Fizz</model><vendorCode>286-382-2</vendorCode><description><![CDATA[Блеск для губ Victoria's Secret Shiny Kiss&nbsp;Strawberry Fizz
+
+	
+		Сладкий, с приятным ароматом
+	
+		На губах полупрозрачный
+	
+		Вес: 13г
+	
+		Производство: США
+
+]]></description></offer><offer id="286-382-7" type="vendor.model" available="true"><url>http://vs.dev/product/153</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/imag1829_2.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Блеск для губ Hot Cocoa]]></model><model>Блеск для губ Hot Cocoa</model><vendorCode>286-382-7</vendorCode><description><![CDATA[Блеск для губ Victoria's Secret Shiny Kiss&nbsp;Hot Cocoa
+
+	
+		Сладкий, с приятным ароматом
+	
+		На губах полупрозрачный
+	
+		Вес: 13г
+	
+		Производство: США
+
+]]></description></offer><offer id="286-382-8" type="vendor.model" available="true"><url>http://vs.dev/product/154</url><price>100</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/imag1830_3.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Блеск для губ Slice Of Heaven]]></model><model>Блеск для губ Slice Of Heaven</model><vendorCode>286-382-8</vendorCode><description><![CDATA[Блеск для губ Victoria's Secret Shiny&nbsp;Slice Of Heaven
+	Производство: США
+	13 г
+]]></description></offer><offer id="286-382-9" type="vendor.model" available="true"><url>http://vs.dev/product/155</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/imag1831_2.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Блеск для губ Melongerous]]></model><model>Блеск для губ Melongerous</model><vendorCode>286-382-9</vendorCode><description><![CDATA[Блеск для губ Victoria's Secret Shiny&nbsp;Melongerous
+
+	
+		Сладкий, с приятным ароматом
+	
+		На губах полупрозрачный
+	
+		Вес: 13г
+	
+		Производство: США
+
+]]></description></offer><offer id="286-382-19" type="vendor.model" available="true"><url>http://vs.dev/product/156</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/imag1832_2.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Блеск для губ Coral]]></model><model>Блеск для губ Coral</model><vendorCode>286-382-19</vendorCode><description><![CDATA[Блеск для губ Victoria's Secret Shiny Coral
+
+	
+		Сладкий, с приятным ароматом
+	
+		На губах полупрозрачный
+	
+		Вес: 13г
+	
+		Производство: США
+
+]]></description></offer><offer id="286-382-11" type="vendor.model" available="true"><url>http://vs.dev/product/157</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/imag1833_2.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Блеск для губ Punchy]]></model><model>Блеск для губ Punchy</model><vendorCode>286-382-11</vendorCode><description><![CDATA[Блеск для губ Victoria's Secret Punchy
+
+	
+		Сладкий, с приятным ароматом
+	
+		На губах полупрозрачный
+	
+		Вес 13г
+	
+		Производство: США
+
+]]></description></offer><offer id="286-382-12" type="vendor.model" available="true"><url>http://vs.dev/product/158</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/imag1835_2.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Блеск для губ Hot Pink]]></model><model>Блеск для губ Hot Pink</model><vendorCode>286-382-12</vendorCode><description><![CDATA[Блеск для губ Victoria's Secret Hot Pink
+
+	
+		Сладкий, с приятным ароматом
+	
+		На губах полупрозрачный
+	
+		Вес :13г
+	
+		Производство: США
+
+]]></description></offer><offer id="286-382-13" type="vendor.model" available="true"><url>http://vs.dev/product/159</url><price>90</price><currencyId>UAH</currencyId><categoryId>5</categoryId><picture>http://vs.dev/sites/default/files/imag1838_2.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Блеск для губ Candy Baby]]></model><model>Блеск для губ Candy Baby</model><vendorCode>286-382-13</vendorCode><description><![CDATA[Блеск для губ Victoria's Secret Candy Baby
+
+	
+		Сладкий, с приятным ароматом
+	
+		На губах полупрозрачный
+	
+		Вес: 13г
+	
+		Производство: США
+
+]]></description></offer><offer id="285-255" type="vendor.model" available="true"><url>http://vs.dev/product/160</url><price>680</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/285-255.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Потрясающий кружевной купальник Lace Ruffle]]></model><model>Потрясающий кружевной купальник Lace Ruffle</model><vendorCode>285-255</vendorCode><description><![CDATA[Потрясающий кружевной купальник из коллекции&nbsp;Beach Sexy
+
+	
+		Верх со съемными поролоновыми вставками&nbsp;
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+		Возможность регулировки объема
+	
+		Плавочки на завязках
+	
+		Состав: нейлон/спандекс
+
+]]></description></offer><offer id="281-721-2" type="vendor.model" available="true"><url>http://vs.dev/product/161</url><price>690</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v338306.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник с шикарной брошью]]></model><model>Купальник с шикарной брошью</model><vendorCode>281-721-2</vendorCode><description><![CDATA[Купальник с шикарной многоуровневой брошью Beach Sexy.
+&nbsp;
+
+	
+		Верх со съемными поролоновыми вставками&nbsp;
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+		Возможность регулировки объема
+	
+		Состав: нейлон/спандекс
+
+]]></description></offer><offer id="297-101" type="vendor.model" available="true"><url>http://vs.dev/product/162</url><price>600</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v360525.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник с  брошью Starburst]]></model><model>Купальник с  брошью Starburst</model><vendorCode>297-101</vendorCode><description><![CDATA[Купальник с &nbsp;брошью Starburst из коллекции&nbsp;Beach Sexy
+
+	
+		
+			
+				Верх со съемными поролоновыми вставками&nbsp;
+			
+				Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+			
+				Возможность регулировки объема
+			
+				Веселые кружевные плавки на завязках
+			
+				Состав: нейлон/спандекс
+		
+	
+
+
+	
+		&nbsp;
+	
+
+&nbsp;
+]]></description></offer><offer id="294-909" type="vendor.model" available="true"><url>http://vs.dev/product/163</url><price>775</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v355975.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник с  брошью Jeweled]]></model><model>Купальник с  брошью Jeweled</model><vendorCode>294-909</vendorCode><description><![CDATA[Купальник с &nbsp;брошью Jeweled из коллекции&nbsp;Very Sexy
+
+	
+		Верх со съемными поролоновыми вставками&nbsp;
+	
+		Наличие дополнительной съемной бретели&nbsp;
+	
+		Золотая застежка с логотипом VS&nbsp;
+	
+		Плавки на завязках
+	
+		Состав: нейлон/спандекс&nbsp;Lycra®
+
+]]></description></offer><offer id="284-031" type="vendor.model" available="true"><url>http://vs.dev/product/164</url><price>770</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v377613.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник с брошью  Jungle Jewel ]]></model><model>Купальник с брошью  Jungle Jewel </model><vendorCode>284-031</vendorCode><description><![CDATA[Купальник с брошью &nbsp;Jungle Jewel из коллекции&nbsp;Very Sexy
+
+	
+		Верх со съемными поролоновыми вставками&nbsp;
+	
+	
+		Наличие дополнительной съемной бретели, завязывается через шею
+	
+	
+		Возможность регулировки объема
+	
+	
+		Состав: нейлон/спандекс&nbsp;Lycra®
+	
+
+]]></description></offer><offer id="297-103" type="vendor.model" available="true"><url>http://vs.dev/product/165</url><price>510</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v360529_edit_hy383g.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо с брошью Leopard-Print]]></model><model>Купальник бандо с брошью Leopard-Print</model><vendorCode>297-103</vendorCode><description><![CDATA[Купальник бандо с брошью Leopard-Print из коллекции&nbsp;Beach Sexy
+
+	
+		Верх со съемными поролоновыми вставками
+	
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+	
+		Возможность регулировки объема
+	
+	
+		Плавки на завязках
+	
+	
+		Состав: нейлон/спандекс
+	
+
+]]></description></offer><offer id="CN-294-533" type="vendor.model" available="true"><url>http://vs.dev/product/166</url><price>600</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v355433.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник треугольный Ruffle Push-Up]]></model><model>Купальник треугольный Ruffle Push-Up</model><vendorCode>CN-294-533</vendorCode><description><![CDATA[Купальник треугольный Ruffle Push-Up из коллекции&nbsp;Beach Sexy
+
+	
+		Верх со съемными поролоновыми вставками&nbsp;
+	
+	
+		Завязки на спине и шее
+	
+	
+		Плавки на завязках
+	
+	
+		Состав: нейлон/спандекс
+	
+
+]]></description></offer><offer id="286-251-1" type="vendor.model" available="true"><url>http://vs.dev/product/167</url><price>700</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v336781_rc2cb.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо Rio Push-up]]></model><model>Купальник бандо Rio Push-up</model><vendorCode>286-251-1</vendorCode><description><![CDATA[Купальник бандо Rio Push-up из коллекции&nbsp;Very Sexy
+
+	
+		Съемные пушап подушечки
+	
+	
+		Наличие дополнительной съемной бретели, завязывается через шею
+	
+	
+		Золотая застежка с логотипом VS
+	
+	
+		Есть возможность регулировки объема
+	
+	
+		Состав: нейлон/спандекс Lycra®
+	
+
+]]></description></offer><offer id="241-609-1" type="vendor.model" available="true"><url>http://vs.dev/product/168</url><price>460</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v306426_edit_xv.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Ночнушка Lace-trim Satin Slip]]></model><model>Ночнушка Lace-trim Satin Slip</model><vendorCode>241-609-1</vendorCode><description><![CDATA[Атласная ночная рубашка из коллекции Dream Angels
+
+	
+		Регулируемые бретельки
+	
+		Спереди украшена бархатным бантиком
+	
+		Кружевная оборка
+	
+		Состав: полиэстер
+
+]]></description></offer><offer id="CN-241-609-2" type="vendor.model" available="true"><url>http://vs.dev/product/169</url><price>350</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v310722_24z.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Ночнушка Lace-trim Satin Slip]]></model><model>Ночнушка Lace-trim Satin Slip</model><vendorCode>CN-241-609-2</vendorCode><description><![CDATA[Ночнушка Lace-trim Satin Slip из коллекции&nbsp;Dream Angels
+
+	
+		Регулируемые бретельки
+	
+		Спереди украшена бархатным бантиком
+	
+		Кружевная оборка
+	
+		Состав: полиэстр
+
+]]></description></offer><offer id="241-609-3" type="vendor.model" available="true"><url>http://vs.dev/product/170</url><price>460</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v346731_rcs54.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Ночнушка Lace-trim Satin Slip]]></model><model>Ночнушка Lace-trim Satin Slip</model><vendorCode>241-609-3</vendorCode><description><![CDATA[Ночнушка Lace-trim Satin Slip из коллекции&nbsp;Dream Angels
+
+	
+		Регулируемые бретельки
+	
+		Спереди украшена бархатным бантиком
+	
+		Кружевная оборка
+	
+		Состав: полиэстр
+
+]]></description></offer><offer id="CN-241-609-4" type="vendor.model" available="true"><url>http://vs.dev/product/171</url><price>460</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v360920.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Атласная ночная рубашка ]]></model><model>Атласная ночная рубашка </model><vendorCode>CN-241-609-4</vendorCode><description><![CDATA[Атласная ночная рубашка из коллекции&nbsp;Dream Angels
+
+	
+		Регулируемые бретельки
+	
+		Спереди украшена бархатным бантиком
+	
+		Кружевная оборка
+	
+		Состав: полиэстер
+
+]]></description></offer><offer id="CN-250-184-1" type="vendor.model" available="true"><url>http://vs.dev/product/172</url><price>530</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/lcdxj1-hgcc.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Кружевной пеньюар Sexy Little Things]]></model><model>Кружевной пеньюар Sexy Little Things</model><vendorCode>CN-250-184-1</vendorCode><description><![CDATA[
+	
+		Встроенные чашечки&nbsp;&nbsp;
+	
+		Регулируемые бретельки
+	
+		Застежка сзади
+	
+		Чашечки на тонкой подкладке со съемными подушечками
+	
+		Материал: нейлон
+
+]]></description></offer><offer id="CN-250-184-2" type="vendor.model" available="true"><url>http://vs.dev/product/173</url><price>600</price><currencyId>UAH</currencyId><categoryId>2</categoryId><picture>http://vs.dev/sites/default/files/v352820.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Кружевной пеньюар Sexy Little Things]]></model><model>Кружевной пеньюар Sexy Little Things</model><vendorCode>CN-250-184-2</vendorCode><description><![CDATA[Пеньюар из мягчайшего кружева, сзади украшен соблазнительными обрками и милым бантиком.&nbsp;
+&nbsp;
+
+	
+		&#8203;Встроенные чашечки на тонком поролоне
+	
+		Небольшой пуш-ап
+	
+		Регулируемые бретельки
+	
+		Чашечки на тонкой подкладке со съемными подушечками
+	
+		Застежка сзади
+	
+		Материал: нейлон
+
+]]></description></offer><offer id="CN-250-184-3" type="vendor.model" available="true"><url>http://vs.dev/product/174</url><price>600</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v360994.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Кружевной пеньюар Sexy Little Things]]></model><model>Кружевной пеньюар Sexy Little Things</model><vendorCode>CN-250-184-3</vendorCode><description><![CDATA[
+	
+		Встроенные чашечки
+	
+		Регулируемые бретельки
+	
+		Чашечки на тонкой подкладке со съемными подушечками
+	
+		Застежка сзади
+	
+		Материал: нейлон
+
+]]></description></offer><offer id="263-617" type="vendor.model" available="true"><url>http://vs.dev/product/175</url><price>530</price><currencyId>UAH</currencyId><categoryId>9</categoryId><picture>http://vs.dev/sites/default/files/v306838.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Пеньюар Sexy Little Things]]></model><model>Пеньюар Sexy Little Things</model><vendorCode>263-617</vendorCode><description><![CDATA[
+	
+		Подушечки пуш-ап
+	
+		Регулируемые бретельки
+	
+		Спереди украшена бантиком
+	
+		В комплекте трусики бикини
+	
+		Материал: полиэстер
+
+]]></description></offer><offer id="295-307" type="vendor.model" available="true"><url>http://vs.dev/product/176</url><price>790</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v357640.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо Sequin Bandeau Bikini Top]]></model><model>Купальник бандо Sequin Bandeau Bikini Top</model><vendorCode>295-307</vendorCode><description><![CDATA[Купальник бандо Sequin Bandeau Bikini Top из коллекции&nbsp;Beach Sexy
+
+	
+		Верх со съемными поролоновыми вставками&nbsp;
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+		Завязывается на спине
+	
+	
+		
+			
+				Состав: нейлон/спандекс
+		
+	
+
+]]></description></offer><offer id="295-307-1" type="vendor.model" available="true"><url>http://vs.dev/product/177</url><price>790</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v360542.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо Sequin Bandeau Bikini Top]]></model><model>Купальник бандо Sequin Bandeau Bikini Top</model><vendorCode>295-307-1</vendorCode><description><![CDATA[Купальник бандо Sequin Bandeau Bikini Top из коллекции&nbsp;Beach Sexy
+
+	
+		Верх со съемными поролоновыми вставками&nbsp;
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+		Завязывается на спине
+	
+		Состав: нейлон/спандекс
+
+]]></description></offer><offer id="306-539" type="vendor.model" available="true"><url>http://vs.dev/product/178</url><price>670</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v345885_edit.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Bandeau Top]]></model><model>Купальник Bandeau Top</model><vendorCode>306-539</vendorCode><description><![CDATA[Купальник Bandeau Top из коллекции&nbsp;Very Sexy
+
+	
+		Золотой логотип в центре&nbsp;
+	
+	
+		Полностью на подкладке
+	
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+		Завязывается на спине
+	
+		Нейлон / Lycra ® спандекс
+
+]]></description></offer><offer id="306-539-1" type="vendor.model" available="true"><url>http://vs.dev/product/179</url><price>810</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v362909.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Bandeau Top]]></model><model>Купальник Bandeau Top</model><vendorCode>306-539-1</vendorCode><description><![CDATA[Купальник Bandeau Top из коллекции&nbsp;Very Sexy
+
+	
+		Полностью на подкладке
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+		Завязывается на спине
+	
+		Нейлон / Lycra ® спандекс
+
+]]></description></offer><offer id="285-886" type="vendor.model" available="true"><url>http://vs.dev/product/180</url><price>550</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v350186_edit_1.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Push-Up Bandeau Top]]></model><model>Купальник Push-Up Bandeau Top</model><vendorCode>285-886</vendorCode><description><![CDATA[Купальник Push-Up Bandeau Top из коллекции&nbsp;Beach Sexy
+
+	
+		Небольшой пушап за счет формы чашек
+	
+		Наличие дополнительной съемной бретели
+	
+		Возможность регулировки объема
+	
+		Состав: нейлон/спандекс
+
+]]></description></offer><offer id="306-545" type="vendor.model" available="true"><url>http://vs.dev/product/181</url><price>900</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v350824.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Push-up Triangle Top]]></model><model>Купальник Push-up Triangle Top</model><vendorCode>306-545</vendorCode><description><![CDATA[Купальник Push-up Triangle Top из коллекции&nbsp;Very Sexy
+
+	
+		Декоративные цепочки с надписью&nbsp;&nbsp;Victoria's Secret
+	
+		Встроенный push-up
+	
+		Завязывается на спине и шее
+	
+		Полностью на подкладке
+	
+		Нейлон / Lycra ® спандекс
+		
+			&nbsp;
+	
+
+]]></description></offer><offer id="294-523" type="vendor.model" available="true"><url>http://vs.dev/product/182</url><price>670</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v356799.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник с  брошью Jeweled Bandeau Top]]></model><model>Купальник с  брошью Jeweled Bandeau Top</model><vendorCode>294-523</vendorCode><description><![CDATA[Купальник с &nbsp;брошью Jeweled Bandeau Top из коллекции&nbsp;Beach Sexy
+
+	
+		Верх со съемными поролоновыми вставками
+	
+		Наличие дополнительной съемной бретели
+	
+		Завязывается на спине
+	
+		Нейлон / Lycra ® спандекс
+
+]]></description></offer><offer id="297-078" type="vendor.model" available="true"><url>http://vs.dev/product/183</url><price>470</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v363442.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо Beach Sexy]]></model><model>Купальник бандо Beach Sexy</model><vendorCode>297-078</vendorCode><description><![CDATA[Купальник бандо &nbsp;из коллекции&nbsp;Beach Sexy
+
+	
+		Небольшой пушап за счет формы чашек
+	
+		Наличие дополнительной съемной бретели
+	
+		Возможность регулировки объема
+	
+		Состав: нейлон/спандекс
+
+]]></description></offer><offer id="306-432" type="vendor.model" available="true"><url>http://vs.dev/product/184</url><price>690</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v338367_rc38v_3h2.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо Rio Push-up]]></model><model>Купальник бандо Rio Push-up</model><vendorCode>306-432</vendorCode><description><![CDATA[Купальник бандо Rio Push-up из коллекции&nbsp;Very Sexy
+
+	
+		Съемные пушап подушечки
+	
+		Наличие дополнительной съемной бретели, завязывается через шею
+	
+		Золотая застежка с логотипом VS
+	
+		Есть возможность регулировки объема
+	
+		Состав: нейлон/спандекс Lycra®
+
+]]></description></offer><offer id="292-152" type="vendor.model" available="true"><url>http://vs.dev/product/185</url><price>490</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v350191.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо Beach Sexy]]></model><model>Купальник бандо Beach Sexy</model><vendorCode>292-152</vendorCode><description><![CDATA[Купальник из коллекции Beach Sexy
+
+	
+		Верх со съемными поролоновыми вставками&nbsp;
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+		Возможность регулировки объема
+	
+		Состав: нейлон/спандекс
+
+]]></description></offer><offer id="295-136" type="vendor.model" available="true"><url>http://vs.dev/product/186</url><price>600</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v355431_0.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо Sequin Top]]></model><model>Купальник бандо Sequin Top</model><vendorCode>295-136</vendorCode><description><![CDATA[Купальник из коллекции Beach Sexy
+
+	
+		Верх со съемными поролоновыми вставками&nbsp;
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+		Возможность регулировки объема
+	
+		Состав: нейлон/спандекс
+
+]]></description></offer><offer id="295-136-1" type="vendor.model" available="true"><url>http://vs.dev/product/187</url><price>600</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v356806.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо Sequin Top]]></model><model>Купальник бандо Sequin Top</model><vendorCode>295-136-1</vendorCode><description><![CDATA[Купальник из коллекции Beach Sexy
+
+	
+		Верх со съемными поролоновыми вставками&nbsp;
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+		Возможность регулировки объема
+	
+		Состав: нейлон/спандекс
+
+]]></description></offer><offer id="295-136-2" type="vendor.model" available="true"><url>http://vs.dev/product/188</url><price>600</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v356806_0.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо Sequin Top]]></model><model>Купальник бандо Sequin Top</model><vendorCode>295-136-2</vendorCode><description><![CDATA[Купальник из коллекции Beach Sexy
+
+	
+		Верх со съемными поролоновыми вставками&nbsp;
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+		Возможность регулировки объема
+	
+		Состав: нейлон/спандекс
+
+]]></description></offer><offer id="281-678" type="vendor.model" available="true"><url>http://vs.dev/product/189</url><price>600</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v334025_2qj_2.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Push-up Halter Top]]></model><model>Купальник Push-up Halter Top</model><vendorCode>281-678</vendorCode><description><![CDATA[Купальник Push-up Halter Top
+
+	
+		лиф с пуш-ап эффектом
+	
+		завязки через шею
+	
+		сзади лифа металлическая регулируемая застежка
+	
+		трусики на завязках полностью на подкладке
+
+]]></description></offer><offer id="306-432-2" type="vendor.model" available="true"><url>http://vs.dev/product/190</url><price>650</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v345871_0.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо Rio Push-up]]></model><model>Купальник бандо Rio Push-up</model><vendorCode>306-432-2</vendorCode><description><![CDATA[Купальник бандо Rio Push-up из коллекции&nbsp;Very Sexy
+
+	
+		Съемные пушап подушечки
+	
+		Наличие дополнительной съемной бретели, завязывается через шею
+	
+		Золотая застежка с логотипом VS
+	
+		Есть возможность регулировки объема
+	
+		Состав: нейлон/спандекс Lycra®
+
+]]></description></offer><offer id="281-678-2" type="vendor.model" available="true"><url>http://vs.dev/product/191</url><price>600</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v347448.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Push-up Halter Top]]></model><model>Купальник Push-up Halter Top</model><vendorCode>281-678-2</vendorCode><description><![CDATA[
+	
+		лиф с пуш-ап эффектом
+	
+		завязки через шею
+	
+		сзади лифа металлическая регулируемая застежка
+	
+		трусики на завязках полностью на подкладке
+
+]]></description></offer><offer id="298-667" type="vendor.model" available="true"><url>http://vs.dev/product/192</url><price>650</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v352583.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо Twist Bandeau Top]]></model><model>Купальник бандо Twist Bandeau Top</model><vendorCode>298-667</vendorCode><description><![CDATA[Купальник бандо Twist Bandeau Top из коллекции&nbsp;Forever Sexy
+
+	
+		Съемные пушап подушечки
+	
+		Наличие дополнительной съемной бретели, завязывается через шею
+	
+		Золотая застежка с логотипом VS
+	
+		Есть возможность регулировки объема
+	
+		Состав: нейлон/спандекс Lycra®
+
+]]></description></offer><offer id="297-094" type="vendor.model" available="true"><url>http://vs.dev/product/193</url><price>440</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v361990.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник  Sliding Triangle Top ]]></model><model>Купальник  Sliding Triangle Top </model><vendorCode>297-094</vendorCode><description><![CDATA[Купальник &nbsp;Sliding Triangle Top из коллекции&nbsp;Beach Sexy
+
+	
+		мягкие съемныe чашки
+	
+		завязывается на спине и шее
+	
+		плавки на завязках
+	
+		состав: нейлон/спандекс
+
+]]></description></offer><offer id="CU-299-002" type="vendor.model" available="true"><url>http://vs.dev/product/194</url><price>490</price><currencyId>UAH</currencyId><picture>http://vs.dev/sites/default/files/v365909_0.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо Colorblock ]]></model><model>Купальник бандо Colorblock </model><vendorCode>CU-299-002</vendorCode><description><![CDATA[Купальник бандо Colorblock из коллекции&nbsp;Beach Sexy
+
+	
+		Верх со съемными поролоновыми вставками
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+		Завязывается на спине
+	
+		Состав: нейлон/спандекс
+
+]]></description></offer><offer id="303-504" type="vendor.model" available="true"><url>http://vs.dev/product/195</url><price>390</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v363973_dk9.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Бюстгальтер коттоновый PUSH-UP BRA]]></model><model>Бюстгальтер коттоновый PUSH-UP BRA</model><vendorCode>303-504</vendorCode><description><![CDATA[Бюстгальтер коттоновый PUSH-UP BRA из коллекции&nbsp;COTTON LINGERIE
+
+	
+		Чашечки на косточках
+	
+		Регулируемые бретели
+	
+		Может носиться классически или с перекрещенными бретелями
+	
+		Хлопок/Спандекс
+
+]]></description></offer><offer id="299-133" type="vendor.model" available="true"><url>http://vs.dev/product/196</url><price>390</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v356162_rc2am_edit_hy412a_dl3.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Пуш-ап лиф]]></model><model>Пуш-ап лиф</model><vendorCode>299-133</vendorCode><description><![CDATA[Пуш-ап лиф из коллекции&nbsp;SEXY TEE
+
+	
+		Экстремальный объем
+	
+		Чашечки на косточках
+	
+		Регулируемые бретели
+	
+		Технология Infinity Edge, создающая эффект невидимости под одеждой
+	
+		Нейлон/Эластан
+
+]]></description></offer><offer id="299-133-4" type="vendor.model" available="true"><url>http://vs.dev/product/200</url><price>390</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v356162_rc2am_edit_hy412a_cc7.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Пуш-ап лиф]]></model><model>Пуш-ап лиф</model><vendorCode>299-133-4</vendorCode><description><![CDATA[Пуш-ап лиф из коллекции&nbsp;SEXY TEE
+
+	
+		Экстремальный объем
+	
+		Чашечки на косточках
+	
+		Регулируемые бретели
+	
+		Технология Infinity Edge, создающая эффект невидимости под одеждой
+	
+		Нейлон/Эластан
+
+]]></description></offer><offer id="299-133-5" type="vendor.model" available="true"><url>http://vs.dev/product/201</url><price>390</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v356162_rc2am_edit_hy412a_cc7_0.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Пуш-ап лиф]]></model><model>Пуш-ап лиф</model><vendorCode>299-133-5</vendorCode><description><![CDATA[Пуш-ап лиф из коллекции&nbsp;SEXY TEE
+
+	
+		Экстремальный объем
+	
+		Чашечки на косточках
+	
+		Регулируемые бретели
+	
+		Технология Infinity Edge, создающая эффект невидимости под одеждой
+	
+		Нейлон/Эластан
+
+]]></description></offer><offer id="299-133-6" type="vendor.model" available="true"><url>http://vs.dev/product/202</url><price>390</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v356162_rc2am_edit_hy412a_608.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Пуш-ап лиф]]></model><model>Пуш-ап лиф</model><vendorCode>299-133-6</vendorCode><description><![CDATA[Пуш-ап лиф из коллекции&nbsp;SEXY TEE
+
+	
+		Экстремальный объем
+	
+		Чашечки на косточках
+	
+		Регулируемые бретели
+	
+		Технология Infinity Edge, создающая эффект невидимости под одеждой
+	
+		Нейлон/Эластан
+
+]]></description></offer><offer id="VW-299-113" type="vendor.model" available="true"><url>http://vs.dev/product/204</url><price>390</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v366874_cg9.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Деми-лиф]]></model><model>Деми-лиф</model><vendorCode>VW-299-113</vendorCode><description><![CDATA[Деми-лиф из коллекции&nbsp;SEXY TEE
+
+	
+		На тонком паролоне
+	
+		Чашечки на косточках
+	
+		Регулируемые бретели
+	
+		Технология Infinity Edge, создающая эффект невидимости под одеждой
+	
+		Нейлон/Эластан
+
+]]></description></offer><offer id="299-133-9" type="vendor.model" available="true"><url>http://vs.dev/product/206</url><price>390</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v369989_crop1.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Пуш-ап лиф]]></model><model>Пуш-ап лиф</model><vendorCode>299-133-9</vendorCode><description><![CDATA[Пуш-ап лиф из коллекции&nbsp;SEXY TEE
+
+	
+		Экстремальный объем
+	
+		Чашечки на косточках
+	
+		Регулируемые бретели
+	
+		Технология Infinity Edge, создающая эффект невидимости под одеждой
+	
+		Нейлон/Эластан
+
+]]></description></offer><offer id="299-133-11" type="vendor.model" available="true"><url>http://vs.dev/product/209</url><price>390</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v357192_w12.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Бюстгальтер коттоновый PUSH-UP BRA]]></model><model>Бюстгальтер коттоновый PUSH-UP BRA</model><vendorCode>299-133-11</vendorCode><description><![CDATA[&nbsp;
+
+	Бюстгальтер коттоновый PUSH-UP BRA из коллекции&nbsp;Cotton Lingerie
+
+	
+		Чашечки на косточках
+	
+		Регулируемые бретели
+	
+		Может носиться классически или с перекрещенными бретелями
+	
+		Хлопок/Спандекс
+
+]]></description></offer><offer id="281-356" type="vendor.model" available="true"><url>http://vs.dev/product/210</url><price>560</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v362006_dj5.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[ Пуш-ап лиф]]></model><model> Пуш-ап лиф</model><vendorCode>281-356</vendorCode><description><![CDATA[Пуш-ап лиф из коллекции&nbsp;Very Sexy
+
+	
+		Экстремальный объем
+	
+		Чашечки на косточках
+	
+		Двойные регулируемые по всей длине бретели
+	
+		Технология Infinity Edge, создающая эффект невидимости под одеждой
+
+]]></description></offer><offer id="308-306" type="vendor.model" available="true"><url>http://vs.dev/product/212</url><price>390</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v377710_crop1.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Гладкий пуш-ап лиф]]></model><model>Гладкий пуш-ап лиф</model><vendorCode>308-306</vendorCode><description><![CDATA[Гладкий пуш-ап лиф из коллекции&nbsp;PINK
+
+	
+		Лиф можно носить&nbsp;&nbsp;с перекрещенными на спине бретелями или классически
+	
+		Мягкие чашечки&nbsp;на косточках
+	
+		Регулируемые бретели с перламутровым отливом
+	
+		Нейлон/Спандекс
+
+]]></description></offer><offer id="262-023" type="vendor.model" available="true"><url>http://vs.dev/product/213</url><price>340</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v374842.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Гладкий пуш-ап лиф ]]></model><model>Гладкий пуш-ап лиф </model><vendorCode>262-023</vendorCode><description><![CDATA[Гладкий пуш-ап лиф из коллекции&nbsp;PINK
+
+	
+		Лиф можно носить&nbsp;&nbsp;с перекрещенными на спине бретелями или классически
+	
+		Мягкие чашечки&nbsp;&nbsp;на косточках
+	
+		Регулируемые бретели
+	
+		Нейлон/Спандекс
+
+]]></description></offer><offer id="262-023-1" type="vendor.model" available="true"><url>http://vs.dev/product/214</url><price>340</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v377343.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Гладкий пуш-ап лиф]]></model><model>Гладкий пуш-ап лиф</model><vendorCode>262-023-1</vendorCode><description><![CDATA[Гладкий пуш-ап лиф из коллекции&nbsp;PINK
+
+	
+		Лиф можно носить&nbsp;&nbsp;с перекрещенными на спине бретелями или классически
+	
+		Мягкие чашечки&nbsp;&nbsp;на косточках
+	
+		Регулируемые бретели
+	
+		Нейлон/Спандекс
+
+]]></description></offer><offer id="262-023-2" type="vendor.model" available="true"><url>http://vs.dev/product/215</url><price>340</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v349194_rcy06.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Гладкий пуш-ап лиф]]></model><model>Гладкий пуш-ап лиф</model><vendorCode>262-023-2</vendorCode><description><![CDATA[Гладкий пуш-ап лиф из коллекции&nbsp;PINK
+
+	
+		Лиф можно носить&nbsp;&nbsp;с перекрещенными на спине бретелями или классически
+	
+		Мягкие чашечки&nbsp;&nbsp;на косточках
+	
+		Регулируемые бретели
+	
+		Нейлон/Спандекс
+
+]]></description></offer><offer id="262-023-3" type="vendor.model" available="true"><url>http://vs.dev/product/216</url><price>340</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v334667.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Гладкий пуш-ап лиф]]></model><model>Гладкий пуш-ап лиф</model><vendorCode>262-023-3</vendorCode><description><![CDATA[Гладкий пуш-ап лиф из коллекции&nbsp;PINK
+
+	
+		Лиф можно носить&nbsp;&nbsp;с перекрещенными на спине бретелями или классически
+	
+		Мягкие чашечки&nbsp;&nbsp;на косточках
+	
+		Регулируемые бретели
+	
+		Нейлон/Спандекс
+
+]]></description></offer><offer id="262-023-4" type="vendor.model" available="true"><url>http://vs.dev/product/217</url><price>340</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/post-440059-0-77121500-1376324941.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Гладкий пуш-ап лиф]]></model><model>Гладкий пуш-ап лиф</model><vendorCode>262-023-4</vendorCode><description><![CDATA[Гладкий пуш-ап лиф из коллекции&nbsp;PINK
+
+	
+		Лиф можно носить&nbsp;&nbsp;с перекрещенными на спине бретелями или классически
+	
+		Мягкие чашечки&nbsp;&nbsp;на косточках
+	
+		Регулируемые бретели
+	
+		Нейлон/Спандекс
+
+]]></description></offer><offer id="295-136-3" type="vendor.model" available="true"><url>http://vs.dev/product/218</url><price>600</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/4qllhzmn7qq.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник бандо Sequin Top]]></model><model>Купальник бандо Sequin Top</model><vendorCode>295-136-3</vendorCode><description><![CDATA[Купальник из коллекции Beach Sexy
+
+	
+		Верх со съемными поролоновыми вставками&nbsp;
+	
+		Наличие дополнительной съемной бретели, завязывается через шею&nbsp;
+	
+		Возможность регулировки объема
+	
+		Состав: нейлон/спандекс
+
+]]></description></offer><offer id="250-184-5" type="vendor.model" available="true"><url>http://vs.dev/product/221</url><price>600</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/250-184-pink-daisy-500x500.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Кружевной пеньюар Sexy Little Things]]></model><model>Кружевной пеньюар Sexy Little Things</model><vendorCode>250-184-5</vendorCode><description><![CDATA[Пеньюар из мягчайшего кружева, сзади украшен соблазнительными обрками и милым бантиком.&nbsp;
+
+	
+		Встроенные чашечки&nbsp;на тонком поролоне
+	
+		Небольшой пуш-ап&nbsp;
+	
+		Регулируемые бретелькии
+	
+		Застежка сзади
+	
+		Материал: нейлон
+
+]]></description></offer><offer id="241-619" type="vendor.model" available="true"><url>http://vs.dev/product/222</url><price>400</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v328830_rc120.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Кружевной пеньюар Sexy Little Things]]></model><model>Кружевной пеньюар Sexy Little Things</model><vendorCode>241-619</vendorCode><description><![CDATA[
+	
+		Открытая спина
+	
+		Регулируемая застежка на шее и спине
+	
+		В комплекте трусики&nbsp;
+	
+		Нейлон/Спандекс
+
+]]></description></offer><offer id="307-226-1" type="vendor.model" available="true"><url>http://vs.dev/product/223</url><price>480</price><currencyId>UAH</currencyId><categoryId>2</categoryId><picture>http://vs.dev/sites/default/files/v346157_h64.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Шифоновый пеньюар]]></model><model>Шифоновый пеньюар</model><vendorCode>307-226-1</vendorCode><description><![CDATA[Легкий воздушный пеньюар с кружевной отделкой.&nbsp;
+
+	
+		Регулируемые бретельки
+	
+		В комплекте с трусиками
+	
+		Нейлон
+
+]]></description></offer><offer id="296-513" type="vendor.model" available="true"><url>http://vs.dev/product/224</url><price>780</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/apro.png</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Шикарный пеньюар Valentine's Day]]></model><model>Шикарный пеньюар Valentine's Day</model><vendorCode>296-513</vendorCode><description><![CDATA[&nbsp;
+
+	Побалуйте себя бельем из невероятно женственной и сексуальной коллекции St. Valentines Day от Victoria's Secret.
+
+	
+		Украшен красным горным хрусталем
+	
+		Тонкий лиф на косточках
+	
+		Кружевная отделка
+	
+		Регулируемые подвязки
+	
+		Нейлон / спандекс
+	
+		В комлекте трусики V-образной формы.Разме S-ка.
+
+
+	&nbsp;
+]]></description></offer><offer id="307-226-2" type="vendor.model" available="true"><url>http://vs.dev/product/225</url><price>480</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v310862_rc584.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Шифоновый пеньюар]]></model><model>Шифоновый пеньюар</model><vendorCode>307-226-2</vendorCode><description><![CDATA[Легкий воздушный пеньюар с кружевной отделкой.&nbsp;
+
+	
+		Регулируемые бретельки
+	
+		В комплекте с трусиками
+	
+		Нейлон
+
+]]></description></offer><offer id="306-545-2" type="vendor.model" available="true"><url>http://vs.dev/product/226</url><price>900</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v346161_rc3h2.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Push-up Triangle Top]]></model><model>Купальник Push-up Triangle Top</model><vendorCode>306-545-2</vendorCode><description><![CDATA[Купальник Push-up Triangle Top из коллекции&nbsp;Very Sexy
+
+	
+		Декоративные цепочки с надписью&nbsp;&nbsp;Victoria's Secret
+	
+		Встроенный push-up
+	
+		Завязывается на спине и шее
+	
+		Полностью на подкладке
+	
+		Нейлон / Lycra ® спандекс
+
+]]></description></offer><offer id="306-545-3" type="vendor.model" available="true"><url>http://vs.dev/product/227</url><price>900</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/reg.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Push-up Triangle Top]]></model><model>Купальник Push-up Triangle Top</model><vendorCode>306-545-3</vendorCode><description><![CDATA[Купальник Push-up Triangle Top из коллекции&nbsp;Very Sexy
+
+	
+		Декоративные цепочки с надписью&nbsp;&nbsp;Victoria's Secret
+	
+		Встроенный push-up
+	
+		Завязывается на спине и шее
+	
+		Полностью на подкладке
+	
+		Нейлон / Lycra ® спандекс
+
+]]></description></offer><offer id="304-785" type="vendor.model" available="true"><url>http://vs.dev/product/228</url><price>490</price><currencyId>UAH</currencyId><vendor>Victoria's Secret</vendor><model><![CDATA[Атласный пеньюар с кружевом]]></model><model>Атласный пеньюар с кружевом</model><vendorCode>304-785</vendorCode><description><![CDATA[Игривый и в то же время сексуальный пеньюар неоново-розового цвета.
+
+	
+		Сзади завязывается на бант
+	
+		В комплекте с трусиками
+	
+		Нейлон
+
+]]></description></offer><offer id="296-282" type="vendor.model" available="true"><url>http://vs.dev/product/229</url><price>500</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v356749.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Атласный пеньюар Very Sexy ]]></model><model>Атласный пеньюар Very Sexy </model><vendorCode>296-282</vendorCode><description><![CDATA[Пеньюар из шелковистого атласа с выразительным декольте
+
+	
+		Чашки без подкладки
+	
+		V-образный вырез на спине
+	
+		Контрастная кружевная отделка
+	
+		Завышенная талия
+	
+		В комплекте трусики
+	
+		Полиэстер/нейлон/спандекс
+
+&nbsp;
+&nbsp;
+]]></description></offer><offer id="293-998-3" type="vendor.model" available="true"><url>http://vs.dev/product/230</url><price>690</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v350843_h64.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Gorgeous]]></model><model>Купальник Gorgeous</model><vendorCode>293-998-3</vendorCode><description><![CDATA[Эффектный купальник&nbsp;Gorgeous
+
+	
+		Глубокое декольте с вырезами по бокам
+	
+		Хороший уровень пушапа
+	
+		Возможность регулировки объема
+	
+		Завязывается через шею
+	
+		Состав: полиэстер
+
+]]></description></offer><offer id="299-417-1" type="vendor.model" available="true"><url>http://vs.dev/product/231</url><price>760</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v372537.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Новинка! Шикарный комплект Very Sexy]]></model><model>Новинка! Шикарный комплект Very Sexy</model><vendorCode>299-417-1</vendorCode><description><![CDATA[Нежный кружевной комплект Very Sexy.
+
+	
+		Форма бюстгальтера: анжелика с пуш-апом
+	
+		Двойные регулируемые бретели
+	
+		Край украшен лентой с кружевом (по технологии&nbsp;Infinity Edge)
+	
+		Нейлон/эластан
+		&nbsp;
+	
+		Трусики: чики Very Sexy&nbsp;
+
+]]></description></offer><offer id="299-417-2" type="vendor.model" available="true"><url>http://vs.dev/product/232</url><price>760</price><currencyId>UAH</currencyId><categoryId>45</categoryId><picture>http://vs.dev/sites/default/files/v372508_crop1.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Новинка! Шикарный комплект Very Sexy ]]></model><model>Новинка! Шикарный комплект Very Sexy </model><vendorCode>299-417-2</vendorCode><description><![CDATA[Нежный кружевной комплект Very Sexy.
+
+	
+		Форма бюстгальтера: анжелика с пуш-апом
+	
+		Двойные регулируемые бретели
+	
+		Край украшен лентой с кружевом (по технологии&nbsp;Infinity Edge)
+	
+		Нейлон/эластан
+		&nbsp;
+	
+		Трусики: чики Very Sexy&nbsp;
+
+]]></description></offer><offer id="296-178-1" type="vendor.model" available="true"><url>http://vs.dev/product/233</url><price>490</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v372885.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Бюстгальтер с пуш-апом Fabulous]]></model><model>Бюстгальтер с пуш-апом Fabulous</model><vendorCode>296-178-1</vendorCode><description><![CDATA[Бюстгальтер с пуш-апом Fabulous.
+Сексуальное белье еще никогда не было настолько удобным!
+
+	
+		Мягкий, словно облако, пуш-ап, который повторяет форму вашей груди.&nbsp;
+	
+		Регулируемые бретели
+	
+		Нейлон/спандекс
+
+]]></description></offer><offer id="123-456" type="vendor.model" available="true"><url>http://vs.dev/product/234</url><price>250</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v375622-534x720.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Новинка! Наушники PINK]]></model><model>Новинка! Наушники PINK</model><vendorCode>123-456</vendorCode><description><![CDATA[Яркие наушники PINK
+
+	
+		Разъем: 3.5мм
+
+&nbsp;
+]]></description></offer><offer id="123-457" type="vendor.model" available="true"><url>http://vs.dev/product/235</url><price>150</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/umbrella.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Зонт Victoria's Secret]]></model><model>Зонт Victoria's Secret</model><vendorCode>123-457</vendorCode><description><![CDATA[Этот яркий полосатый зонт с логотипом&nbsp;Victoria's Secret - поднимет настроение Вам и всем окружающим!
+
+	
+		Зонт механический&nbsp;
+	
+		Диаметр: 89 см
+	
+		Длина сложенного зонта: 24 см
+	
+		Ручка: пластик
+
+]]></description></offer><offer id="293-998-5" type="vendor.model" available="true"><url>http://vs.dev/product/236</url><price>740</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v350843_rc433_edit_ad.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Gorgeous ]]></model><model>Купальник Gorgeous </model><vendorCode>293-998-5</vendorCode><description><![CDATA[Эффектный купальник&nbsp;Gorgeous
+
+	
+		Глубокое декольте с вырезами по бокам
+	
+		Хороший уровень пушапа
+	
+		Возможность регулировки объема
+	
+		Завязывается через шею
+	
+		Состав: полиэстер
+
+]]></description></offer><offer id="293-998-6" type="vendor.model" available="true"><url>http://vs.dev/product/237</url><price>740</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v364068.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Gorgeous]]></model><model>Купальник Gorgeous</model><vendorCode>293-998-6</vendorCode><description><![CDATA[Эффектный купальник&nbsp;Gorgeous
+
+	
+		Глубокое декольте с вырезами по бокам
+	
+		Хороший уровень пушапа
+	
+		Возможность регулировки объема
+	
+		Завязывается через шею
+	
+		Состав: полиэстер
+
+]]></description></offer><offer id="293-998-7" type="vendor.model" available="true"><url>http://vs.dev/product/238</url><price>740</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v362896.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Gorgeous с двойным пуш-апом]]></model><model>Купальник Gorgeous с двойным пуш-апом</model><vendorCode>293-998-7</vendorCode><description><![CDATA[
+	
+		Глубокое декольте с вырезами по бокам
+	
+		Двойной пуш-ап
+	
+		Возможность регулировки объема
+	
+		Завязывается через шею
+	
+		Состав: полиэстер
+
+]]></description></offer><offer id="293-998-8" type="vendor.model" available="true"><url>http://vs.dev/product/239</url><price>740</price><currencyId>UAH</currencyId><categoryId>6</categoryId><picture>http://vs.dev/sites/default/files/v364069.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Gorgeous]]></model><model>Купальник Gorgeous</model><vendorCode>293-998-8</vendorCode><description><![CDATA[Эффектный купальник&nbsp;Gorgeous
+
+	
+		Глубокое декольте с вырезами по бокам
+	
+		Хороший уровень пушапа
+	
+		Возможность регулировки объема
+	
+		Завязывается через шею
+	
+		Состав: полиэстер
+
+]]></description></offer><offer id="293-998-9" type="vendor.model" available="true"><url>http://vs.dev/product/240</url><price>740</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/akqtiryvqbe.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Gorgeous с двойным пуш-апом]]></model><model>Купальник Gorgeous с двойным пуш-апом</model><vendorCode>293-998-9</vendorCode><description><![CDATA[
+	
+		Глубокое декольте с вырезами по бокам
+	
+		Двойной пуш-ап
+	
+		Возможность регулировки объема
+	
+		Завязывается через шею
+	
+		Состав: полиэстер
+
+]]></description></offer><offer id="293-998-10" type="vendor.model" available="true"><url>http://vs.dev/product/241</url><price>650</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v357635.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Gorgeous с двойным пуш-апом]]></model><model>Купальник Gorgeous с двойным пуш-апом</model><vendorCode>293-998-10</vendorCode><description><![CDATA[
+	
+		Глубокое декольте с вырезами по бокам
+	
+		Двойной пуш-ап
+	
+		Возможность регулировки объема
+	
+		Завязывается через шею
+	
+		Состав: полиэстер
+
+]]></description></offer><offer id="293-998-11" type="vendor.model" available="true"><url>http://vs.dev/product/242</url><price>740</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v350205.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Gorgeous с двойным пуш-апом]]></model><model>Купальник Gorgeous с двойным пуш-апом</model><vendorCode>293-998-11</vendorCode><description><![CDATA[
+	
+		Глубокое декольте с вырезами по бокам
+	
+		Двойной пуш-ап
+	
+		Возможность регулировки объема
+	
+		Завязывается через шею
+	
+		Состав: полиэстер
+
+]]></description></offer><offer id="293-998-12" type="vendor.model" available="true"><url>http://vs.dev/product/243</url><price>740</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v356682.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Gorgeous с двойным пуш-апом]]></model><model>Купальник Gorgeous с двойным пуш-апом</model><vendorCode>293-998-12</vendorCode><description><![CDATA[
+	
+		Глубокое декольте с вырезами по бокам
+	
+		Двойной пуш-ап
+	
+		Возможность регулировки объема
+	
+		Завязывается через шею
+	
+		Состав: полиэстер
+
+]]></description></offer><offer id="293-998-13" type="vendor.model" available="true"><url>http://vs.dev/product/244</url><price>740</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v366183.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Gorgeous с двойным пуш-апом]]></model><model>Купальник Gorgeous с двойным пуш-апом</model><vendorCode>293-998-13</vendorCode><description><![CDATA[
+	
+		Глубокое декольте с вырезами по бокам
+	
+		Двойной пуш-ап
+	
+		Возможность регулировки объема
+	
+		Завязывается через шею
+	
+		Состав: полиэстер
+
+]]></description></offer><offer id="293-998-14" type="vendor.model" available="true"><url>http://vs.dev/product/245</url><price>740</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v357471.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Gorgeous с двойным пуш-апом]]></model><model>Купальник Gorgeous с двойным пуш-апом</model><vendorCode>293-998-14</vendorCode><description><![CDATA[
+	
+		Глубокое декольте с вырезами по бокам
+	
+		Двойной пуш-ап
+	
+		Возможность регулировки объема
+	
+		Завязывается через шею
+	
+		Состав: полиэстер
+
+]]></description></offer><offer id="297-320" type="vendor.model" available="true"><url>http://vs.dev/product/246</url><price>860</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v366262.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Fabulous]]></model><model>Купальник Fabulous</model><vendorCode>297-320</vendorCode><description><![CDATA[
+	
+		Чашечки с оборкой, бантик в центре
+	
+		На косточках
+	
+		Завязывается на шее
+	
+		Сзади петелькоа &nbsp;для регулирования объема
+	
+		Украшен золотыми логотпами&nbsp;
+	
+		Плавки на завязках
+	
+		Полностью на подкладке
+	
+		Нейлон/Спандекс
+
+]]></description></offer><offer id="297-320-2" type="vendor.model" available="true"><url>http://vs.dev/product/247</url><price>690</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v362904.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Fabulous]]></model><model>Купальник Fabulous</model><vendorCode>297-320-2</vendorCode><description><![CDATA[
+	
+		Чашечки с оборкой, бантик в центре
+	
+		На косточках
+	
+		Завязывается на шее
+	
+		Сзади петелька &nbsp;для регулирования объема
+	
+		Плавки на завязках
+	
+		Полностью на подкладке
+	
+		Нейлон/Спандекс
+
+]]></description></offer><offer id="285-878" type="vendor.model" available="true"><url>http://vs.dev/product/248</url><price>620</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v329271_dl7.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Купальник Beach Sexy ]]></model><model>Купальник Beach Sexy </model><vendorCode>285-878</vendorCode><description><![CDATA[
+	
+		Вынимаемые пуш-ап вкладыши
+	
+		Широкая лента под грудью для улучшенной поддержки
+	
+		Завязки на спине и шее
+	
+		Плавки на завязках
+	
+		Полностью на подкладке
+	
+		Нейлон/Спандекс
+
+]]></description></offer><offer id="235-871-1" type="vendor.model" available="true"><url>http://vs.dev/product/253</url><price>400</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v281694_092.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Пляжная туника с рюшами]]></model><model>Пляжная туника с рюшами</model><vendorCode>235-871-1</vendorCode><description><![CDATA[Легкая, воздушная, приятная к телу туника Beach Sexy будет уместна и на пляже, и на вечеринке!&nbsp;
+
+	
+		Спереди украшена игривыми рюшами
+	
+		Сзади завязывается на бант&nbsp;
+
+]]></description></offer><offer id="235-871-2" type="vendor.model" available="true"><url>http://vs.dev/product/254</url><price>400</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/strapless-ruffle-cover-up-beach-sexy-victoria-s-secret-2011-new-collection.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Пляжная туника с рюшами]]></model><model>Пляжная туника с рюшами</model><vendorCode>235-871-2</vendorCode><description><![CDATA[Легкая, воздушная, приятная к телу туника Beach Sexy будет уместна и на пляже, и на вечеринке!&nbsp;
+
+	
+		Спереди украшена игривыми рюшами
+	
+		Сзади завязывается на бант&nbsp;
+
+]]></description></offer><offer id="298-581" type="vendor.model" available="true"><url>http://vs.dev/product/255</url><price>370</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v363262.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Платье-туника Flutter-Sleeve Dress]]></model><model>Платье-туника Flutter-Sleeve Dress</model><vendorCode>298-581</vendorCode><description><![CDATA[Платье-туника Victoria's Secret с рукавами необычного кроя
+
+	
+		V-образный вырез
+	
+		Завышенная талия с драпировкой
+	
+		Сзади завязывается
+
+&nbsp;
+]]></description></offer><offer id="295-312" type="vendor.model" available="true"><url>http://vs.dev/product/256</url><price>670</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v356289.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Шикарное платье со встроенным Bombshell бюстом]]></model><model>Шикарное платье со встроенным Bombshell бюстом</model><vendorCode>295-312</vendorCode><description><![CDATA[Шикарное платье со встроенным бюстом Bombshell, визиально увеличивающим грудь на 2 размера!
+
+	
+		Бюст украшен камнями разной формы и цвета
+	
+		Максимальный пуш-ап
+	
+		Стрейчевый материал платья подчеркнет ваши формы
+	
+		Размер: бюст 75В (также подойдет на неполный 75С), платье S/M
+
+&nbsp;
+&nbsp;
+]]></description></offer><offer id="385-433" type="vendor.model" available="true"><url>http://vs.dev/product/257</url><price>499</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/1829409-p-multiview.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Шифоновое платье Jessica Simpson]]></model><model>Шифоновое платье Jessica Simpson</model><vendorCode>385-433</vendorCode><description><![CDATA[Воздушное шифоновое платье Jessica Simpson
+
+	
+		Нижняя часть выполнена из контрастной бирюзовой ткани
+	
+		Милая застежка-пуговица сзади (в области шеи)
+	
+		Пояс в комплекте
+
+]]></description></offer><offer id="307-188" type="vendor.model" available="true"><url>http://vs.dev/product/258</url><price>670</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v354641.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Ярко-алое платье Victoria's Secret]]></model><model>Ярко-алое платье Victoria's Secret</model><vendorCode>307-188</vendorCode><description><![CDATA[Платье Victoria's Secret насыщенного ярко-алого цвета
+
+	
+		Немнущийся материал
+	
+		Эластичная линия талии
+	
+		V-образный вырез на спине
+	
+		Полиэстер/спандекс
+	
+		*Пояс не входит в комплект
+
+]]></description></offer><offer id="122-343" type="vendor.model" available="true"><url>http://vs.dev/product/259</url><price>190</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v363140_3aw.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Кружевной топ Victoria's Secret]]></model><model>Кружевной топ Victoria's Secret</model><vendorCode>122-343</vendorCode><description><![CDATA[Изящный кружевной топ Victoria's Secret
+
+	
+		Без поролона
+	
+		Присобран на груди&nbsp;
+	
+		V-образный вырез
+	
+		Нейлон/эластан
+
+]]></description></offer><offer id="232-367" type="vendor.model" available="true"><url>http://vs.dev/product/260</url><price>350</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/1-428x571.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Платье с бра-топом]]></model><model>Платье с бра-топом</model><vendorCode>232-367</vendorCode><description><![CDATA[Коттоновое платье Victoria's Secret со встроенным бра-топом
+
+	
+		Дополнительная поддержка груди
+	
+		Без поролона
+
+&nbsp;
+]]></description></offer><offer id="241-580-1" type="vendor.model" available="true"><url>http://vs.dev/product/262</url><price>720</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v370730.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Атласный халат]]></model><model>Атласный халат</model><vendorCode>241-580-1</vendorCode><description><![CDATA[Атласный халатик в фирменном цвете&nbsp;Victoria's Secret&nbsp;
+
+	
+		Карманы: есть
+	
+		Длина: до колена
+
+]]></description></offer><offer id="304-353-1" type="vendor.model" available="true"><url>http://vs.dev/product/263</url><price>80</price><currencyId>UAH</currencyId><categoryId>9</categoryId><picture>http://vs.dev/sites/default/files/v350308.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Коттоновые чики Victoria's Secret]]></model><model>Коттоновые чики Victoria's Secret</model><vendorCode>304-353-1</vendorCode></offer><offer id="304-353-2" type="vendor.model" available="true"><url>http://vs.dev/product/264</url><price>80</price><currencyId>UAH</currencyId><categoryId>9</categoryId><picture>http://vs.dev/sites/default/files/v368842.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Коттоновые чики Victoria's Secret]]></model><model>Коттоновые чики Victoria's Secret</model><vendorCode>304-353-2</vendorCode></offer><offer id="304-353-3" type="vendor.model" available="true"><url>http://vs.dev/product/265</url><price>80</price><currencyId>UAH</currencyId><categoryId>9</categoryId><picture>http://vs.dev/sites/default/files/v369551.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Коттоновые чики Victoria's Secret]]></model><model>Коттоновые чики Victoria's Secret</model><vendorCode>304-353-3</vendorCode></offer><offer id="304-353-4" type="vendor.model" available="true"><url>http://vs.dev/product/266</url><price>80</price><currencyId>UAH</currencyId><categoryId>9</categoryId><picture>http://vs.dev/sites/default/files/v369402.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Коттоновые чики Victoria's Secret]]></model><model>Коттоновые чики Victoria's Secret</model><vendorCode>304-353-4</vendorCode></offer><offer id="304-353-5" type="vendor.model" available="true"><url>http://vs.dev/product/267</url><price>80</price><currencyId>UAH</currencyId><categoryId>9</categoryId><picture>http://vs.dev/sites/default/files/v369396.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Коттоновые чики Victoria's Secret]]></model><model>Коттоновые чики Victoria's Secret</model><vendorCode>304-353-5</vendorCode></offer><offer id="301-253" type="vendor.model" available="true"><url>http://vs.dev/product/268</url><price>90</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v374600.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Новинка! Лосьон для тела Sugared Lilac]]></model><model>Новинка! Лосьон для тела Sugared Lilac</model><vendorCode>301-253</vendorCode><description><![CDATA[Увлажняющий лосьон для тела&nbsp;Sugared Lilac
+
+	
+		Аромат: Засахаренная сирень и пралине
+	
+		Объем: 250мл
+
+]]></description></offer><offer id="301-253-1" type="vendor.model" available="true"><url>http://vs.dev/product/269</url><price>90</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v374601.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Новинка! Лосьон для тела  Frosted Magnolia]]></model><model>Новинка! Лосьон для тела  Frosted Magnolia</model><vendorCode>301-253-1</vendorCode><description><![CDATA[Увлажняющий лосьон для тела&nbsp;Frosted Magnolia
+
+	
+		Аромат: Магнолия и малина
+	
+		Объем: 250мл
+
+]]></description></offer><offer id="301-253-2" type="vendor.model" available="true"><url>http://vs.dev/product/270</url><price>90</price><currencyId>UAH</currencyId><categoryId>8</categoryId><picture>http://vs.dev/sites/default/files/v374602.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Новинка! Лосьон для тела Candied Violet]]></model><model>Новинка! Лосьон для тела Candied Violet</model><vendorCode>301-253-2</vendorCode><description><![CDATA[Увлажняющий лосьон для тела&nbsp;Candied Violet
+
+	
+		Аромат: Фиалки и жимолость
+	
+		Объем: 250мл
+
+]]></description></offer><offer id="123-123" type="vendor.model" available="true"><url>http://vs.dev/product/271</url><price>40</price><currencyId>UAH</currencyId><categoryId>14</categoryId><picture>http://vs.dev/sites/default/files/gift.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Подарочная коробка Victoria's Secret]]></model><model>Подарочная коробка Victoria's Secret</model><vendorCode>123-123</vendorCode><description><![CDATA[Глянцевая подарочная коробка&nbsp;Victoria's Secret.&nbsp;
+	&nbsp;
+	В комплект входит&nbsp;коробка в сложенном виде,&nbsp;тонкая розовая шуршащая бумага для внутреннего оформления подарка,&nbsp;резинка с бантиком в тон логотипа
+	&nbsp;
+	Размеры:&nbsp;
+
+	
+		S -&nbsp;&nbsp;29*22*5см
+	
+		M -&nbsp;38*28*7,5см
+	
+		L -&nbsp;38*38*13см
+
+&nbsp;
+	*Коробка запечатанная, Вы сможете собрать ее самостоятельно, и тем самым подарить себе праздничное настроение :)
+]]></description></offer><offer id="303-504-1" type="vendor.model" available="true"><url>http://vs.dev/product/272</url><price>470</price><currencyId>UAH</currencyId><categoryId>45</categoryId><picture>http://vs.dev/sites/default/files/v373883_crop1.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Комплект коттоновый с пушапом  ]]></model><model>Комплект коттоновый с пушапом  </model><vendorCode>303-504-1</vendorCode><description><![CDATA[Удобный и сексуальный комплект из коллекции&nbsp;Cotton Lingerie
+
+	
+		Бюстгальтер с пушапом и регулируемыми бретелями
+	
+		Cтринги Victoria's Secret
+	
+		Хлопок/спандекс
+		&nbsp;
+
+]]></description></offer><offer id="303-504-2" type="vendor.model" available="true"><url>http://vs.dev/product/273</url><price>470</price><currencyId>UAH</currencyId><categoryId>45</categoryId><picture>http://vs.dev/sites/default/files/v357192_2am.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Комплект коттоновый с пушапом]]></model><model>Комплект коттоновый с пушапом</model><vendorCode>303-504-2</vendorCode><description><![CDATA[Удобный и сексуальный комплект из коллекции&nbsp;Cotton Lingerie
+
+	
+		Бюстгальтер с пушапом и регулируемыми бретелями
+	
+		Cтринги Victoria's Secret
+	
+		Хлопок/спандекс
+
+]]></description></offer><offer id="299-133-20" type="vendor.model" available="true"><url>http://vs.dev/product/274</url><price>470</price><currencyId>UAH</currencyId><categoryId>45</categoryId><picture>http://vs.dev/sites/default/files/v376580_crop1.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Комплект с пушапом]]></model><model>Комплект с пушапом</model><vendorCode>299-133-20</vendorCode><description><![CDATA[Нежный комплект с пушапом
+
+	
+		Бюстгальтер с пушапом Sexy Tee
+	
+		Регулируемые бретели
+	
+		По краю украшен шифионовыми рюшами в горошек
+		&nbsp;
+	
+		Трусики спереди хлопковые, сзади ажурные
+
+&nbsp;
+&nbsp;
+]]></description></offer><offer id="299-133-21" type="vendor.model" available="true"><url>http://vs.dev/product/275</url><price>530</price><currencyId>UAH</currencyId><categoryId>45</categoryId><picture>http://vs.dev/sites/default/files/v376580_crop1_0.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Комплект с пушапом]]></model><model>Комплект с пушапом</model><vendorCode>299-133-21</vendorCode><description><![CDATA[Нежный комплект с пушапом
+
+	
+		Бюстгальтер с пушапом Sexy Tee
+	
+		Регулируемые бретели
+	
+		По краю украшен шифионовыми рюшами в горошек
+		&nbsp;
+	
+		Трусики кружевные VerySexy (подойдут на бедра 95-105см)
+
+]]></description></offer><offer id="299-133-22" type="vendor.model" available="true"><url>http://vs.dev/product/276</url><price>470</price><currencyId>UAH</currencyId><categoryId>45</categoryId><picture>http://vs.dev/sites/default/files/v372832_crop1.jpg</picture><vendor>Victoria's Secret</vendor><model><![CDATA[Комплект с пушапом Sexy Tee]]></model><model>Комплект с пушапом Sexy Tee</model><vendorCode>299-133-22</vendorCode><description><![CDATA[Ярко-коралловый комплект Sexy Tee
+
+	
+		Бюстгальтер с пушапом Sexy Tee
+	
+		Регулируемые бретели
+	
+		Чашки бюстгальтера украшены кружевом по бокам
+		&nbsp;
+	
+		Трусики: стринги PINK&nbsp;
+	
+		Трусики: хипстеры PINK&nbsp;
+
+]]></description></offer></offers></shop></yml_catalog>

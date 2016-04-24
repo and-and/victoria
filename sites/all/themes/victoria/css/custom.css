@@ -17,13 +17,30 @@ body {
 #site-name a{
   background-image: url('../images/vs-logo.gif');
   display: block;
-  float: left;
   width: 256px;
   height: 21px;
   text-indent: -9999px;
   float: left;
   margin: 20px 40px 0 0;
   padding-top: 0;
+}
+
+#site-logo {
+  margin-left: -76px;
+}
+
+#site-logo a{
+  display: block;
+  width: 36px;
+  height: 21px;
+  text-indent: -9999px;
+  float: left;
+  margin: 5px 40px 0 0;
+  padding-top: 0;
+}
+
+#site-logo img{
+  display: block;
 }
 
 #header {
